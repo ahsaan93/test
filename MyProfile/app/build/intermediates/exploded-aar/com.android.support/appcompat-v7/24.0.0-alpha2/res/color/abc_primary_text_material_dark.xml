@@ -1,0 +1,10 @@
+sSubheader">일부 기능이 제대로 설치되지 않았습니다.</text>
+    </successwithwarningssubheader>
+    <warningstext>
+      <text _locID="txtSuccessIssues">전체 제품 기능을 사용하려면 다음 문제를 해결하십시오. 자세한 내용을 보려면 !$!http://go.microsoft.com/fwlink/?LinkID=[[SolutionFwlinkId]]&amp;clcid=[[clcid]]!,!일반적인 문제와 해결 방법!@! 목록을 확인하거나 !$![[LogFilePath]]!,!로그 파일!@!을 검토하십시오.</text>
+    </warningstext>
+    <thirdpartydownloadwarningtext>
+      <text _locID="thirdPartyWarning">일부 패키지를 다운로드하지 못했습니다. 자세한 내용은 설치 로그를 참조하세요.</text>
+    </thirdpartydownloadwarningtext>
+    <modernuxwarningstext>
+      <text _locID="txtModernUxSuccessIssues">!$![[LogFilePath]]!,!로그 파일 보기!@! | !$!http://go.microsoft.com/fwlink/?LinkID=[[SolutionFwl

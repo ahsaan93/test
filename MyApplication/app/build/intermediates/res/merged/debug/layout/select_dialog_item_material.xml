@@ -1,0 +1,16 @@
+exception>
+      <exception cref="T:System.ArgumentNullException">The <paramref name="baseName" /> or <paramref name="assembly" /> parameter is null. </exception>
+    </member>
+    <member name="M:System.Resources.ResourceManager.#ctor(System.Type)">
+      <summary>Initializes a new instance of the <see cref="T:System.Resources.ResourceManager" /> class that looks up resources in satellite assemblies based on information from the specified type object.</summary>
+      <param name="resourceSource">A type from which the resource manager derives all information for finding .resources files. </param>
+      <exception cref="T:System.ArgumentNullException">The <paramref name="resourceSource" /> parameter is null. </exception>
+    </member>
+    <member name="P:System.Resources.ResourceManager.BaseName">
+      <summary>Gets the root name of the resource files that the <see cref="T:System.Resources.ResourceManager" /> searches for resources.</summary>
+      <returns>The root name of the resource files that the <see cref="T:System.Resources.ResourceManager" /> searches for resources.</returns>
+    </member>
+    <member name="F:System.Resources.ResourceManager.BaseNameField">
+      <summary>Specifies the root name of the resource files that the <see cref="T:System.Resources.ResourceManager" /> searches for resources.</summary>
+    </member>
+    <member name="M:System.Resources.ResourceManager.

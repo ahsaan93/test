@@ -1,0 +1,26 @@
+ elle a été remplacée dans une classe dérivée.</returns>
+      <param name="length">Retourne la valeur 0, sauf si elle a été remplacée dans une classe dérivée.</param>
+      <filterpriority>2</filterpriority>
+    </member>
+    <member name="M:System.Xml.XmlDictionaryReader.TryGetLocalNameAsDictionaryString(System.Xml.XmlDictionaryString@)">
+      <summary>Non implémentée dans cette classe (cette propriété retourne toujours false).Peut être remplacée dans les classes dérivées.</summary>
+      <returns>false sauf si elle a été remplacée dans une classe dérivée.</returns>
+      <param name="localName">Retourne la valeur null, sauf si elle a été remplacée dans une classe dérivée. .</param>
+    </member>
+    <member name="M:System.Xml.XmlDictionaryReader.TryGetNamespaceUriAsDictionaryString(System.Xml.XmlDictionaryString@)">
+      <summary>Non implémentée dans cette classe (cette propriété retourne toujours false).Peut être remplacée dans les classes dérivées.</summary>
+      <returns>false sauf si elle a été remplacée dans une classe dérivée.</returns>
+      <param name="namespaceUri">Retourne la valeur null, sauf si elle a été remplacée dans une classe dérivée.</param>
+    </member>
+    <member name="M:System.Xml.XmlDictionaryReader.TryGetValueAsDictionaryString(System.Xml.XmlDictionaryString@)">
+      <summary>Non implémentée dans cette classe (cette propriété retourne toujours false).Peut être remplacée dans les classes dérivées.</summary>
+      <returns>false sauf si elle a été remplacée dans une classe dérivée.</returns>
+      <param name="value">Retourne la valeur null, sauf si elle a été remplacée dans une classe dérivée.</param>
+    </member>
+    <member name="T:System.Xml.XmlDictionaryReaderQuotas">
+      <summary>Contient des valeurs de quota configurables pour les XmlDictionaryReaders.</summary>
+    </member>
+    <member name="M:System.Xml.XmlDictionaryReaderQuotas.#ctor">
+      <summary>Crée une instance de cette classe. </summary>
+    </member>
+    <member name="M:System.Xml.XmlDictionaryReaderQuotas.CopyTo(Syst

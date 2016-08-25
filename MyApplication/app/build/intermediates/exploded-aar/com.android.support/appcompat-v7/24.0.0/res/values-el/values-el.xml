@@ -1,0 +1,24 @@
+mmary>
+        </member>
+        <member name="T:Microsoft.Expression.Drawing.Core.BezierCurveFlattener">
+            <summary>
+            Eine &quot;utility&quot;-Klasse zum Reduzieren von Bézierkurven.
+            </summary>
+        </member>
+        <member name="M:Microsoft.Expression.Drawing.Core.BezierCurveFlattener.FlattenCubic(System.Windows.Point[],System.Double,System.Collections.Generic.ICollection{System.Windows.Point},System.Boolean,System.Collections.Generic.ICollection{System.Double})">
+            <summary>
+            Reduziert eine kubische Bézierkurve und fügt die resultierende Polylinie dem dritten Parameter hinzu.
+            </summary>
+            <param name="controlPoints">Die vier Kontrollpunkte der kubischen Bézierkurve.</param>
+            <param name="errorTolerance">Der maximale Abstand zwischen zwei entsprechenden Punkten auf der wahren Kurve und auf der reduzierten Polylinie. Muss grundsätzlich positiv sein.</param>
+            <param name="resultPolyline">Position, an der die reduzierte Polylinie hinzugefügt wird.</param>
+            <param name="skipFirstPoint">&quot;True&quot;, um beim Hinzufügen der reduzierten Polylinie den ersten Kontrollpunkt zu überspringen.
+            <param name="resultParameters">Position, an der der Wert des Bézierkurvenparameters hinzugefügt wird, der mit den einzelnen Scheitelpunkten der Polylinie verknüpft ist.</param> 
+            Wenn <paramref name="resultPolyline"/> leer ist, werden der erste Kontrollpunkt und der zugehörige Parameter immer hinzugefügt.</param>
+        </member>
+        <member name="M:Microsoft.Expression.Drawing.Core.BezierCurveFlattener.FlattenQuadratic(System.Windows.Point[],System.Double,System.Collections.Generic.ICollection{System.Windows.Point},System.Boolean,System.Collections.Generic.ICollection{System.Double})">
+            <summary>
+            Reduziert eine quadratische Bézierkurve und fügt die resultierende Polylinie dem dritten Parameter hinzu. Verwendet die Graderhöhung für Bézierkurven, um den Code für den kubischen Fall wiederverwenden zu können.
+            </summary>
+            <param name="controlPoints">Die drei Kontrollpunkte der quadratischen Bézierkurve.</param>
+            <param name="errorTolerance">Der maximale Abstand zwischen zwei entsprechenden Punkten auf der wahren Kurve und auf der reduzierten Polylinie. Muss grundsätzlich positiv

@@ -1,0 +1,23 @@
+cref="T:System.InvalidOperationException">Tente d'assigner set la valeur, mais les valeurs de quota sont en lecture seule pour cette instance.</exception>
+      <exception cref="T:System.ArgumentException">Tente d'assigner set la valeur à moins de zéro.</exception>
+    </member>
+    <member name="P:System.Xml.XmlDictionaryReaderQuotas.MaxDepth">
+      <summary>Obtient et définit la profondeur maximale des nœuds imbriqués.</summary>
+      <returns>Profondeur maximale des nœuds imbriqués.La valeur par défaut est 32 ;</returns>
+      <exception cref="T:System.InvalidOperationException">Tente d'assigner set la valeur, mais les valeurs de quota sont en lecture seule pour cette instance.</exception>
+      <exception cref="T:System.ArgumentException">Tente d'assigner set la valeur à moins de zéro.</exception>
+    </member>
+    <member name="P:System.Xml.XmlDictionaryReaderQuotas.MaxNameTableCharCount">
+      <summary>Obtient et définit le nombre maximal de caractères autorisés dans un nom de table.</summary>
+      <returns>Nombre maximal de caractères autorisés dans un nom de tableau.La valeur par défaut est 16384.</returns>
+      <exception cref="T:System.InvalidOperationException">Tente d'assigner set la valeur, mais les valeurs de quota sont en lecture seule pour cette instance.</exception>
+      <exception cref="T:System.ArgumentException">Tente d'assigner set la valeur à moins de zéro.</exception>
+    </member>
+    <member name="P:System.Xml.XmlDictionaryReaderQuotas.MaxStringContentLength">
+      <summary>Obtient et définit la longueur de chaîne maximale retournée par le lecteur.</summary>
+      <returns>Longueur de chaîne maximale retournée par le lecteur.La valeur par défaut est 8192.</returns>
+      <exception cref="T:System.InvalidOperationException">Tente d'assigner set la valeur, mais les valeurs de quota sont en lecture seule pour cette instance.</exception>
+      <exception cref="T:System.ArgumentException">Tente d'assigner set la valeur à moins de zéro.</exception>
+    </member>
+    <member name="P:System.Xml.XmlDictionaryReaderQuotas.ModifiedQuotas">
+      <summary>Obtient l

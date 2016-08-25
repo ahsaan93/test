@@ -1,0 +1,20 @@
+geladen wird.
+            </summary>
+        </member>
+        <member name="T:Microsoft.Expression.Interactivity.Media.StoryboardAction">
+            <summary>
+            Eine abstrakte Klasse, die die Auswahl eines Storyboards als Ziel ermöglicht.
+            </summary>
+            <remarks>
+            Diese Klasse stellt für Ersteller von Aktionen eine Standardmethode für die Auswahl eines Storyboards als Ziel bereit. In Designtools können spezielle Bearbeitungsoptionen für Klassen, die von dieser Aktion erben, bereitgestellt und somit die Benutzerfreundlichkeit verbessert werden. 
+            </remarks>
+        </member>
+        <member name="M:Microsoft.Expression.Interactivity.Media.StoryboardAction.OnStoryboardChanged(System.Windows.DependencyPropertyChangedEventArgs)">
+            <summary>
+            Diese Methode wird aufgerufen, wenn sich die &quot;Storyboard&quot;-Eigenschaft ändert.
+            </summary>
+            <param name="args"></param>
+        </member>
+        <member name="P:Microsoft.Expression.Interactivity.Media.StoryboardAction.Storyboard">
+            <summary>
+            Das Zielstoryboard. Hierbei

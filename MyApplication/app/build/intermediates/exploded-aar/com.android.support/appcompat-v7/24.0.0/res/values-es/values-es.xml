@@ -1,0 +1,24 @@
+tring)">
+      <summary>Lit le contenu d'une série de nœuds avec les éléments <paramref name="localName" /> et <paramref name="namespaceUri" /> dans un tableau de nombres float (<see cref="T:System.Single" />).</summary>
+      <returns>Tableau de nombres float (<see cref="T:System.Single" />).</returns>
+      <param name="localName">Nom local de l'élément.</param>
+      <param name="namespaceUri">URI de l'espace de noms de l'élément.</param>
+    </member>
+    <member name="M:System.Xml.XmlDictionaryReader.ReadStartElement(System.Xml.XmlDictionaryString,System.Xml.XmlDictionaryString)">
+      <summary>Vérifie si le nœud actuel est un élément portant les éléments <paramref name="localName" /> et <paramref name="namespaceUri" />, puis avance le lecteur jusqu'au nœud suivant.</summary>
+      <param name="localName">Nom local de l'élément.</param>
+      <param name="namespaceUri">URI de l'espace de noms de l'élément.</param>
+    </member>
+    <member name="M:System.Xml.XmlDictionaryReader.ReadTimeSpanArray(System.String,System.String)">
+      <summary>Lit le contenu d'une série de nœuds avec les éléments <paramref name="localName" /> et <paramref name="namespaceUri" /> donnés dans un tableau de <see cref="T:System.TimeSpan" />.</summary>
+      <returns>Tableau <see cref="T:System.TimeSpan" />.</returns>
+      <param name="localName">Nom local de l'élément.</param>
+      <param name="namespaceUri">URI de l'espace de noms de l'élément.</param>
+    </member>
+    <member name="M:System.Xml.XmlDictionaryReader.ReadTimeSpanArray(System.Xml.XmlDictionaryString,System.Xml.XmlDictionaryString)">
+      <summary>Lit le contenu d'une série de nœuds avec les éléments <paramref name="localName" /> et <paramref name="namespaceUri" /> donnés dans un tableau de <see cref="T:System.TimeSpan" />.</summary>
+      <returns>Tableau <see cref="T:System.TimeSpan" />.</returns>
+      <param name="localName">Nom local de l'élément.</param>
+      <param name="namespaceUri">URI de l'espace de noms de l'élément.</param>
+    </member>
+    <member name="M:System.Xml.XmlDiction

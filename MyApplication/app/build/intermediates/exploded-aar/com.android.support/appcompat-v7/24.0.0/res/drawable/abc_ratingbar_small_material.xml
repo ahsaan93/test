@@ -1,0 +1,9 @@
+ unidimensionnel qui contient les noms complets spécifiques à la culture des jours de la semaine.</summary>
+      <returns>Tableau de chaînes unidimensionnel contenant les noms complets spécifiques à la culture des jours de la semaine.Le tableau pour <see cref="P:System.Globalization.DateTimeFormatInfo.InvariantInfo" /> contient "Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday" et "Saturday".</returns>
+      <exception cref="T:System.ArgumentNullException">The property is being set to null. </exception>
+      <exception cref="T:System.ArgumentException">The property is being set to an array that is multidimensional or that has a length that is not exactly 7. </exception>
+      <exception cref="T:System.InvalidOperationException">The property is being set and the <see cref="T:System.Globalization.DateTimeFormatInfo" /> object is read-only. </exception>
+    </member>
+    <member name="P:System.Globalization.DateTimeFormatInfo.FirstDayOfWeek">
+      <summary>Obtient ou définit le premier jour de la semaine.</summary>
+      <returns>Valeur d'énumération qui représente le premier jour de la semaine.La valeur par défaut de <see

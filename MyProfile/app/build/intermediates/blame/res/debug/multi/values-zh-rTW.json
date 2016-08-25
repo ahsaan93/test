@@ -1,0 +1,117 @@
+ystem.TimeSpan.ToString(System.String)">
+      <summary>Konvertiert den Wert des aktuellen <see cref="T:System.TimeSpan" />-Objekts unter Verwendung des angegebenen Formats in die entsprechende Zeichenfolgendarstellung.</summary>
+      <returns>Die Zeichenfolgendarstellung des aktuellen <see cref="T:System.TimeSpan" />-Werts im durch den <paramref name="format" />-Parameter angegebenen Format.</returns>
+      <param name="format">Eine standardmäßige oder benutzerdefinierte <see cref="T:System.TimeSpan" />-Formatierungszeichenfolge.</param>
+      <exception cref="T:System.FormatException">The <paramref name="format" /> parameter is not recognized or is not supported.</exception>
+    </member>
+    <member name="M:System.TimeSpan.ToString(System.String,System.IFormatProvider)">
+      <summary>Konvertiert den Wert des aktuellen <see cref="T:System.TimeSpan" />-Objekts unter Verwendung des angegebenen Formats und der kulturspezifischen Formatierungsinformationen in die entsprechende Zeichenfolgendarstellung.</summary>
+      <returns>Die Zeichenfolgendarstellung des aktuellen <see cref="T:System.TimeSpan" />-Werts, wie von <paramref name="format" /> und <paramref name="formatProvider" /> angegeben.</returns>
+      <param name="format">Eine standardmäßige oder benutzerdefinierte <see cref="T:System.TimeSpan" />-Formatierungszeichenfolge.</param>
+      <param name="formatProvider">Ein Objekt, das kulturspezifische Formatierungsinformationen bereitstellt.</param>
+      <exception cref="T:System.FormatException">The <paramref name="format" /> parameter is not recognized or is not supported.</exception>
+    </member>
+    <member name="P:System.TimeSpan.TotalDays">
+      <summary>Ruft den Wert der aktuellen <see cref="T:System.TimeSpan" />-Struktur in ganzen Tagen und Bruchteilen von Tagen ab.</summary>
+      <returns>Die Gesamtzahl der von dieser Instanz dargestellten Tage.</returns>
+      <filterpriority>1</filterpriority>
+    </member>
+    <member name="P:System.TimeSpan.TotalHours">
+      <summary>Ruft den Wert der aktuellen <see cref="T:System.TimeSpan" />-Struktur in ganzen Stunden und Bruchteilen von Stunden ab.</summary>
+      <returns>Die Gesamtzahl der von dieser Instanz dargestellten Stunden.</returns>
+      <filterpriority>1</filterpriority>
+    </member>
+    <member name="P:System.TimeSpan.TotalMilliseconds">
+      <summary>Ruft den Wert der aktuellen <see cref="T:System.TimeSpan" />-Struktur in ganzen Millisekunden und Bruchteilen von Millisekunden ab.</summary>
+      <returns>Die Gesamtzahl der von dieser Instanz dargestellten Millisekunden.</returns>
+      <filterpriority>1</filterpriority>
+    </member>
+    <member name="P:System.TimeSpan.TotalMinutes">
+      <summary>Ruft den Wert der aktuellen <see cref="T:System.TimeSpan" />-Struktur in ganzen Minuten und Bruchteilen von Minuten ab.</summary>
+      <returns>Die Gesamtzahl der von dieser Instanz dargestellten Minuten.</returns>
+      <filterpriority>1</filterpriority>
+    </member>
+    <member name="P:System.TimeSpan.TotalSeconds">
+      <summary>Ruft den Wert der aktuellen <see cref="T:System.TimeSpan" />-Struktur in ganzen Sekunden und Bruchteilen von Sekunden ab.</summary>
+      <returns>Die Gesamtzahl der von dieser Instanz dargestellten Sekunden.</returns>
+      <filterpriority>1</filterpriority>
+    </member>
+    <member name="M:System.TimeSpan.TryParse(System.String,System.IFormatProvider,System.TimeSpan@)">
+      <summary>Konvertiert die Zeichenfolgendarstellung eines Zeitintervalls unter Verwendung der angegebenen kulturspezifischen Formatierungsinformationen in die entsprechende <see cref="T:System.TimeSpan" /> und gibt einen Wert zurück, der angibt, ob die Konvertierung erfolgreich abgeschlossen wurde.</summary>
+      <returns>true, wenn <paramref name="input" /> erfolgreich konvertiert wurde, andernfalls false.Dieser Vorgang gibt false zurück, wenn der <paramref name="input" />-Parameter gleich null oder <see cref="F:System.String.Empty" /> ist, ein ungültiges Format aufweist, ein Zeitintervall kleiner als <see cref="F:System.TimeSpan.MinValue" /> oder größer als <see cref="F:System.TimeSpan.MaxValue" /> darstellt oder mindestens eine der Komponenten für Tage, Stunden, Minuten oder Sekunden außerhalb des zulässigen Bereichs liegt.</returns>
+      <param name="input">Eine Zeichenfolge, die das zu konvertierende Zeitintervall angibt.</param>
+      <param name="formatProvider">Ein Objekt, das kulturspezifische Formatierungsinformationen bereitstellt.</param>
+      <param name="result">Diese Methode gibt entweder ein Objekt zurück, das das durch <paramref name="input" /> angegebene Zeitintervall darstellt, oder <see cref="F:System.TimeSpan.Zero" />, wenn die Konvertierung nicht ausgeführt werden konnte.Dieser Parameter wird nicht initialisiert übergeben.</param>
+    </member>
+    <member name="M:System.TimeSpan.TryParse(System.String,System.TimeSpan@)">
+      <summary>Konvertiert die Zeichenfolgendarstellung eines Zeitintervalls in die entsprechende <see cref="T:System.TimeSpan" /> und gibt einen Wert zurück, der angibt, ob die Konvertierung erfolgreich durchgeführt wurde.</summary>
+      <returns>true, wenn <paramref name="s" /> erfolgreich konvertiert wurde, andernfalls false.Dieser Vorgang gibt false zurück, wenn der <paramref name="s" />-Parameter gleich null oder <see cref="F:System.String.Empty" /> ist, ein ungültiges Format aufweist, ein Zeitintervall kleiner als <see cref="F:System.TimeSpan.MinValue" /> oder größer als <see cref="F:System.TimeSpan.MaxValue" /> darstellt oder mindestens eine der Komponenten für Tage, Stunden, Minuten oder Sekunden außerhalb des zulässigen Bereichs liegt.</returns>
+      <param name="s">Eine Zeichenfolge, die das zu konvertierende Zeitintervall angibt.</param>
+      <param name="result">Diese Methode gibt entweder ein Objekt zurück, das das durch <paramref name="s" /> angegebene Zeitintervall darstellt, oder <see cref="F:System.TimeSpan.Zero" />, wenn die Konvertierung nicht ausgeführt werden konnte.Dieser Parameter wird nicht initialisiert übergeben.</param>
+      <filterpriority>1</filterpriority>
+    </member>
+    <member name="M:System.TimeSpan.TryParseExact(System.String,System.String,System.IFormatProvider,System.Globalization.TimeSpanStyles,System.TimeSpan@)">
+      <summary>Konvertiert die Zeichenfolgendarstellung eines Zeitintervalls unter Verwendung des angegebenen Formats, der kulturspezifischen Formatierungsinformationen und Stile in die entsprechende <see cref="T:System.TimeSpan" /> und gibt einen Wert zurück, der angibt, ob die Konvertierung erfolgreich abgeschlossen wurde.Das Format der Zeichenfolgendarstellung muss dem angegebenen Format genau entsprechen.</summary>
+      <returns>true, wenn <paramref name="input" /> erfolgreich konvertiert wurde, andernfalls false.</returns>
+      <param name="input">Eine Zeichenfolge, die das zu konvertierende Zeitintervall angibt.</param>
+      <param name="format">Eine standardmäßige oder benutzerdefinierte Formatierungszeichenfolge, die das erforderliche Format von <paramref name="input" /> definiert.</param>
+      <param name="formatProvider">Ein Objekt, das kulturspezifische Formatierungsinformationen bereitstellt.</param>
+      <param name="styles">Ein oder mehrere Enumerationswerte, die den Stil von <paramref name="input" /> angeben.</param>
+      <param name="result">Diese Methode gibt entweder ein Objekt zurück, das das durch <paramref name="input" /> angegebene Zeitintervall darstellt, oder <see cref="F:System.TimeSpan.Zero" />, wenn die Konvertierung nicht ausgeführt werden konnte.Dieser Parameter wird nicht initialisiert übergeben.</param>
+    </member>
+    <member name="M:System.TimeSpan.TryParseExact(System.String,System.String,System.IFormatProvider,System.TimeSpan@)">
+      <summary>Konvertiert die Zeichenfolgendarstellung eines Zeitintervalls unter Verwendung des angegebenen Formats und der kulturspezifischen Formatierungsinformationen in die entsprechende <see cref="T:System.TimeSpan" /> und gibt einen Wert zurück, der angibt, ob die Konvertierung erfolgreich abgeschlossen wurde.Das Format der Zeichenfolgendarstellung muss dem angegebenen Format genau entsprechen.</summary>
+      <returns>true, wenn <paramref name="input" /> erfolgreich konvertiert wurde, andernfalls false.</returns>
+      <param name="input">Eine Zeichenfolge, die das zu konvertierende Zeitintervall angibt.</param>
+      <param name="format">Eine standardmäßige oder benutzerdefinierte Formatierungszeichenfolge, die das erforderliche Format von <paramref name="input" /> definiert.</param>
+      <param name="formatProvider">Ein Objekt, das kulturspezifische Formatierungsinformationen bereitstellt.</param>
+      <param name="result">Diese Methode gibt entweder ein Objekt zurück, das das durch <paramref name="input" /> angegebene Zeitintervall darstellt, oder <see cref="F:System.TimeSpan.Zero" />, wenn die Konvertierung nicht ausgeführt werden konnte.Dieser Parameter wird nicht initialisiert übergeben.</param>
+    </member>
+    <member name="M:System.TimeSpan.TryParseExact(System.String,System.String[],System.IFormatProvider,System.Globalization.TimeSpanStyles,System.TimeSpan@)">
+      <summary>Konvertiert die angegebene Zeichenfolgendarstellung eines Zeitintervalls unter Verwendung der angegebenen Formate, kulturspezifischen Formatierungsinformationen und Stile in die entsprechende <see cref="T:System.TimeSpan" /> und gibt einen Wert zurück, der angibt, ob die Konvertierung erfolgreich abgeschlossen wurde.Das Format der Zeichenfolgendarstellung muss einem der angegebenen Formate genau entsprechen.</summary>
+      <returns>true, wenn <paramref name="input" /> erfolgreich konvertiert wurde, andernfalls false.</returns>
+      <param name="input">Eine Zeichenfolge, die das zu konvertierende Zeitintervall angibt.</param>
+      <param name="formats">Ein Array von standardmäßigen oder benutzerdefinierten Formatierungszeichenfolgen, die die zulässigen Formate von <paramref name="input" /> definieren.</param>
+      <param name="formatProvider">Ein Objekt, das kulturspezifische Formatierungsinformationen bereitstellt.</param>
+      <param name="styles">Ein oder mehrere Enumerationswerte, die den Stil von <paramref name="input" /> angeben.</param>
+      <param name="result">Diese Methode gibt entweder ein Objekt zurück, das das durch <paramref name="input" /> angegebene Zeitintervall darstellt, oder <see cref="F:System.TimeSpan.Zero" />, wenn die Konvertierung nicht ausgeführt werden konnte.Dieser Parameter wird nicht initialisiert übergeben.</param>
+    </member>
+    <member name="M:System.TimeSpan.TryParseExact(System.String,System.String[],System.IFormatProvider,System.TimeSpan@)">
+      <summary>Konvertiert die angegebene Zeichenfolgendarstellung eines Zeitintervalls unter Verwendung der angegebenen Formate und kulturspezifischen Formatierungsinformationen in die entsprechende <see cref="T:System.TimeSpan" /> und gibt einen Wert zurück, der angibt, ob die Konvertierung erfolgreich abgeschlossen wurde.Das Format der Zeichenfolgendarstellung muss einem der angegebenen Formate genau entsprechen.</summary>
+      <returns>true, wenn <paramref name="input" /> erfolgreich konvertiert wurde, andernfalls false.</returns>
+      <param name="input">Eine Zeichenfolge, die das zu konvertierende Zeitintervall angibt.</param>
+      <param name="formats">Ein Array von standardmäßigen oder benutzerdefinierten Formatierungszeichenfolgen, die die zulässigen Formate von <paramref name="input" /> definieren.</param>
+      <param name="formatProvider">Ein Objekt, das kulturspezifische Formatierungsinformationen bereitstellt.</param>
+      <param name="result">Diese Methode gibt entweder ein Objekt zurück, das das durch <paramref name="input" /> angegebene Zeitintervall darstellt, oder <see cref="F:System.TimeSpan.Zero" />, wenn die Konvertierung nicht ausgeführt werden konnte.Dieser Parameter wird nicht initialisiert übergeben.</param>
+    </member>
+    <member name="F:System.TimeSpan.Zero">
+      <summary>Stellt den <see cref="T:System.TimeSpan" />-Wert für 0 (null) dar.Dieses Feld ist schreibgeschützt.</summary>
+      <filterpriority>1</filterpriority>
+    </member>
+    <member name="T:System.TimeZoneInfo">
+      <summary>Stellt eine beliebige Zeitzone der Erde dar.</summary>
+    </member>
+    <member name="P:System.TimeZoneInfo.BaseUtcOffset">
+      <summary>Ruft den Zeitunterschied zwischen der Standardzeit der aktuellen Zeitzone und der Coordinated Universal Time (UTC) ab.</summary>
+      <returns>Ein Objekt, das den Zeitunterschied zwischen der Standardzeit der aktuellen Zeitzone und der Coordinated Universal Time (UTC) angibt.</returns>
+    </member>
+    <member name="M:System.TimeZoneInfo.ConvertTime(System.DateTime,System.TimeZoneInfo)">
+      <summary>Konvertiert eine Zeit in die Zeit in einer bestimmten Zeitzone.</summary>
+      <returns>Das Datum und die Uhrzeit in der Zielzeitzone.</returns>
+      <param name="dateTime">Das Datum und die Uhrzeit, die konvertiert werden sollen.   </param>
+      <param name="destinationTimeZone">Die Zeitzone, in die <paramref name="dateTime" /> konvertiert werden soll.</param>
+      <exception cref="T:System.ArgumentException">Der Wert des <paramref name="dateTime" />-Parameters stellt eine ungültige Zeit dar.</exception>
+      <exception cref="T:System.ArgumentNullException">Der Wert des <paramref name="destinationTimeZone" />-Parameters ist null.</exception>
+    </member>
+    <member name="M:System.TimeZoneInfo.ConvertTime(System.DateTime,System.TimeZoneInfo,System.TimeZoneInfo)">
+      <summary>Konvertiert eine Zeit aus einer Zeitzone in ein andere.</summary>
+      <returns>Das Datum und die Uhrzeit in der Zielzeitzone, die dem <paramref name="dateTime" />-Parameter in der Quellzeitzone entsprechen.</returns>
+      <param name="dateTime">Das Datum und die Uhrzeit, die konvertiert werden sollen.</param>
+      <param name="sourceTimeZone">Die Zeitzone von <paramref name="dateTime" />.</param>
+      <param name="destinationTimeZone">Die Zeitzone, in die <paramref name="dateTime" /> konvertiert werden soll.</param>
+      <exception cref="T:System.ArgumentException">Die <see cref="P:System.DateTime.Kind" />-Eigenschaft des <paramref name="dateTime" />-Parameters ist <see cref="F:System.DateTimeKind.Local" />, der <paramref name="sourceTimeZone" />-Parameter entspricht jedoch nicht <see cref="F:System.DateTimeKind.Local" />.Weitere Informationen finden Sie im Abschnitt "Hinweise".- oder -Die <see cref="P:System.DateTime.Kind" />-Eigenschaft des <paramref name="dateTime" />-Parameters ist <see cref="F:System.DateTimeKind.Utc" />, der <paramref name="sourceTimeZone" />-Parameter entspricht jedoch nicht <see cref="P:System.TimeZoneInfo.Utc" />.- oder -Der <paramref name="dateTime" />-Parameter ist eine ungültige Zeit (d. h. er stellt eine Zeit dar, die aufgrund der Anpassungsregeln einer Zeitzone nicht vorhanden ist).</exception>
+      <exception cref="T:System.ArgumentNullException">Der <paramref name="sourceTimeZone" />-Parameter ist null.- oder -Der <paramref name="destinationTimeZone" />-Parameter ist null.</exception>
+    </member>
+    <member name="M:System.TimeZoneInfo.ConvertTime(System.DateTimeOffset,System.TimeZoneInfo)">
+      <summary>Konvertiert eine Zeit in die Zeit in einer bestimmten Zeitzone.</summary>
+      <returns>Das Datum und die Uh

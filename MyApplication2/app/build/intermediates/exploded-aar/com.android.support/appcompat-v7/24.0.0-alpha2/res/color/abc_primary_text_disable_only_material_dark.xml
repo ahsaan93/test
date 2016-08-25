@@ -1,0 +1,13 @@
+e la columna que se acaba de construir.</returns>
+      <param name="nullable">Valor que indica si la columna admite o no valores NULL.</param>
+      <param name="precision">Precisión de la columna.</param>
+      <param name="defaultValue">Valor constante que se va usar como valor predeterminado para esta columna.</param>
+      <param name="defaultValueSql">Expresión de SQL que se usa como valor predeterminado para esta columna.</param>
+      <param name="name">Nombre de la columna.</param>
+      <param name="storeType">Tipo de datos específico del proveedor de bases de datos que se va a usar en esta columna.</param>
+    </member>
+    <member name="M:System.Data.Entity.Migrations.Builders.ColumnBuilder.ToString">
+      <summary>Devuelve una cadena que representa el objeto actual.</summary>
+      <returns>Cadena que representa el objeto actual.</returns>
+    </member>
+    <member name="T:System.Data

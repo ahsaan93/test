@@ -1,0 +1,112 @@
+ding.Tasks.Task`1" /> 完成時執行的接續工作。</summary>
+      <returns>新的接續 <see cref="T:System.Threading.Tasks.Task" />。</returns>
+      <param name="continuationAction">當 <see cref="T:System.Threading.Tasks.Task`1" /> 完成時要執行的動作。當執行時，完成的工作會傳遞至委派，並以呼叫端提供狀態的物件做為引數。</param>
+      <param name="state">物件，表示接續動作所使用的資料。</param>
+      <param name="cancellationToken">要指派給新接續工作的 <see cref="T:System.Threading.CancellationToken" />。</param>
+      <exception cref="T:System.ArgumentNullException">The <paramref name="continuationAction" /> argument is null.</exception>
+      <exception cref="T:System.ObjectDisposedException">The provided <see cref="T:System.Threading.CancellationToken" /> has already been disposed.</exception>
+    </member>
+    <member name="M:System.Threading.Tasks.Task`1.ContinueWith(System.Action{System.Threading.Tasks.Task{`0},System.Object},System.Object,System.Threading.CancellationToken,System.Threading.Tasks.TaskContinuationOptions,System.Threading.Tasks.TaskScheduler)">
+      <summary>建立目標 <see cref="T:System.Threading.Tasks.Task`1" /> 完成時執行的接續工作。</summary>
+      <returns>新的接續 <see cref="T:System.Threading.Tasks.Task" />。</returns>
+      <param name="continuationAction">當 <see cref="T:System.Threading.Tasks.Task`1" /> 完成時要執行的動作。當執行時，完成的工作會傳遞至委派，並以呼叫端提供狀態的物件做為引數。</param>
+      <param name="state">物件，表示接續動作所使用的資料。</param>
+      <param name="cancellationToken">要指派給新接續工作的 <see cref="T:System.Threading.CancellationToken" />。</param>
+      <param name="continuationOptions">接續工作的排程時間及其行為方式的適用選項。這包含準則 (如 <see cref="F:System.Threading.Tasks.TaskContinuationOptions.OnlyOnCanceled" />) 和執行選項 (如 <see cref="F:System.Threading.Tasks.TaskContinuationOptions.ExecuteSynchronously" />)。</param>
+      <param name="scheduler">要與接續工作產生關聯且於執行時使用的 <see cref="T:System.Threading.Tasks.TaskScheduler" />。</param>
+      <exception cref="T:System.ArgumentNullException">The <paramref name="continuationAction" /> argument is null.</exception>
+      <exception cref="T:System.ArgumentOutOfRangeException">The <paramref name="continuationOptions" /> argument specifies an invalid value for <see cref="T:System.Threading.Tasks.TaskContinuationOptions" />.</exception>
+      <exception cref="T:System.ArgumentNullException">The <paramref name="scheduler" /> argument is null.</exception>
+      <exception cref="T:System.ObjectDisposedException">The provided <see cref="T:System.Threading.CancellationToken" /> has already been disposed.</exception>
+    </member>
+    <member name="M:System.Threading.Tasks.Task`1.ContinueWith(System.Action{System.Threading.Tasks.Task{`0},System.Object},System.Object,System.Threading.Tasks.TaskContinuationOptions)">
+      <summary>建立目標 <see cref="T:System.Threading.Tasks.Task`1" /> 完成時執行的接續工作。</summary>
+      <returns>新的接續 <see cref="T:System.Threading.Tasks.Task" />。</returns>
+      <param name="continuationAction">當 <see cref="T:System.Threading.Tasks.Task`1" /> 完成時要執行的動作。當執行時，完成的工作會傳遞至委派，並以呼叫端提供狀態的物件做為引數。</param>
+      <param name="state">物件，表示接續動作所使用的資料。</param>
+      <param name="continuationOptions">接續工作的排程時間及其行為方式的適用選項。這包含準則 (如 <see cref="F:System.Threading.Tasks.TaskContinuationOptions.OnlyOnCanceled" />) 和執行選項 (如 <see cref="F:System.Threading.Tasks.TaskContinuationOptions.ExecuteSynchronously" />)。</param>
+      <exception cref="T:System.ArgumentNullException">The <paramref name="continuationAction" /> argument is null.</exception>
+      <exception cref="T:System.ArgumentOutOfRangeException">The <paramref name="continuationOptions" /> argument specifies an invalid value for <see cref="T:System.Threading.Tasks.TaskContinuationOptions" />.</exception>
+    </member>
+    <member name="M:System.Threading.Tasks.Task`1.ContinueWith(System.Action{System.Threading.Tasks.Task{`0},System.Object},System.Object,System.Threading.Tasks.TaskScheduler)">
+      <summary>建立目標 <see cref="T:System.Threading.Tasks.Task`1" /> 完成時執行的接續工作。</summary>
+      <returns>新的接續 <see cref="T:System.Threading.Tasks.Task" />。</returns>
+      <param name="continuationAction">當 <see cref="T:System.Threading.Tasks.Task`1" /> 完成時要執行的動作。當執行時，完成的工作會傳遞至委派，並以呼叫端提供狀態的物件做為引數。</param>
+      <param name="state">物件，表示接續動作所使用的資料。</param>
+      <param name="scheduler">要與接續工作產生關聯且於執行時使用的 <see cref="T:System.Threading.Tasks.TaskScheduler" />。</param>
+      <exception cref="T:System.ArgumentNullException">The <paramref name="continuationAction" /> argument is null. </exception>
+      <exception cref="T:System.ArgumentNullException">The <paramref name="scheduler" /> argument is null. </exception>
+    </member>
+    <member name="M:System.Threading.Tasks.Task`1.ContinueWith``1(System.Func{System.Threading.Tasks.Task{`0},``0})">
+      <summary>建立當目標 <see cref="T:System.Threading.Tasks.Task`1" /> 完成時非同步執行的接續。</summary>
+      <returns>新的接續 <see cref="T:System.Threading.Tasks.Task`1" />。</returns>
+      <param name="continuationFunction">當 <see cref="T:System.Threading.Tasks.Task`1" /> 完成時要執行的函式。執行時，會將已完成的工作當做引數傳遞給委派。</param>
+      <typeparam name="TNewResult"> 接續作業所產生的結果類型。</typeparam>
+      <exception cref="T:System.ObjectDisposedException">The <see cref="T:System.Threading.Tasks.Task`1" /> has been disposed.</exception>
+      <exception cref="T:System.ArgumentNullException">The <paramref name="continuationFunction" /> argument is null.</exception>
+    </member>
+    <member name="M:System.Threading.Tasks.Task`1.ContinueWith``1(System.Func{System.Threading.Tasks.Task{`0},``0},System.Threading.CancellationToken)">
+      <summary>建立當目標 <see cref="T:System.Threading.Tasks.Task`1" /> 完成時非同步執行的接續。</summary>
+      <returns>新的接續 <see cref="T:System.Threading.Tasks.Task`1" />。</returns>
+      <param name="continuationFunction">當 <see cref="T:System.Threading.Tasks.Task`1" /> 完成時要執行的函式。執行時，會將已完成的工作當做引數傳遞給委派。</param>
+      <param name="cancellationToken">要指派給新工作的 <see cref="T:System.Threading.CancellationToken" />。</param>
+      <typeparam name="TNewResult"> 接續作業所產生的結果類型。</typeparam>
+      <exception cref="T:System.ObjectDisposedException">The <see cref="T:System.Threading.Tasks.Task`1" /> has been disposed.-or-The <see cref="T:System.Threading.CancellationTokenSource" /> that created<paramref name=" cancellationToken" /> has already been disposed.</exception>
+      <exception cref="T:System.ArgumentNullException">The <paramref name="continuationFunction" /> argument is null.</exception>
+    </member>
+    <member name="M:System.Threading.Tasks.Task`1.ContinueWith``1(System.Func{System.Threading.Tasks.Task{`0},``0},System.Threading.CancellationToken,System.Threading.Tasks.TaskContinuationOptions,System.Threading.Tasks.TaskScheduler)">
+      <summary>建立會根據 <paramref name="continuationOptions" /> 中指定的條件執行的接續。</summary>
+      <returns>新的接續 <see cref="T:System.Threading.Tasks.Task`1" />。</returns>
+      <param name="continuationFunction">要根據 <paramref name="continuationOptions" /> 中指定之條件執行的函式。執行時，會將這個完成的工作當做引數傳遞給委派。</param>
+      <param name="cancellationToken">要指派給新工作的 <see cref="T:System.Threading.CancellationToken" />。</param>
+      <param name="continuationOptions">接續工作的排程時間及其行為方式的適用選項。這包含準則 (如 <see cref="F:System.Threading.Tasks.TaskContinuationOptions.OnlyOnCanceled" />) 和執行選項 (如 <see cref="F:System.Threading.Tasks.TaskContinuationOptions.ExecuteSynchronously" />)。</param>
+      <param name="scheduler">要與接續工作產生關聯且於執行時使用的 <see cref="T:System.Threading.Tasks.TaskScheduler" />。</param>
+      <typeparam name="TNewResult"> 接續作業所產生的結果類型。</typeparam>
+      <exception cref="T:System.ObjectDisposedException">The <see cref="T:System.Threading.Tasks.Task`1" /> has been disposed.-or-The <see cref="T:System.Threading.CancellationTokenSource" /> that created<paramref name=" cancellationToken" /> has already been disposed.</exception>
+      <exception cref="T:System.ArgumentNullException">The <paramref name="continuationFunction" /> argument is null.-or-The <paramref name="scheduler" /> argument is null.</exception>
+      <exception cref="T:System.ArgumentOutOfRangeException">The <paramref name="continuationOptions" /> argument specifies an invalid value for <see cref="T:System.Threading.Tasks.TaskContinuationOptions" />.</exception>
+    </member>
+    <member name="M:System.Threading.Tasks.Task`1.ContinueWith``1(System.Func{System.Threading.Tasks.Task{`0},``0},System.Threading.Tasks.TaskContinuationOptions)">
+      <summary>建立會根據 <paramref name="continuationOptions" /> 中指定的條件執行的接續。</summary>
+      <returns>新的接續 <see cref="T:System.Threading.Tasks.Task`1" />。</returns>
+      <param name="continuationFunction">要根據 <paramref name="continuationOptions" /> 中指定之條件執行的函式。執行時，會將已完成的工作當做引數傳遞給委派。</param>
+      <param name="continuationOptions">接續工作的排程時間及其行為方式的適用選項。這包含準則 (如 <see cref="F:System.Threading.Tasks.TaskContinuationOptions.OnlyOnCanceled" />) 和執行選項 (如 <see cref="F:System.Threading.Tasks.TaskContinuationOptions.ExecuteSynchronously" />)。</param>
+      <typeparam name="TNewResult"> 接續作業所產生的結果類型。</typeparam>
+      <exception cref="T:System.ObjectDisposedException">The <see cref="T:System.Threading.Tasks.Task`1" /> has been disposed.</exception>
+      <exception cref="T:System.ArgumentNullException">The <paramref name="continuationFunction" /> argument is null.</exception>
+      <exception cref="T:System.ArgumentOutOfRangeException">The <paramref name="continuationOptions" /> argument specifies an invalid value for <see cref="T:System.Threading.Tasks.TaskContinuationOptions" />.</exception>
+    </member>
+    <member name="M:System.Threading.Tasks.Task`1.ContinueWith``1(System.Func{System.Threading.Tasks.Task{`0},``0},System.Threading.Tasks.TaskScheduler)">
+      <summary>建立當目標 <see cref="T:System.Threading.Tasks.Task`1" /> 完成時非同步執行的接續。</summary>
+      <returns>新的接續 <see cref="T:System.Threading.Tasks.Task`1" />。</returns>
+      <param name="continuationFunction">當 <see cref="T:System.Threading.Tasks.Task`1" /> 完成時要執行的函式。執行時，會將已完成的工作當做引數傳遞給委派。</param>
+      <param name="scheduler">要與接續工作產生關聯且於執行時使用的 <see cref="T:System.Threading.Tasks.TaskScheduler" />。</param>
+      <typeparam name="TNewResult"> 接續作業所產生的結果類型。</typeparam>
+      <exception cref="T:System.ObjectDisposedException">The <see cref="T:System.Threading.Tasks.Task`1" /> has been disposed.</exception>
+      <exception cref="T:System.ArgumentNullException">The <paramref name="continuationFunction" /> argument is null.-or-The <paramref name="scheduler" /> argument is null.</exception>
+    </member>
+    <member name="M:System.Threading.Tasks.Task`1.ContinueWith``1(System.Func{System.Threading.Tasks.Task{`0},System.Object,``0},System.Object)">
+      <summary>建立目標 <see cref="T:System.Threading.Tasks.Task`1" /> 完成時執行的接續工作。</summary>
+      <returns>新的接續 <see cref="T:System.Threading.Tasks.Task`1" />。</returns>
+      <param name="continuationFunction">當 <see cref="T:System.Threading.Tasks.Task`1" /> 完成時要執行的函式。當執行時，完成的工作會傳遞至委派，並以呼叫端提供狀態的物件做為引數。</param>
+      <param name="state">物件，表示接續函式所使用的資料。</param>
+      <typeparam name="TNewResult">接續作業所產生的結果類型。</typeparam>
+      <exception cref="T:System.ArgumentNullException">The <paramref name="continuationFunction" /> argument is null.</exception>
+    </member>
+    <member name="M:System.Threading.Tasks.Task`1.ContinueWith``1(System.Func{System.Threading.Tasks.Task{`0},System.Object,``0},System.Object,System.Threading.CancellationToken)">
+      <summary>建立目標 <see cref="T:System.Threading.Tasks.Task`1" /> 完成時執行的接續工作。</summary>
+      <returns>新的接續 <see cref="T:System.Threading.Tasks.Task`1" />。</returns>
+      <param name="continuationFunction">當 <see cref="T:System.Threading.Tasks.Task`1" /> 完成時要執行的函式。當執行時，完成的工作會傳遞至委派，並以呼叫端提供狀態的物件做為引數。</param>
+      <param name="state">物件，表示接續函式所使用的資料。</param>
+      <param name="cancellationToken">要指派給新工作的 <see cref="T:System.Threading.CancellationToken" />。</param>
+      <typeparam name="TNewResult">接續作業所產生的結果類型。</typeparam>
+      <exception cref="T:System.ArgumentNullException">The <paramref name="continuationFunction" /> argument is null.</exception>
+      <exception cref="T:System.ObjectDisposedException">The provided <see cref="T:System.Threading.CancellationToken" /> has already been disposed.</exception>
+    </member>
+    <member name="M:System.Threading.Tasks.Task`1.ContinueWith``1(System.Func{System.Threading.Tasks.Task{`0},System.Object,``0},System.Object,System.Threading.CancellationToken,System.Threading.Tasks.TaskContinuationOptions,System.Threading.Tasks.TaskScheduler)">
+      <summary>建立目標 <see cref="T:System.Threading.Tasks.Task`1" /> 完成時執行的接續工作。</summary>
+      <returns>新的接續 <see cref="T:System.Threading.Tasks.Task`1" />。</returns>
+      <param name="continuationFunction">當 <see cref="T:System.Threading.Tasks.Task`1" /> 完成時要執行的函式。當執行時，完成的工作會傳遞至委派，並以呼叫端提供狀態的物件做為引數。</param>
+      <param name="state">物件，表示接續函式所使用的資料。</param>
+      <param name="cancellationToken">要指派給新工作的 <see cref="T:System.Threading.CancellationToken" />。</param>
+      <param name="conti

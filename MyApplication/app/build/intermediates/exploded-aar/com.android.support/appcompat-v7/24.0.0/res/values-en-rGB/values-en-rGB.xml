@@ -1,0 +1,29 @@
+ht die Oberfläche von &quot;PropertyMetadata&quot; in WPF und Silverlight. Stellt die erforderliche Benachrichtigung zum Rendern, Anordnen und Messen bereit.
+            </summary>
+        </member>
+        <member name="M:Microsoft.Expression.Media.DrawingPropertyMetadata.#ctor(Microsoft.Expression.Media.DrawingPropertyMetadataOptions,System.Object)">
+            <summary>
+            Dieses private &quot;Ctor&quot; darf nur von &quot;AttachCallback&quot; verwendet werden.
+            </summary>
+        </member>
+        <member name="M:Microsoft.Expression.Media.DrawingPropertyMetadata.AttachCallback(System.Object,Microsoft.Expression.Media.DrawingPropertyMetadataOptions,System.Windows.PropertyChangedCallback)">
+            <summary>
+            &quot;InternalCallback()&quot; wird verkettet, um die Instanz von &quot;DrawingPropertyMetadata&quot; an Eigenschaftsrückruf anzufügen. In Silverlight werden die Eigenschaftsmetadaten nach dem Festlegen verworfen. Rückruf wird zum Speichern verwendet.
+            </summary>
+        </member>
+        <member name="M:Microsoft.Expression.Media.DrawingPropertyMetadata.InternalCallback(System.Windows.DependencyObject,System.Windows.DependencyPropertyChangedEventArgs)">
+            <summary>
+            Vor dem Verketten des ursprünglichen Rückrufs wird &quot;DrawingPropertyChangedEvent&quot; ausgelöst.
+            </summary>
+        </member>
+        <member name="T:Microsoft.Expression.Drawing.Core.GeometryHelper">
+            <summary>
+            Erweiterungsmethoden für geometriebezogene Datenstrukturen (Punkt/Vektor/Größe/Rechteck).
+            </summary>
+        </member>
+        <member name="M:Microsoft.Expression.Drawing.Core.GeometryHelper.Resize(System.Windows.Rect,System.Double)">
+            <summary>
+            Passt die Größe des Rechtecks an die relative Größe an, wobei der Mittelpunkt invariant bleibt.
+            </summary>
+        </member>
+        <member name="M:Microsoft.Expression.Drawing.Core.GeometryHelper.Subtract(System.Windows.Point,Sy

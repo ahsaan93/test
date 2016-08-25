@@ -1,0 +1,7 @@
+ary>Genera código para realizar una <see cref="T:System.Data.Entity.Migrations.Model.AddForeignKeyOperation" /> como parte de una <see cref="T:System.Data.Entity.Migrations.Model.CreateTableOperation" />.</summary>
+      <param name="addForeignKeyOperation">Operación para la que se va a generar el código.</param>
+      <param name="writer">Escritor de texto al que se va agregar el código generado.</param>
+    </member>
+    <member name="M:System.Data.Entity.Migrations.Design.CSharpMigrationCodeGenerator.GenerateInline(System.Data.Entity.Migrations.Model.AddPrimaryKeyOperation,System.Data.Entity.Migrations.Utilities.IndentedTextWriter)">
+      <summary>Genera código para realizar una <see cref="T:System.Data.Entity.Migrations.Model.AddPrimaryKeyOperation" /> como parte de una <see cref="T:System.Data.Entity.Migrations.Model.CreateTableOperation" />.</summary>
+      <param name="addPrimaryKeyOperation">Ope

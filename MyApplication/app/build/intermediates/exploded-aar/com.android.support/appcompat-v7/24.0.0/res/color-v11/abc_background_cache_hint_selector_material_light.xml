@@ -1,0 +1,10 @@
+me="min">The minimum number of times that the item can be repeated.</param>
+      <param name="max">The maximum number of times that the item can be repeated.</param>
+      <param name="text">The text associated with the item.</param>
+      <exception cref="ArgumentOutOfRangeException">
+        <paramref name="min" /> is negative or larger than 255.<paramref name="max" /> is negative or larger than 255.</exception>
+      <exception cref="ArgumentException">
+        <paramref name="min" /> is larger than <paramref name="max" />.</exception>
+    </member>
+    <member name="M:System.Speech.Recognition.SrgsGrammar.SrgsItem.#ctor(System.Speech.Recognition.SrgsGrammar.SrgsElement[])">
+      <summary>Initializes a new instance of the <see cref="SrgsItem" /> class, specifying an array of <see cref="T:System.Speech.Recognition.SrgsGrammar.SrgsElement" /> objects to be added to this instance.<

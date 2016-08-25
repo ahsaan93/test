@@ -1,0 +1,149 @@
+ <paramref name="t2" /> ist, andernfalls false.</returns>
+      <param name="t1">Das erste zu vergleichende Zeitintervall.</param>
+      <param name="t2">Das zweite zu vergleichende Zeitintervall. </param>
+      <filterpriority>3</filterpriority>
+    </member>
+    <member name="M:System.TimeSpan.op_LessThanOrEqual(System.TimeSpan,System.TimeSpan)">
+      <summary>Gibt an, ob eine angegebene <see cref="T:System.TimeSpan" /> kleiner oder gleich einer anderen angegebenen <see cref="T:System.TimeSpan" /> ist.</summary>
+      <returns>true wenn der Wert von <paramref name="t1" /> kleiner oder gleich dem Wert von <paramref name="t2" /> ist, andernfalls false.</returns>
+      <param name="t1">Das erste zu vergleichende Zeitintervall. </param>
+      <param name="t2">Das zweite zu vergleichende Zeitintervall. </param>
+      <filterpriority>3</filterpriority>
+    </member>
+    <member name="M:System.TimeSpan.op_Subtraction(System.TimeSpan,System.TimeSpan)">
+      <summary>Subtrahiert eine angegebene <see cref="T:System.TimeSpan" /> von einer anderen angegebenen <see cref="T:System.TimeSpan" />.</summary>
+      <returns>Ein Objekt, dessen Wert das Ergebnis des Werts von <paramref name="t1" /> minus dem Wert von <paramref name="t2" /> ist.</returns>
+      <param name="t1">Der Minuend. </param>
+      <param name="t2">Der Subtrahend. </param>
+      <exception cref="T:System.OverflowException">The return value is less than <see cref="F:System.TimeSpan.MinValue" /> or greater than <see cref="F:System.TimeSpan.MaxValue" />. </exception>
+      <filterpriority>3</filterpriority>
+    </member>
+    <member name="M:System.TimeSpan.op_UnaryNegation(System.TimeSpan)">
+      <summary>Gibt eine <see cref="T:System.TimeSpan" /> zurück, deren Wert der negierte Wert der angegebenen Instanz ist.</summary>
+      <returns>Ein Objekt mit demselben numerischen Wert wie diese Instanz, jedoch mit umgekehrtem Vorzeichen.</returns>
+      <param name="t">Das Zeitintervall, das negiert werden soll. </param>
+      <exception cref="T:System.OverflowException">The negated value of this instance cannot be represented by a <see cref="T:System.TimeSpan" />; that is, the value of this instance is <see cref="F:System.TimeSpan.MinValue" />. </exception>
+      <filterpriority>3</filterpriority>
+    </member>
+    <member name="M:System.TimeSpan.op_UnaryPlus(System.TimeSpan)">
+      <summary>Gibt die angegebene Instanz von <see cref="T:System.TimeSpan" /> zurück.</summary>
+      <returns>Das von <paramref name="t" /> angegebene Zeitintervall.</returns>
+      <param name="t">Das Zeitintervall, das zurückgegeben werden soll. </param>
+      <filterpriority>3</filterpriority>
+    </member>
+    <member name="M:System.TimeSpan.Parse(System.String)">
+      <summary>Konvertiert die Zeichenfolgendarstellung eines Zeitintervalls in die entsprechende <see cref="T:System.TimeSpan" />. </summary>
+      <returns>Ein Zeitintervall, das <paramref name="s" /> entspricht.</returns>
+      <param name="s">Eine Zeichenfolge, die das zu konvertierende Zeitintervall angibt. </param>
+      <exception cref="T:System.ArgumentNullException">
+        <paramref name="s" /> is null. </exception>
+      <exception cref="T:System.FormatException">
+        <paramref name="s" /> has an invalid format. </exception>
+      <exception cref="T:System.OverflowException">
+        <paramref name="s" /> represents a number that is less than <see cref="F:System.TimeSpan.MinValue" /> or greater than <see cref="F:System.TimeSpan.MaxValue" />.-or- At least one of the days, hours, minutes, or seconds components is outside its valid range. </exception>
+      <filterpriority>1</filterpriority>
+    </member>
+    <member name="M:System.TimeSpan.Parse(System.String,System.IFormatProvider)">
+      <summary>Konvertiert die Zeichenfolgendarstellung eines Zeitintervalls unter Verwendung der angegebenen kulturspezifischen Formatierungsinformationen in die entsprechende <see cref="T:System.TimeSpan" />.</summary>
+      <returns>Ein Zeitintervall, das <paramref name="input" /> entspricht, wie von <paramref name="formatProvider" /> angegeben.</returns>
+      <param name="input">Eine Zeichenfolge, die das zu konvertierende Zeitintervall angibt.</param>
+      <param name="formatProvider">Ein Objekt, das kulturspezifische Formatierungsinformationen bereitstellt.</param>
+      <exception cref="T:System.ArgumentNullException">
+        <paramref name="input" /> is null. </exception>
+      <exception cref="T:System.FormatException">
+        <paramref name="input" /> has an invalid format. </exception>
+      <exception cref="T:System.OverflowException">
+        <paramref name="input" /> represents a number that is less than <see cref="F:System.TimeSpan.MinValue" /> or greater than <see cref="F:System.TimeSpan.MaxValue" />.-or- At least one of the days, hours, minutes, or seconds components in <paramref name="input" /> is outside its valid range. </exception>
+    </member>
+    <member name="M:System.TimeSpan.ParseExact(System.String,System.String,System.IFormatProvider)">
+      <summary>Konvertiert die Zeichenfolgendarstellung eines Zeitintervalls unter Verwendung des angegebenen Formats und der kulturspezifischen Formatierungsinformationen in die entsprechende <see cref="T:System.TimeSpan" />.Das Format der Zeichenfolgendarstellung muss dem angegebenen Format genau entsprechen.</summary>
+      <returns>Ein Zeitintervall, das <paramref name="input" /> entspricht, wie von <paramref name="format" /> und <paramref name="formatProvider" /> angegeben.</returns>
+      <param name="input">Eine Zeichenfolge, die das zu konvertierende Zeitintervall angibt.</param>
+      <param name="format">Eine standardmäßige oder benutzerdefinierte Formatierungszeichenfolge, die das erforderliche Format von <paramref name="input" /> definiert.</param>
+      <param name="formatProvider">Ein Objekt, das kulturspezifische Formatierungsinformationen bereitstellt.</param>
+      <exception cref="T:System.ArgumentNullException">
+        <paramref name="input" /> is null. </exception>
+      <exception cref="T:System.FormatException">
+        <paramref name="input" /> has an invalid format. </exception>
+      <exception cref="T:System.OverflowException">
+        <paramref name="input" /> represents a number that is less than <see cref="F:System.TimeSpan.MinValue" /> or greater than <see cref="F:System.TimeSpan.MaxValue" />.-or- At least one of the days, hours, minutes, or seconds components in <paramref name="input" /> is outside its valid range. </exception>
+    </member>
+    <member name="M:System.TimeSpan.ParseExact(System.String,System.String,System.IFormatProvider,System.Globalization.TimeSpanStyles)">
+      <summary>Konvertiert die Zeichenfolgendarstellung eines Zeitintervalls unter Verwendung des angegebenen Formats, der kulturspezifischen Formatierungsinformationen und Stile in die entsprechende <see cref="T:System.TimeSpan" />.Das Format der Zeichenfolgendarstellung muss dem angegebenen Format genau entsprechen.</summary>
+      <returns>Ein Zeitintervall, das <paramref name="input" /> entspricht, wie von <paramref name="format" />, <paramref name="formatProvider" /> und <paramref name="styles" /> angegeben.</returns>
+      <param name="input">Eine Zeichenfolge, die das zu konvertierende Zeitintervall angibt.</param>
+      <param name="format">Eine standardmäßige oder benutzerdefinierte Formatierungszeichenfolge, die das erforderliche Format von <paramref name="input" /> definiert.</param>
+      <param name="formatProvider">Ein Objekt, das kulturspezifische Formatierungsinformationen bereitstellt.</param>
+      <param name="styles">Eine bitweise Kombination von Enumerationswerten, die die Stilelemente definiert, die in der <paramref name="input" /> vorhanden sein können.</param>
+      <exception cref="T:System.ArgumentException">
+        <paramref name="styles" /> is an invalid <see cref="T:System.Globalization.TimeSpanStyles" /> value.</exception>
+      <exception cref="T:System.ArgumentNullException">
+        <paramref name="input" /> is null. </exception>
+      <exception cref="T:System.FormatException">
+        <paramref name="input" /> has an invalid format. </exception>
+      <exception cref="T:System.OverflowException">
+        <paramref name="input" /> represents a number that is less than <see cref="F:System.TimeSpan.MinValue" /> or greater than <see cref="F:System.TimeSpan.MaxValue" />.-or- At least one of the days, hours, minutes, or seconds components in <paramref name="input" /> is outside its valid range. </exception>
+    </member>
+    <member name="M:System.TimeSpan.ParseExact(System.String,System.String[],System.IFormatProvider)">
+      <summary>Konvertiert die Zeichenfolgendarstellung eines Zeitintervalls unter Verwendung des angegebenen Arrays von Formatierungszeichenfolgen und der kulturspezifischen Formatierungsinformationen in die entsprechende <see cref="T:System.TimeSpan" />.Das Format der Zeichenfolgendarstellung muss einem der angegebenen Formate genau entsprechen.</summary>
+      <returns>Ein Zeitintervall, das <paramref name="input" /> entspricht, wie von <paramref name="formats" /> und <paramref name="formatProvider" /> angegeben.</returns>
+      <param name="input">Eine Zeichenfolge, die das zu konvertierende Zeitintervall angibt.</param>
+      <param name="formats">Ein Array standardmäßiger oder benutzerdefinierter Formatierungszeichenfolgen, das das erforderliche Format von <paramref name="input" /> definiert.</param>
+      <param name="formatProvider">Ein Objekt, das kulturspezifische Formatierungsinformationen bereitstellt.</param>
+      <exception cref="T:System.ArgumentNullException">
+        <paramref name="input" /> is null. </exception>
+      <exception cref="T:System.FormatException">
+        <paramref name="input" /> has an invalid format. </exception>
+      <exception cref="T:System.OverflowException">
+        <paramref name="input" /> represents a number that is less than <see cref="F:System.TimeSpan.MinValue" /> or greater than <see cref="F:System.TimeSpan.MaxValue" />.-or- At least one of the days, hours, minutes, or seconds components in <paramref name="input" /> is outside its valid range. </exception>
+    </member>
+    <member name="M:System.TimeSpan.ParseExact(System.String,System.String[],System.IFormatProvider,System.Globalization.TimeSpanStyles)">
+      <summary>Konvertiert die Zeichenfolgendarstellung eines Zeitintervalls unter Verwendung der angegebenen Formate, der kulturspezifischen Formatierungsinformationen und Stile in die entsprechende <see cref="T:System.TimeSpan" />.Das Format der Zeichenfolgendarstellung muss einem der angegebenen Formate genau entsprechen.</summary>
+      <returns>Ein Zeitintervall, das <paramref name="input" /> entspricht, wie von <paramref name="formats" />, <paramref name="formatProvider" /> und <paramref name="styles" /> angegeben.</returns>
+      <param name="input">Eine Zeichenfolge, die das zu konvertierende Zeitintervall angibt.</param>
+      <param name="formats">Ein Array standardmäßiger oder benutzerdefinierter Formatierungszeichenfolgen, das das erforderliche Format von <paramref name="input" /> definiert.</param>
+      <param name="formatProvider">Ein Objekt, das kulturspezifische Formatierungsinformationen bereitstellt.</param>
+      <param name="styles">Eine bitweise Kombination von Enumerationswerten, die die Stilelemente definiert, die in der Eingabe vorhanden sein können.</param>
+      <exception cref="T:System.ArgumentException">
+        <paramref name="styles" /> is an invalid <see cref="T:System.Globalization.TimeSpanStyles" /> value.</exception>
+      <exception cref="T:System.ArgumentNullException">
+        <paramref name="input" /> is null. </exception>
+      <exception cref="T:System.FormatException">
+        <paramref name="input" /> has an invalid format. </exception>
+      <exception cref="T:System.OverflowException">
+        <paramref name="input" /> represents a number that is less than <see cref="F:System.TimeSpan.MinValue" /> or greater than <see cref="F:System.TimeSpan.MaxValue" />.-or- At least one of the days, hours, minutes, or seconds components in <paramref name="input" /> is outside its valid range. </exception>
+    </member>
+    <member name="P:System.TimeSpan.Seconds">
+      <summary>Ruft die Sekundenkomponente des Zeitintervalls ab, das durch die aktuelle <see cref="T:System.TimeSpan" />-Struktur dargestellt wird.</summary>
+      <returns>Die Sekundenkomponente der aktuellen <see cref="T:System.TimeSpan" />-Struktur.Der Rückgabewert liegt im Bereich von -59 bis 59.</returns>
+      <filterpriority>1</filterpriority>
+    </member>
+    <member name="M:System.TimeSpan.Subtract(System.TimeSpan)">
+      <summary>Gibt ein neues <see cref="T:System.TimeSpan" />-Objekt zurück, dessen Wert die Differenz zwischen dem angegebenen <see cref="T:System.TimeSpan" />-Objekt und dieser Instanz ist.</summary>
+      <returns>Ein neues Zeitintervall, dessen Wert das Ergebnis der Subtraktion des Werts von <paramref name="ts" /> vom Wert dieser Instanz ist.</returns>
+      <param name="ts">Das Zeitintervall, das subtrahiert werden soll. </param>
+      <exception cref="T:System.OverflowException">The return value is less than <see cref="F:System.TimeSpan.MinValue" /> or greater than <see cref="F:System.TimeSpan.MaxValue" />. </exception>
+      <filterpriority>1</filterpriority>
+    </member>
+    <member name="M:System.TimeSpan.System#IComparable#CompareTo(System.Object)">
+      <summary>Vergleicht die aktuelle Instanz mit einem anderen Objekt vom selben Typ und gibt eine Ganzzahl zurück, die angibt, ob die aktuelle Instanz in der Sortierreihenfolge vor oder nach dem anderen Objekt oder an derselben Position auftritt.</summary>
+      <returns>Eine Ganzzahl mit Vorzeichen, die die relative Reihenfolge dieser Instanz und <paramref name="value" /> angibt.Rückgabewert Bedeutung Kleiner als 0 (null) Diese Instanz befindet sich in der Sortierreihenfolge vor <paramref name="value" />.Zero Diese Instanz tritt an der gleichen Position wie <paramref name="value" /> in der Sortierreihenfolge auf.Größer als 0 (null) Diese Instanz folgt in der Sortierreihenfolge auf <paramref name="value" />.- oder -  <paramref name="value" /> ist null. </returns>
+      <param name="value">Ein Objekt, das mit dieser Instanz verglichen werden soll, oder null.</param>
+      <exception cref="T:System.ArgumentException">
+        <paramref name="value" /> is not a <see cref="T:System.TimeSpan" /> object. </exception>
+    </member>
+    <member name="P:System.TimeSpan.Ticks">
+      <summary>Ruft die Anzahl der Ticks ab, die den Wert der aktuellen <see cref="T:System.TimeSpan" />-Struktur darstellt.</summary>
+      <returns>Die Anzahl der Ticks in dieser Instanz.</returns>
+      <filterpriority>1</filterpriority>
+    </member>
+    <member name="F:System.TimeSpan.TicksPerDay">
+      <summary>Stellt die Anzahl der Ticks pro Tag dar.Dieses Feld ist konstant.</summary>
+      <filterpriority>1</filterpriority>
+    </member>
+    <member name="F:System.TimeSpan.TicksPerHour">
+      <summary>Stellt die Anzahl der Ticks pro Stunde dar.Dieses Feld ist konstant.</summary>
+      <filterpriority>1</filterpriority>
+    </member>
+    <member name="F:System.TimeSpan.TicksPerMillisecond">
+      <summary>Stellt die Anzahl der Ticks pro Millisekunde dar.Dieses Feld ist konstant.</

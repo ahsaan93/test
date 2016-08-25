@@ -1,0 +1,35 @@
+ombre entier qui correspond à la clé de l'entrée de dictionnaire.</param>
+      <exception cref="T:System.ArgumentNullException">
+        <paramref name="dictionary" /> a la valeur null.</exception>
+      <exception cref="T:System.ArgumentNullException">
+        <paramref name="value" /> a la valeur null.</exception>
+      <exception cref="T:System.ArgumentOutOfRangeException">
+        <paramref name="key" /> est inférieur à 0 ou supérieur à <see cref="F:System.Int32.MaxValue" />/4.</exception>
+    </member>
+    <member name="P:System.Xml.XmlDictionaryString.Dictionary">
+      <summary>Représente le <see cref="T:System.Xml.IXmlDictionary" /> passé au constructeur de cette instance de la <see cref="T:System.Xml.XmlDictionaryString" />.</summary>
+      <returns>Le <see cref="T:System.Xml.IXmlDictionary" /> de cette entrée de dictionnaire.</returns>
+    </member>
+    <member name="P:System.Xml.XmlDictionaryString.Empty">
+      <summary>Obtient une <see cref="T:System.Xml.XmlDictionaryString" /> représentant la chaîne vide.</summary>
+      <returns>
+        <see cref="T:System.Xml.XmlDictionaryString" /> représentant la chaîne vide.</returns>
+    </member>
+    <member name="P:System.Xml.XmlDictionaryString.Key">
+      <summary>Obtient la clé entière pour cette instance de la classe.  </summary>
+      <returns>La clé entière pour cette instance de la classe. </returns>
+      <filterpriority>2</filterpriority>
+    </member>
+    <member name="M:System.Xml.XmlDictionaryString.ToString">
+      <summary>Affiche une représentation textuelle de cet objet.</summary>
+      <returns>La valeur de chaîne pour cette instance de la classe. </returns>
+    </member>
+    <member name="P:System.Xml.XmlDictionaryString.Value">
+      <summary>Obtient la valeur de chaîne pour cette instance de la classe.  </summary>
+      <returns>La valeur de chaîne pour cette instance de la classe. </returns>
+      <filterpriority>2</filterpriority>
+    </member>
+    <member name="T:System.Xml.XmlDictionaryWriter">
+      <summary>Représente une classe abstraite que Windows Communication Foundation (WCF) dérive de <see cref="T:System.Xml.XmlWriter" /> pour procéder à la sérialisation et à la désérialisation.</summary>
+    </member>
+    <member name="M:System.Xm

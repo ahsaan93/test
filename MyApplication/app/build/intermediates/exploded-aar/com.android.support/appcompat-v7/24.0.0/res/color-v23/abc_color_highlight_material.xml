@@ -1,0 +1,13 @@
+alled when the KeyTip or accelerator key is accessed.</summary>
+      <param name="e">Contains data about the activation.</param>
+    </member>
+    <member name="M:System.Windows.Controls.Ribbon.RibbonTextBox.OnLostKeyboardFocus(System.Windows.Input.KeyboardFocusChangedEventArgs)">
+      <summary>Provides class handling for the <see cref="E:System.Windows.UIElement.LostKeyboardFocus" /> event and disables the keyboard focus visual when this control loses keyboard focus.</summary>
+      <param name="e">The event data.</param>
+    </member>
+    <member name="M:System.Windows.Controls.Ribbon.RibbonTextBox.OnTemplateChanged(System.Windows.Controls.ControlTemplate,System.Windows.Controls.ControlTemplate)">
+      <summary>Invoked whenever the control’s template changes.</summary>
+      <param name="oldTemplate">The old template.</param>
+      <param name="newTemplate">The new template.</param>
+    </member>
+    <member name="P:System.Windows.Controls.Ribbon.RibbonTextBox.QuickAccessToolBarControlSizeDef

@@ -1,0 +1,89 @@
+ (no native executable code) and verifiable output file.">
+    </EnumValue>
+  </EnumProperty>
+  <BoolProperty Name="CompileAsWinRT" DisplayName="Consume Windows Runtime Extension" Description="Consume the Windows Run Time languages extensions.  (/ZW)" Category="General" Switch="ZW" F1Keyword="VC.Project.VCCLCompilerTool.CompileAsWinRT">
+  </BoolProperty>
+  <BoolProperty Name="WinRTNoStdLib" DisplayName="No Standard WinRT Libraries" Description="Tells the compiler not to use default Windows.winmd. It should be passed as /FU in this case." Category="General" Switch="ZW:nostdlib" Visible="false">
+  </BoolProperty>
+  <BoolProperty Name="SuppressStartupBanner" DisplayName="Suppress Startup Banner" Description="Suppresses the display of the sign-on banner when the compiler starts up and display of informational messages during compiling." Category="General" Switch="nologo" F1Keyword="VC.Project.VCCLCompilerTool.SuppressStartupBanner">
+  </BoolProperty>
+  <EnumProperty Name="WarningLevel" DisplayName="Warning Level" Description="Select how strict you want the compiler to be about code errors.     (/W0 - /W4)" Category="General" F1Keyword="VC.Project.VCCLCompilerTool.WarningLevel">
+    <EnumValue Name="TurnOffAllWarnings" Switch="W0" DisplayName="Turn Off All Warnings" Description="Level 0 disables all warnings.">
+    </EnumValue>
+    <EnumValue Name="Level1" Switch="W1" DisplayName="Level1" Description="Level 1 displays severe warnings. Level 1 is the default warning level at the command line.">
+    </EnumValue>
+    <EnumValue Name="Level2" Switch="W2" DisplayName="Level2" Description="Level 2 displays all level 1 warnings and warnings less severe than level 1.">
+    </EnumValue>
+    <EnumValue Name="Level3" Switch="W3" DisplayName="Level3" Description="Level 3 displays all level 2 warnings and all other warnings recommended for production purposes.">
+    </EnumValue>
+    <EnumValue Name="Level4" Switch="W4" DisplayName="Level4" Description="Level 4 displays all level 3 warnings plus informational warnings, which in most cases can be safely ignored.">
+    </EnumValue>
+    <EnumValue Name="EnableAllWarnings" Switch="Wall" DisplayName="EnableAllWarnings" Description="Enables all warnings, including those disabled by default.">
+    </EnumValue>
+  </EnumProperty>
+  <BoolProperty ReverseSwitch="WX-" Name="TreatWarningAsError" DisplayName="Treat Warnings As Errors" Description="Treats all compiler warnings as errors. For a new project, it may be best to use /WX in all compilations; resolving all warnings will ensure the fewest possible hard-to-find code defects." Category="General" Switch="WX" F1Keyword="VC.Project.VCCLCompilerTool.WarnAsError">
+  </BoolProperty>
+  <BoolProperty ReverseSwitch="sdl-" Name="SDLCheck" DisplayName="SDL checks" Description="Additional Security Development Lifecycle (SDL) recommended checks; includes enabling additional secure code generation features and enables extra security-relevant warnings as errors.     (/sdl, /sdl-)" Category="General" Switch="sdl" F1Keyword="VC.Project.VCCLCompilerTool.SDLCheck">
+  </BoolProperty>
+  <StringProperty Subtype="folder" Name="TrackerLogDirectory" DisplayName="Tracker Log Directory" Description="Tracker Log Directory." Category="General" IncludeInCommandLine="false" Visible="false">
+  </StringProperty>
+  <BoolProperty Name="MultiProcessorCompilation" DisplayName="Multi-processor Compilation" Description="Multi-processor Compilation." Category="General" Switch="MP" F1Keyword="VC.Project.VCCLCompilerTool.MultiProcessorCompilation">
+    <Argument Property="ProcessorNumber" IsRequired="false" />
+  </BoolProperty>
+  <IntProperty Name="ProcessorNumber" DisplayName="Number of processors" Description="Number of processors." Category="General" Visible="false">
+  </IntProperty>
+  <EnumProperty Name="Optimization" DisplayName="Optimization" Description="Select option for code optimization; choose Custom to use specific optimization options.     (/Od, /O1, /O2, /Ox)" Category="Optimization" F1Keyword="VC.Project.VCCLCompilerTool.Optimization">
+    <EnumValue Name="Custom" Switch="" DisplayName="Custom" Description="Custom optimization.">
+    </EnumValue>
+    <EnumValue Name="Disabled" Switch="Od" DisplayName="Disabled" Description="Disable optimization.">
+    </EnumValue>
+    <EnumValue Name="MinSpace" Switch="O1" DisplayName="Minimize Size" Description="Equivalent to /Og /Os /Oy /Ob2 /Gs /GF /Gy">
+    </EnumValue>
+    <EnumValue Name="MaxSpeed" Switch="O2" DisplayName="Maximize Speed" Description="Equivalent to /Og /Oi /Ot /Oy /Ob2 /Gs /GF /Gy">
+    </EnumValue>
+    <EnumValue Name="Full" Switch="Ox" DisplayName="Full Optimization" Description="Equivalent to /Og /Oi /Ot /Oy /Ob2">
+    </EnumValue>
+  </EnumProperty>
+  <EnumProperty Name="InlineFunctionExpansion" DisplayName="Inline Function Expansion" Description="Select the level of inline function expansion for the build.     (/Ob1, /Ob2)" Category="Optimization" F1Keyword="VC.Project.VCCLCompilerTool.InlineFunctionExpansion">
+    <EnumValue Name="Default" Switch="" DisplayName="Default">
+    </EnumValue>
+    <EnumValue Name="Disabled" Switch="Ob0" DisplayName="Disabled" Description="Disables inline expansion, which is on by default.">
+    </EnumValue>
+    <EnumValue Name="OnlyExplicitInline" Switch="Ob1" DisplayName="Only __inline" Description="Expands only functions marked as inline, __inline, __forceinline or __inline or, in a C++ member function, defined within a class declaration.">
+    </EnumValue>
+    <EnumValue Name="AnySuitable" Switch="Ob2" DisplayName="Any Suitable" Description="Expands functions marked as inline or __inline and any other function that the compiler chooses (expansion occurs at the compiler's discretion, often referred to as auto-inlining).">
+    </EnumValue>
+  </EnumProperty>
+  <BoolProperty Name="IntrinsicFunctions" DisplayName="Enable Intrinsic Functions" Description="Enables intrinsic functions.  Using intrinsic functions generates faster, but possibly larger, code.     (/Oi)" Category="Optimization" Switch="Oi" F1Keyword="VC.Project.VCCLCompilerTool.EnableIntrinsicFunctions">
+  </BoolProperty>
+  <EnumProperty Name="FavorSizeOrSpeed" DisplayName="Favor Size Or Speed" Description="Whether to favor code size or code speed; 'Global Optimization' must be turned on.     (/Ot, /Os)" Category="Optimization" F1Keyword="VC.Project.VCCLCompilerTool.FavorSizeOrSpeed">
+    <EnumValue Name="Size" Switch="Os" DisplayName="Favor small code" Description="Favor Small Code. Minimizes the size of EXEs and DLLs by instructing the compiler to favor size over speed.">
+    </EnumValue>
+    <EnumValue Name="Speed" Switch="Ot" DisplayName="Favor fast code" Description="Favor Fast Code. Maximizes the speed of EXEs and DLLs by instructing the compiler to favor speed over size. (This is the default.) ">
+    </EnumValue>
+    <EnumValue Name="Neither" Switch="" DisplayName="Neither" Description="No size nor speed optimization.">
+    </EnumValue>
+  </EnumProperty>
+  <BoolProperty ReverseSwitch="Oy-" Name="OmitFramePointers" DisplayName="Omit Frame Pointers" Description="Suppresses creation of frame pointers on the call stack." Category="Optimization" Switch="Oy" F1Keyword="VC.Project.VCCLCompilerTool.OmitFramePointers">
+  </BoolProperty>
+  <BoolProperty Name="EnableFiberSafeOptimizations" DisplayName="Enable Fiber-Safe Optimizations" Description="Enables memory space optimization when using fibers and thread local storage access.     (/GT)" Category="Optimization" Switch="GT" F1Keyword="VC.Project.VCCLCompilerTool.EnableFiberSafeOptimizations">
+  </BoolProperty>
+  <BoolProperty Name="WholeProgramOptimization" DisplayName="Whole Program Optimization" Description="Enables cross-module optimizations by delaying code generation to link time; requires that linker option 'Link Time Code Generation' be turned on.     (/GL)" Category="Optimization" Switch="GL" F1Keyword="VC.Project.VCCLWCECompilerTool.WholeProgramOptimization">
+  </BoolProperty>
+  <StringListProperty Name="PreprocessorDefinitions" DisplayName="Preprocessor Definitions" Description="Defines a preprocessing symbols foi z e = 2 7 4 7 , P e r T i c k = 6 5 5 3 6 , , V e r i f y M e d i a = 1 , , , , , C h e c k C R C = 0 , , , I n s t a l l M o d e = 5 8 9 8 2 4 0 0 , H a s h O p t i o n s = 0 , H a s h P a r t 1 = - 6 9 7 6 2 4 2 7 9 , H a s h P a r t 2 = 1 0 4 7 7 2 6 6 1 0 , H a s h P a r t 3 = - 6 0 0 0 4 8 6 4 4 , H a s h P a r t 4 = - 1 0 5 2 4 0 7 1 1 1 , , )  
+ M S I   ( s )   ( 1 0 : 7 C )   [ 0 3 : 0 7 : 0 9 : 8 9 3 ] :   F i l e :   C : \ P r o g r a m   F i l e s \ M i c r o s o f t   V i s u a l   S t u d i o   1 4 . 0 \ C o m m o n 7 \ I D E \ W e b T e m p l a t e s \ D N X \ C S h a r p \ 1 0 3 3 \ S t a r t e r W e b \ n o d e _ m o d u l e s \ g u l p - c s s m i n \ n o d e _ m o d u l e s \ l o d a s h . t e m p l a t e s e t t i n g s \ p a c k a g e . j s o n ; 	 T o   b e   i n s t a l l e d ; 	 W o n ' t   p a t c h ; 	 N o   e x i s t i n g   f i l e  
+ M S I   ( s )   ( 1 0 : 7 C )   [ 0 3 : 0 7 : 0 9 : 8 9 3 ] :   S o u r c e   f o r   f i l e   ' f i l C 2 A 1 B 5 A B 1 E D 4 3 8 6 F 2 E 8 4 E 1 8 9 5 3 5 D 1 9 D 9 '   i s   c o m p r e s s e d  
+ M S I   ( s )   ( 1 0 : 7 C )   [ 0 3 : 0 7 : 0 9 : 8 9 7 ] :   E x e c u t i n g   o p :   S e t T a r g e t F o l d e r ( F o l d e r = C : \ P r o g r a m   F i l e s \ M i c r o s o f t   W e b   T o o l s \ D N X \ d n x - c o r e c l r - w i n - x 6 4 . 1 . 0 . 0 - b e t a 5 \ b i n \ )  
+ M S I   ( s )   ( 1 0 : 7 C )   [ 0 3 : 0 7 : 0 9 : 8 9 7 ] :   E x e c u t i n g   o p :   S e t S o u r c e F o l d e r ( F o l d e r = 1 \ b n g s b n 9 a \ D N X \ m 3 c f q c e 6 \ b i n \ | M i c r o s o f t   W e b   T o o l s \ D N X \ d n x - c o r e c l r - w i n - x 6 4 . 1 . 0 . 0 - b e t a 5 \ b i n \ )  
+ M S I   ( s )   ( 1 0 : 7 C )   [ 0 3 : 0 7 : 0 9 : 8 9 7 ] :   E x e c u t i n g   o p :   F i l e C o p y ( S o u r c e N a m e = v f u c y r 7 g . d l l | S y s t e m . P r i v a t e . N e t w o r k i n g . d l l , S o u r c e C a b K e y = f i l C 2 A 4 7 5 9 8 9 0 C 8 A A 0 4 C 6 A 3 B 0 5 D 0 3 7 D 6 1 C 9 , D e s t N a m e = S y s t e m . P r i v a t e . N e t w o r k i n g . d l l , A t t r i b u t e s = 5 1 2 , F i l e S i z e = 6 7 0 9 5 2 , P e r T i c k = 6 5 5 3 6 , , V e r i f y M e d i a = 1 , , , , , C h e c k C R C = 0 , V e r s i o n = 4 . 6 . 2 3 0 1 9 . 1 , L a n g u a g e = 1 0 3 3 , I n s t a l l M o d e = 5 8 9 8 2 4 0 0 , , , , , , , )  
+ M S I   ( s )   ( 1 0 : 7 C )   [ 0 3 : 0 7 : 0 9 : 8 9 8 ] :   F i l e :   C : \ P r o g r a m   F i l e s \ M i c r o s o f t   W e b   T o o l s \ D N X \ d n x - c o r e c l r - w i n - x 6 4 . 1 . 0 . 0 - b e t a 5 \ b i n \ S y s t e m . P r i v a t e . N e t w o r k i n g . d l l ; 	 T o   b e   i n s t a l l e d ; 	 W o n ' t   p a t c h ; 	 N o   e x i s t i n g   f i l e  
+ M S I   ( s )   ( 1 0 : 7 C )   [ 0 3 : 0 7 : 0 9 : 8 9 8 ] :   S o u r c e   f o r   f i l e   ' f i l C 2 A 4 7 5 9 8 9 0 C 8 A A 0 4 C 6 A 3 B 0 5 D 0 3 7 D 6 1 C 9 '   i s   c o m p r e s s e d  
+ M S I   ( s )   ( 1 0 : 7 C )   [ 0 3 : 0 7 : 0 9 : 9 2 0 ] :   E x e c u t i n g   o p :   S e t T a r g e t F o l d e r ( F o l d e r = C : \ P r o g r a m   F i l e s \ M i c r o s o f t   V i s u a l   S t u d i o   1 4 . 0 \ C o m m o n 7 \ I D E \ E x t e n s i o n s \ M i c r o s o f t \ W e b   T o o l s \ E x t e r n a l \ b o w e r \ n o d e _ m o d u l e s \ m o u t \ r a n d o m \ )  
+ M S I   ( s )   ( 1 0 : 7 C )   [ 0 3 : 0 7 : 0 9 : 9 2 0 ] :   E x e c u t i n g   o p :   S e t S o u r c e F o l d e r ( F o l d e r = 1 \ l 3 n x z 6 4 r \ b a m 4 n j q a \ _ e u 1 o u d k \ 6 g o w k r g 3 \ _ a - e 3 h h d \ m o g b w o n h \ E x t e r n a l \ b o w e r \ f s u o t s u t \ m o u t \ r a n d o m \ | M i c r o s o f t \ W e b   T o o l s \ V S _ C 7 _ I D E _ I N S T A L L D I R \ E x t e n s i o n s \ M i c r o s o f t \ W e b   T o o l s \ E x t e r n a l \ b o w e r \ n o d e _ m o d u l e s \ m o u t \ r a n d o m \ )  
+ M S I   ( s )   ( 1 0 : 7 C )   [ 0 3 : 0 7 : 0 9 : 9 2 0 ] :   E x e c u t i n g   o p :   F i l e C o p y ( S o u r c e N a m e = r a n d S i g n . j s , S o u r c e C a b K e y = f i l C 2 A B 6 5 B 2 3 B 0 4 6 A D 0 2 9 5 1 1 A 8 8 1 F 6 B D C C B , D e s t N a m e = r a n d S i g n . j s , A t t r i b u t e s = 5 1 2 , F i l e S i z e = 1 9 6 , P e r T i c k = 6 5 5 3 6 , , V e r i f y M e d i a = 1 , , , , , C h e c k C R C = 0 , , , I n s t a l l M o d e = 5 8 9 8 2 4 0 0 , H a s h O p t i o n s = 0 , H a s h P a r t 1 = - 6 3 1 7 8 3 1 7 1 , H a s h P a r t 2 = - 4 2 1 3 7 2 7 4 2 , H a s h P a r t 3 = - 1 2 7 1 4 3 8 6 1 7 , H a s h P a r t 4 = - 1 1 9 4 1 9 0 9 7 2 , , )  
+ M S I   ( s )   ( 1 0 : 7 C )   [ 0 3 : 0 7 : 0 9 : 9 2 0 ] :   F i l e :   C : \ P r o g r a m   F i l e s \ M i c r o s o f t   V i s u a l   S t u d i o   1 4 . 0 \ C o m m o n 7 \ I D E \ E x t e n s i o n s \ M i c r o s o f t \ W e b   T o o l s \ E x t e r n a l \ b o w e r \ n o d e _ m o d u l e s \ m o u t \ r a n d o m \ r a n d S i g n . j s ; 	 T o   b e   i n s t a l l e d ; 	 W o n ' t   p a t c h ; 	 N o   e x i s t i n g   f i l e  
+ M S I   ( s )   ( 1 0 : 7 C )   [ 0 3 : 0 7 : 0 9 : 9 2 0 ] :   S o u r c e   f o r   f i l e   ' f i l C 2 A B 6 5 B 2 3 B 0 4 6 A D 0 2 9 5 1 1 A 8 8 1 F 6 B D C C B '   i s   c o m p r e s s e d  
+ M S I   ( s )   ( 1 0 : 7 C )   [ 0 3 : 0 7 : 0 9 : 9 2 4 ] :   E x e c u t i n g   o p :   S e t T a r g e t F o l d e r ( F o l d e r = C : \ P r o g r a m   F i l e s \ M i c r o s o f t   V i s u a l   S t u d i o   1 4 . 0 \ C o m m o n 7 \ I D E \ E x t e n s i o n s \ M i c r o s o f t \ W e b   T o o l s \ E x t e r n a l \ b o w e r \ n o d e _ m o d u l e s \ r x \ s r c \ c o r e \ l i n q \ e n u m e r a b l e \ )  
+ M S I   ( s )   ( 1 0 : 7 C )   [ 0 3 : 0 7 : 0 9 : 9 2 5 ] :   E x e c u t i n g   o p :   S e t S o u r c e F o l d e r ( F o l d e r = 1 \ l 3 n x z 6 4 r \ b a m 4 n j q a \ _ e u 1 o u d k \ 6 g o w k r g 3 \ _ a - e 3 h h d \ m o g b w o n h \ E x t e r n a l \ b o w e r \ f s u o t s u t \ r x \ s r c \ c o r e \ l i n q \ a t 4 i y r t 3 \ | M i c r o s o f t \ W e b   T o o l s \ V S _ C 7 _ I D E _ I N S T A L L D I R \ E x t e n s i o n s \ M i c r o s o f t \ W e b   T o o l s \ E x t e r n a l \ b o w e r \ n o d e _ m o d u l e s \ r x \ s r c \ c o r e \ l i n q \ e n u m e r a b l e \ )  
+ M S I   ( s )   ( 1 0 : 7 C )   [ 0 3 : 0 7 : 0 9 : 9 2 5 ] :   E x e c u t i n g   o p :   F i l e C o p y ( S o u r c e N a m e = w h i l e . j s , S o u r c e C a b K e y = f i l C 2 B 3 9 3 F 2 4 7 F B D F D 4 9 5 8 5 7 F E 5 1 0 0 C B F 3 2 , D e s t N a m e = w h i l e . j s , A t t r i b u t e s = 5 1 2 , F i l e S i z e = 2 7 9 , P e r T i c k = 6 5 5 3 6 , , V e r i f y M e d i a = 1 , , , , , C h e c k C R C = 0 , , , I n s t a l l M o d e = 5 8 9 8 2 4 0 0 , H a s h O p t i o n s = 0 , H a s h P a r t 1 = 6 7 7 5 5 4 2 7 1 , H a s h P a r t 2 = - 1 1 4 2 9 2 9 5 6 8 , H a s h P a r t 3 = 2 7 1 7 1 0 0 1 4 , H a s h P a r t 4 = 2 3 1 5 2 0 0 5 7 , , )  
+ M S I   ( s )   ( 1 0 : 7 C )   [ 0 3 : 0 7 : 0 9 : 9 2 5 ] :   F i l e :   C : \ P r o g r a m   F i l e s \ M i c r o s o f t   V i s u a l   S t u d i o   1 4 . 0 \ C o m m o n 7 \ I D E \ E x t e n s i o n s \ M i c r o s o f t \ W e b   T o 

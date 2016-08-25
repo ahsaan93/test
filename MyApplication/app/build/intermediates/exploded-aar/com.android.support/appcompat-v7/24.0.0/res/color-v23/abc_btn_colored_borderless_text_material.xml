@@ -1,0 +1,14 @@
+:System.Windows.Controls.ItemsControl.Items" /> property changes.</summary>
+      <param name="e">Information about the change.</param>
+    </member>
+    <member name="M:System.Windows.Controls.Ribbon.RibbonTab.OnKeyDown(System.Windows.Input.KeyEventArgs)">
+      <summary>Provides class handling for the <see cref="E:System.Windows.UIElement.KeyDown" /> routed event. </summary>
+      <param name="e">The event data.</param>
+    </member>
+    <member name="M:System.Windows.Controls.Ribbon.RibbonTab.OnKeyTipAccessed(System.Windows.Controls.KeyTipAccessedEventArgs)">
+      <summary>Called when the KeyTip or accelerator key is accessed.</summary>
+      <param name="e">Contains data about the activation.</param>
+    </member>
+    <member name="M:System.Windows.Controls.Ribbon.RibbonTab.OnSelected(System.Windows.RoutedEventArgs)">
+      <summary>Raises the <see cref="E:System.Windows.Controls.Primitives.Selector.Selected" /> attached event.</summary>
+      <param name="e">

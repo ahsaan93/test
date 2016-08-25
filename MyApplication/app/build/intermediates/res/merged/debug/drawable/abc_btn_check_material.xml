@@ -1,0 +1,10 @@
+rceException.#ctor(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)">
+      <summary>Initializes a new instance of the <see cref="T:System.Resources.MissingManifestResourceException" /> class from serialized data.</summary>
+      <param name="info">The object that holds the serialized object data. </param>
+      <param name="context">The contextual information about the source or destination of the exception. </param>
+    </member>
+    <member name="T:System.Resources.MissingSatelliteAssemblyException">
+      <summary>The exception that is thrown when the satellite assembly for the resources of the default culture is missing.</summary>
+    </member>
+    <member name="M:System.Resources.MissingSatelliteAssemblyException.#ctor">
+      <summary>Initializes a new instance of the <see cref="T:System.Resources.MissingSatelliteAssemblyException" /> class with defau

@@ -1,0 +1,138 @@
+rray ausgelassen werden sollen, oder <see cref="F:System.StringSplitOptions.None" />, wenn leere Arrayelemente in das zurückgegebene Array eingeschlossen werden sollen. </param>
+      <exception cref="T:System.ArgumentException">
+        <paramref name="options" /> is not one of the <see cref="T:System.StringSplitOptions" /> values.</exception>
+      <filterpriority>1</filterpriority>
+    </member>
+    <member name="M:System.String.Split(System.String[],System.Int32,System.StringSplitOptions)">
+      <summary>Gibt ein Zeichenfolgenarray zurück, das die Teilzeichenfolgen dieser Zeichenfolge enthält, die durch Elemente eines angegebenen Zeichenfolgenarrays getrennt sind.Parameter geben die maximale Anzahl von zurückzugebenden Teilzeichenfolgen an und ob leere Arrayelemente zurückgegeben werden sollen.</summary>
+      <returns>Ein Array, dessen Elemente die Teilzeichenfolgen in dieser Zeichenfolge enthält, die durch ein oder mehr Zeichenfolgen aus <paramref name="separator" /> getrennt sind.Weitere Informationen finden Sie im Abschnitt "Hinweise".</returns>
+      <param name="separator">Ein Array mit Zeichenfolgen, die die Teilzeichenfolgen in dieser Zeichenfolge trennen, ein leeres Array ohne Trennzeichen oder null. </param>
+      <param name="count">Die maximale Anzahl der zurückzugebenden Teilzeichenfolgen. </param>
+      <param name="options">
+        <see cref="F:System.StringSplitOptions.RemoveEmptyEntries" />, wenn leere Arrayelemente aus dem zurückgegebenen Array ausgelassen werden sollen, oder <see cref="F:System.StringSplitOptions.None" />, wenn leere Arrayelemente in das zurückgegebene Array eingeschlossen werden sollen. </param>
+      <exception cref="T:System.ArgumentOutOfRangeException">
+        <paramref name="count" /> is negative. </exception>
+      <exception cref="T:System.ArgumentException">
+        <paramref name="options" /> is not one of the <see cref="T:System.StringSplitOptions" /> values.</exception>
+      <filterpriority>1</filterpriority>
+    </member>
+    <member name="M:System.String.Split(System.String[],System.StringSplitOptions)">
+      <summary>Gibt ein Zeichenfolgenarray zurück, das die Teilzeichenfolgen dieser Zeichenfolge enthält, die durch Elemente eines angegebenen Zeichenfolgenarrays getrennt sind.Ein Parameter gibt an, ob leere Arrayelemente zurückgegeben werden sollen.</summary>
+      <returns>Ein Array, dessen Elemente die Teilzeichenfolgen in dieser Zeichenfolge enthält, die durch ein oder mehr Zeichenfolgen aus <paramref name="separator" /> getrennt sind.Weitere Informationen finden Sie im Abschnitt "Hinweise".</returns>
+      <param name="separator">Ein Array mit Zeichenfolgen, die die Teilzeichenfolgen in dieser Zeichenfolge trennen, ein leeres Array ohne Trennzeichen oder null. </param>
+      <param name="options">
+        <see cref="F:System.StringSplitOptions.RemoveEmptyEntries" />, wenn leere Arrayelemente aus dem zurückgegebenen Array ausgelassen werden sollen, oder <see cref="F:System.StringSplitOptions.None" />, wenn leere Arrayelemente in das zurückgegebene Array eingeschlossen werden sollen. </param>
+      <exception cref="T:System.ArgumentException">
+        <paramref name="options" /> is not one of the <see cref="T:System.StringSplitOptions" /> values.</exception>
+      <filterpriority>1</filterpriority>
+    </member>
+    <member name="M:System.String.StartsWith(System.String)">
+      <summary>Bestimmt, ob der Anfang dieser Zeichenfolgeninstanz mit der angegebenen Zeichenfolge übereinstimmt.</summary>
+      <returns>true, wenn <paramref name="value" /> mit dem Anfang dieser Zeichenfolge übereinstimmt, andernfalls false.</returns>
+      <param name="value">Die zu vergleichende Zeichenfolge. </param>
+      <exception cref="T:System.ArgumentNullException">
+        <paramref name="value" /> is null. </exception>
+      <filterpriority>1</filterpriority>
+    </member>
+    <member name="M:System.String.StartsWith(System.String,System.StringComparison)">
+      <summary>Bestimmt, ob der Anfang dieser Zeichenfolgeninstanz bei einem Vergleich unter Verwendung der angegebenen Vergleichsoption mit der angegebenen Zeichenfolge übereinstimmt.</summary>
+      <returns>true, wenn diese Instanz mit <paramref name="value" /> beginnt; andernfalls false.</returns>
+      <param name="value">Die zu vergleichende Zeichenfolge. </param>
+      <param name="comparisonType">Einer der Enumerationswerte, die bestimmen, wie diese Zeichenfolge und <paramref name="value" /> verglichen werden. </param>
+      <exception cref="T:System.ArgumentNullException">
+        <paramref name="value" /> is null. </exception>
+      <exception cref="T:System.ArgumentException">
+        <paramref name="comparisonType" /> is not a <see cref="T:System.StringComparison" /> value.</exception>
+    </member>
+    <member name="M:System.String.Substring(System.Int32)">
+      <summary>Ruft eine Teilzeichenfolge dieser Instanz ab.Die untergeordnete Zeichenfolge beginnt in einer angegebenen Zeichenposition und wird an das Ende der Zeichenfolge fortgesetzt.</summary>
+      <returns>Eine Zeichenfolge, die der Teilzeichenfolge ab <paramref name="startIndex" /> in dieser Instanz entspricht, oder <see cref="F:System.String.Empty" />, wenn <paramref name="startIndex" /> gleich der Länge dieser Instanz ist.</returns>
+      <param name="startIndex">Die nullbasierte Anfangsposition einer Teilzeichenfolge innerhalb dieser Instanz. </param>
+      <exception cref="T:System.ArgumentOutOfRangeException">
+        <paramref name="startIndex" /> is less than zero or greater than the length of this instance. </exception>
+      <filterpriority>1</filterpriority>
+    </member>
+    <member name="M:System.String.Substring(System.Int32,System.Int32)">
+      <summary>Ruft eine Teilzeichenfolge dieser Instanz ab.Die Teilzeichenfolge beginnt an einer angegebenen Zeichenposition und hat eine angegebene Länge.</summary>
+      <returns>Eine Zeichenfolge, die der Teilzeichenfolge mit der Länge <paramref name="length" /> ab <paramref name="startIndex" /> in dieser Instanz entspricht, oder <see cref="F:System.String.Empty" />, wenn <paramref name="startIndex" /> gleich der Länge dieser Instanz und <paramref name="length" /> 0 (null) ist.</returns>
+      <param name="startIndex">Die nullbasierte Anfangsposition einer Teilzeichenfolge innerhalb dieser Instanz. </param>
+      <param name="length">Die Anzahl der Zeichen in der Teilzeichenfolge. </param>
+      <exception cref="T:System.ArgumentOutOfRangeException">
+        <paramref name="startIndex" /> plus <paramref name="length" /> indicates a position not within this instance.-or- <paramref name="startIndex" /> or <paramref name="length" /> is less than zero. </exception>
+      <filterpriority>1</filterpriority>
+    </member>
+    <member name="M:System.String.System#Collections#Generic#IEnumerable{T}#GetEnumerator">
+      <summary>Gibt einen Enumerator zurück, der das aktuelle <see cref="T:System.String" />-Objekt durchläuft. </summary>
+      <returns>Ein <see cref="T:System.Collections.Generic.IEnumerator`1" /> vom Typ <see cref="T:System.Char" />, der zum Durchlaufen des aktuellen <see cref="T:System.String" />-Objekts verwendet werden kann.</returns>
+    </member>
+    <member name="M:System.String.System#Collections#IEnumerable#GetEnumerator">
+      <summary>Gibt einen Enumerator zurück, der das aktuelle <see cref="T:System.String" />-Objekt durchläuft. </summary>
+      <returns>Ein Enumerator, mit dem die Elemente in der aktuellen Zeichenfolge durchlaufen werden können.</returns>
+    </member>
+    <member name="M:System.String.System#IComparable#CompareTo(System.Object)">
+      <summary>Vergleicht die aktuelle Instanz mit einem anderen Objekt vom selben Typ und gibt eine ganze Zahl zurück, die angibt, ob die aktuelle Instanz in der Sortierreihenfolge vor oder nach dem anderen Objekt oder an derselben Position auftritt.</summary>
+      <returns>Eine Ganzzahl mit Vorzeichen, die die relative Reihenfolge dieser Instanz und <paramref name="value" /> angibt.Return value Meaning Less than zero This instance precedes <paramref name="value" /> in the sort order.Zero This instance occurs in the same position as <paramref name="value" /> in the sort order.Greater than zero This instance follows <paramref name="value" /> in the sort order.-or- <paramref name="value" /> is null. </returns>
+      <param name="value">Ein Objekt, das mit dieser Instanz verglichen werden soll, oder null. </param>
+      <exception cref="T:System.ArgumentException">
+        <paramref name="value" /> is not a <see cref="T:System.String" />. </exception>
+    </member>
+    <member name="M:System.String.System#IConvertible#GetTypeCode"></member>
+    <member name="M:System.String.System#IConvertible#ToBoolean(System.IFormatProvider)">
+      <summary>Eine Beschreibung dieses Members finden Sie unter <see cref="M:System.IConvertible.ToBoolean(System.IFormatProvider)" />. </summary>
+      <returns>true, wenn der Wert der aktuellen Zeichenfolge <see cref="F:System.Boolean.TrueString" /> ist. false, wenn der Wert der aktuellen Zeichenfolge <see cref="F:System.Boolean.FalseString" /> ist.</returns>
+      <param name="provider">Dieser Parameter wird ignoriert.</param>
+      <exception cref="T:System.FormatException">The value of the current string is not <see cref="F:System.Boolean.TrueString" /> or <see cref="F:System.Boolean.FalseString" />.</exception>
+    </member>
+    <member name="M:System.String.System#IConvertible#ToByte(System.IFormatProvider)">
+      <summary>Eine Beschreibung dieses Members finden Sie unter <see cref="M:System.IConvertible.ToByte(System.IFormatProvider)" />.</summary>
+      <returns>Der konvertierte Wert des aktuellen <see cref="T:System.String" />-Objekts.</returns>
+      <param name="provider">Ein Objekt, das kulturspezifische Formatierungsinformationen bereitstellt. </param>
+      <exception cref="T:System.FormatException">The value of the current <see cref="T:System.String" /> object cannot be parsed. </exception>
+      <exception cref="T:System.OverflowException">The value of the current <see cref="T:System.String" /> object is a number greater than <see cref="F:System.Byte.MaxValue" /> or less than <see cref="F:System.Byte.MinValue" />. </exception>
+    </member>
+    <member name="M:System.String.System#IConvertible#ToChar(System.IFormatProvider)">
+      <summary>Eine Beschreibung dieses Members finden Sie unter <see cref="M:System.IConvertible.ToChar(System.IFormatProvider)" />.</summary>
+      <returns>Das Zeichen am Index 0 im aktuellen <see cref="T:System.String" />-Objekt.</returns>
+      <param name="provider">Ein Objekt, das kulturspezifische Formatierungsinformationen bereitstellt. </param>
+    </member>
+    <member name="M:System.String.System#IConvertible#ToDateTime(System.IFormatProvider)">
+      <summary>Eine Beschreibung dieses Members finden Sie unter <see cref="M:System.IConvertible.ToDateTime(System.IFormatProvider)" />.</summary>
+      <returns>Der konvertierte Wert des aktuellen <see cref="T:System.String" />-Objekts.</returns>
+      <param name="provider">Ein Objekt, das kulturspezifische Formatierungsinformationen bereitstellt. </param>
+    </member>
+    <member name="M:System.String.System#IConvertible#ToDecimal(System.IFormatProvider)">
+      <summary>Eine Beschreibung dieses Members finden Sie unter <see cref="M:System.IConvertible.ToDecimal(System.IFormatProvider)" />.</summary>
+      <returns>Der konvertierte Wert des aktuellen <see cref="T:System.String" />-Objekts.</returns>
+      <param name="provider">Ein Objekt, das kulturspezifische Formatierungsinformationen bereitstellt. </param>
+      <exception cref="T:System.FormatException">The value of the current <see cref="T:System.String" /> object cannot be parsed. </exception>
+      <exception cref="T:System.OverflowException">The value of the current <see cref="T:System.String" /> object is a number less than <see cref="F:System.Decimal.MinValue" /> or than <see cref="F:System.Decimal.MaxValue" /> greater. </exception>
+    </member>
+    <member name="M:System.String.System#IConvertible#ToDouble(System.IFormatProvider)">
+      <summary>Eine Beschreibung dieses Members finden Sie unter <see cref="M:System.IConvertible.ToDouble(System.IFormatProvider)" />.</summary>
+      <returns>Der konvertierte Wert des aktuellen <see cref="T:System.String" />-Objekts.</returns>
+      <param name="provider">Ein Objekt, das kulturspezifische Formatierungsinformationen bereitstellt. </param>
+      <exception cref="T:System.FormatException">The value of the current <see cref="T:System.String" /> object cannot be parsed. </exception>
+      <exception cref="T:System.OverflowException">The value of the current <see cref="T:System.String" /> object is a number less than <see cref="F:System.Double.MinValue" /> or greater than <see cref="F:System.Double.MaxValue" />. </exception>
+    </member>
+    <member name="M:System.String.System#IConvertible#ToInt16(System.IFormatProvider)">
+      <summary>Eine Beschreibung dieses Members finden Sie unter <see cref="M:System.IConvertible.ToInt16(System.IFormatProvider)" />.</summary>
+      <returns>Der konvertierte Wert des aktuellen <see cref="T:System.String" />-Objekts.</returns>
+      <param name="provider">Ein Objekt, das kulturspezifische Formatierungsinformationen bereitstellt. </param>
+      <exception cref="T:System.FormatException">The value of the current <see cref="T:System.String" /> object cannot be parsed. </exception>
+      <exception cref="T:System.OverflowException">The value of the current <see cref="T:System.String" /> object is a number greater than <see cref="F:System.Int16.MaxValue" /> or less than <see cref="F:System.Int16.MinValue" />.</exception>
+    </member>
+    <member name="M:System.String.System#IConvertible#ToInt32(System.IFormatProvider)">
+      <summary>Eine Beschreibung dieses Members finden Sie unter <see cref="M:System.IConvertible.ToInt32(System.IFormatProvider)" />.</summary>
+      <returns>Der konvertierte Wert des aktuellen <see cref="T:System.String" />-Objekts.</returns>
+      <param name="provider">Ein Objekt, das kulturspezifische Formatierungsinformationen bereitstellt. </param>
+    </member>
+    <member name="M:System.String.System#IConvertible#ToInt64(System.IFormatProvider)">
+      <summary>Eine Beschreibung dieses Members finden Sie unter <see cref="M:System.IConvertible.ToInt64(System.IFormatProvider)" />.</summary>
+      <returns>Der konvertierte Wert des aktuellen <see cref="T:System.String" />-Objekts.</returns>
+      <param name="provider">Ein Objekt, das kulturspezifische Formatierungsinformationen bereitstellt. </param>
+    </member>
+    <member name="M:System.String.System#IConvertible#ToSByte(System.IFormatProvider)">
+      <summary>Eine Beschreibung dieses Members finden Sie unter <see cref="M:System.IConvertible.ToSByte(System.IFormatProvider)" />.</summary>
+      <returns>Der konvertierte Wert des aktuellen <see cref="T:System.String" />-Objekts.</returns>
+      <param name="provider">Ein Objekt, das kulturspezifische Formatierungsinformationen bereitstellt. </param>
+      <exception cref="T:System.FormatException">The value of the current <see cref="T:Syst

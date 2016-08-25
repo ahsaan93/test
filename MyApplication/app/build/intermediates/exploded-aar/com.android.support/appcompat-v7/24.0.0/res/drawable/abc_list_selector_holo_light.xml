@@ -1,0 +1,27 @@
+ummary>
+            Eine Aktion, die bei Abschluss einen Ton wiedergibt.
+            </summary>
+            <remarks>
+            Diese Aktion soll mit kurzen Soundeffekten verwendet werden, die nicht beendet oder kontrolliert werden müssen. Wenn Sie einen Musik-Player oder ein Spiel erstellen, entspricht dies möglicherweise nicht Ihren Anforderungen.
+            </remarks>
+        </member>
+        <member name="M:Microsoft.Expression.Interactivity.Media.PlaySoundAction.#ctor">
+            <summary>
+            Initialisiert eine neue Instanz der <see cref="T:Microsoft.Expression.Interactivity.Media.PlaySoundAction"/>-Klasse.
+            </summary>
+        </member>
+        <member name="M:Microsoft.Expression.Interactivity.Media.PlaySoundAction.SetMediaElementProperties(System.Windows.Controls.MediaElement)">
+            <summary>
+            Wenn die Aktion aufgerufen wird, wird mithilfe dieser Methode das dynamisch erstellte &quot;MediaElement&quot; angepasst.
+            </summary>
+            <remarks>
+            Diese Methode kann für Ersteller von Aktionen hilfreich sein, die &quot;PlaySoundAction&quot; erweitern möchten. Wenn Sie die &quot;Balance&quot;-Eigenschaft von &quot;MediaElement&quot; kontrollieren möchten, können Sie diese von &quot;PlaySoundAction&quot; übernehmen und diese Methode außer Kraft setzen.
+            </remarks>
+            <param name="mediaElement"></param>
+        </member>
+        <member name="M:Microsoft.Expression.Interactivity.Media.PlaySoundAction.Invoke(System.Object)">
+            <summary>
+            Diese Methode wird aufgerufen, wenn einige Kriterien erfüllt werden und die Aktion aufgerufen werden sollte. 
+            </summary>
+            <remarks>
+            Bei jedem Aufruf der Aktion wird ein neuer Ton wiedergegeben. Auch wenn sich die Impl

@@ -1,0 +1,16 @@
+��该帮助上下文，则 <paramref name="pdwHelpStringContext" /> 可以为 null。该参数未经初始化即被传递。</param>
+      <param name="pbstrHelpStringDll">此方法返回时，包含一个 BSTR，其中包含特定文件（包含帮助文件所使用的 DLL）的完全限定名。如果调用方不需要该文件名，则 <paramref name="pbstrHelpStringDll" /> 可以为 null。该参数未经初始化即被传递。</param>
+    </member>
+    <member name="M:System.Runtime.InteropServices.ComTypes.ITypeInfo2.GetFuncCustData(System.Int32,System.Guid@,System.Object@)">
+      <summary>从指定函数中获取自定义数据。</summary>
+      <param name="index">用于为其获取自定义数据的函数的索引。</param>
+      <param name="guid">用于标识数据的 GUID。</param>
+      <param name="pVarVal">此方法返回时，包含一个指定在何处放置数据的 Object。该参数未经初始化即被传递。</param>
+    </member>
+    <member name="M:System.Runtime.InteropServices.ComTypes.ITypeInfo2.GetFuncDesc(System.Int32,System.IntPtr@)">
+      <summary>检索包含有关指定函数的信息的 <see cref="T:System.Runtime.InteropServices.FUNCDESC" /> 结构。</summary>
+      <param name="index">要返回的函数说明的索引。</param>
+      <param name="ppFuncDesc">此方法返回时，包含对描述指定函数的 FUNCDESC 结构的引用。该参数未经初始化即被传递。</param>
+    </member>
+    <member name="M:System.Runtime.InteropServices.ComTypes.ITypeInfo2.GetFuncIndexOfMemId(System.Int32,System.Runtime.InteropServices.ComTypes.INVOKEKIND,System.Int32@)">
+      <summary>基于已

@@ -1,0 +1,10 @@
+ion="Instructs the compiler to create a precompiled header (.pch) file that represents the state of compilation at a certain point.">
+      <Argument Property="PrecompiledHeaderFile" IsRequired="false" />
+    </EnumValue>
+    <EnumValue Name="Use" Switch="Yu" DisplayName="Use" Description="Instructs the compiler to use an existing precompiled header (.pch) file in the current compilation.">
+      <Argument Property="PrecompiledHeaderFile" IsRequired="false" />
+    </EnumValue>
+    <EnumValue Name="NotUsing" Switch="" DisplayName="Not Using Precompiled Headers" Description="Not using precompiled headers. ">
+    </EnumValue>
+  </EnumProperty>
+  <StringProperty Subt

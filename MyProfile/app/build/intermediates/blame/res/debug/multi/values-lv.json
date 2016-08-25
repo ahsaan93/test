@@ -1,0 +1,569 @@
+nt is null.</exception>
+      <exception cref="T:System.AggregateException">At least one of the <see cref="T:System.Threading.Tasks.Task" /> instances was canceled.If a task was canceled, the <see cref="T:System.AggregateException" /> contains an <see cref="T:System.OperationCanceledException" /> in its <see cref="P:System.AggregateException.InnerExceptions" /> collection.-or-An exception was thrown during the execution of at least one of the <see cref="T:System.Threading.Tasks.Task" /> instances. </exception>
+      <exception cref="T:System.ArgumentOutOfRangeException">
+        <paramref name="millisecondsTimeout" /> is a negative number other than -1, which represents an infinite time-out.</exception>
+      <exception cref="T:System.ArgumentException">The <paramref name="tasks" /> argument contains a null element.</exception>
+      <exception cref="T:System.OperationCanceledException">The <paramref name="cancellationToken" /> was canceled. </exception>
+    </member>
+    <member name="M:System.Threading.Tasks.Task.WaitAll(System.Threading.Tasks.Task[],System.Threading.CancellationToken)">
+      <summary>ç­‰å€™æ‰€æœ‰æä¾›çš„ <see cref="T:System.Threading.Tasks.Task" /> ç‰©ä»¶å®ŒæˆåŸ·è¡Œã€‚</summary>
+      <param name="tasks">è¦ç­‰å¾…ä¹‹ <see cref="T:System.Threading.Tasks.Task" /> åŸ·è¡Œå€‹é«”çš„é™£åˆ—ã€‚</param>
+      <param name="cancellationToken">ç­‰å€™å·¥ä½œå®Œæˆæ™‚è¦è§€å¯Ÿçš„ <see cref="P:System.Threading.Tasks.TaskFactory.CancellationToken" />ã€‚</param>
+      <exception cref="T:System.OperationCanceledException">The <paramref name="cancellationToken" /> was canceled. </exception>
+      <exception cref="T:System.ArgumentNullException">The <paramref name="tasks" /> argument is null.</exception>
+      <exception cref="T:System.AggregateException">At least one of the <see cref="T:System.Threading.Tasks.Task" /> instances was canceled.If a task was canceled, the <see cref="T:System.AggregateException" /> contains an <see cref="T:System.OperationCanceledException" /> in its <see cref="P:System.AggregateException.InnerExceptions" /> collection.-or-An exception was thrown during the execution of at least one of the <see cref="T:System.Threading.Tasks.Task" /> instances. </exception>
+      <exception cref="T:System.ArgumentException">The <paramref name="tasks" /> argument contains a null element.</exception>
+      <exception cref="T:System.ObjectDisposedException">One or more of the <see cref="T:System.Threading.Tasks.Task" /> objects in <paramref name="tasks" /> has been disposed.</exception>
+    </member>
+    <member name="M:System.Threading.Tasks.Task.WaitAll(System.Threading.Tasks.Task[],System.TimeSpan)">
+      <summary>ç­‰å€™æ‰€æœ‰æä¾›çš„å¯å–æ¶ˆ <see cref="T:System.Threading.Tasks.Task" /> ç‰©ä»¶åœ¨æŒ‡å®šçš„æ™‚é–“é–“éš”å…§å®ŒæˆåŸ·è¡Œã€‚</summary>
+      <returns>å¦‚æœæ‰€æœ‰ true åŸ·è¡Œå€‹é«”åœ¨æŒ‡å®šçš„æ™‚é–“å…§åŸ·è¡Œå®Œæˆï¼Œå‰‡ç‚º <see cref="T:System.Threading.Tasks.Task" />ï¼Œå¦å‰‡ç‚º falseã€‚</returns>
+      <param name="tasks">è¦ç­‰å¾…ä¹‹ <see cref="T:System.Threading.Tasks.Task" /> åŸ·è¡Œå€‹é«”çš„é™£åˆ—ã€‚</param>
+      <param name="timeout">
+        <see cref="T:System.TimeSpan" />ï¼Œä»£è¡¨ç­‰å€™æ¯«ç§’æ•¸ï¼›æˆ–æ˜¯ <see cref="T:System.TimeSpan" />ï¼Œä»£è¡¨ç„¡é™æœŸç­‰å€™çš„ -1 æ¯«ç§’ã€‚</param>
+      <exception cref="T:System.ObjectDisposedException">One or more of the <see cref="T:System.Threading.Tasks.Task" /> objects in <paramref name="tasks" /> has been disposed.</exception>
+      <exception cref="T:System.ArgumentNullException">The <paramref name="tasks" /> argument is null. </exception>
+      <exception cref="T:System.AggregateException">At least one of the <see cref="T:System.Threading.Tasks.Task" /> instances was canceled.If a task was canceled, the <see cref="T:System.AggregateException" /> contains an <see cref="T:System.OperationCanceledException" /> in its <see cref="P:System.AggregateException.InnerExceptions" /> collection.-or-An exception was thrown during the execution of at least one of the <see cref="T:System.Threading.Tasks.Task" /> instances. </exception>
+      <exception cref="T:System.ArgumentOutOfRangeException">
+        <paramref name="timeout" /> is a negative number other than -1 milliseconds, which represents an infinite time-out. -or-<paramref name="timeout" /> is greater than <see cref="F:System.Int32.MaxValue" />. </exception>
+      <exception cref="T:System.ArgumentException">The <paramref name="tasks" /> argument contains a null element.</exception>
+    </member>
+    <member name="M:System.Threading.Tasks.Task.WaitAny(System.Threading.Tasks.Task[])">
+      <summary>ç­‰å€™ä»»ä¸€æä¾›çš„ <see cref="T:System.Threading.Tasks.Task" /> ç‰©ä»¶å®ŒæˆåŸ·è¡Œã€‚</summary>
+      <returns>
+        <paramref name="tasks" /> é™£åˆ—å¼•æ•¸ä¸­å·²å®Œæˆå·¥ä½œçš„ç´¢å¼•ã€‚</returns>
+      <param name="tasks">è¦ç­‰å¾…ä¹‹ <see cref="T:System.Threading.Tasks.Task" /> åŸ·è¡Œå€‹é«”çš„é™£åˆ—ã€‚</param>
+      <exception cref="T:System.ObjectDisposedException">The <see cref="T:System.Threading.Tasks.Task" /> has been disposed.</exception>
+      <exception cref="T:System.ArgumentNullException">The <paramref name="tasks" /> argument is null.</exception>
+      <exception cref="T:System.ArgumentException">The <paramref name="tasks" /> argument contains a null element.</exception>
+    </member>
+    <member name="M:System.Threading.Tasks.Task.WaitAny(System.Threading.Tasks.Task[],System.Int32)">
+      <summary>ç­‰å€™æ‰€æœ‰æä¾›çš„ <see cref="T:System.Threading.Tasks.Task" /> ç‰©ä»¶åœ¨æŒ‡å®šçš„æ¯«ç§’æ•¸å…§å®ŒæˆåŸ·è¡Œã€‚</summary>
+      <returns>
+        <paramref name="tasks" /> é™£åˆ—å¼•æ•¸ä¸­å·²å®Œæˆå·¥ä½œçš„ç´¢å¼•ï¼›å¦‚æœç™¼ç”Ÿé€¾æ™‚ï¼Œå‰‡ç‚º -1ã€‚</returns>
+      <param name="tasks">è¦ç­‰å¾…ä¹‹ <see cref="T:System.Threading.Tasks.Task" /> åŸ·è¡Œå€‹é«”çš„é™£åˆ—ã€‚</param>
+      <param name="millisecondsTimeout">è¦ç­‰å€™çš„æ¯«ç§’æ•¸ï¼Œå¦‚æœè¦ç„¡é™æœŸç­‰å€™ï¼Œå‰‡ç‚º <see cref="F:System.Threading.Timeout.Infinite" /> (-1)ã€‚</param>
+      <exception cref="T:System.ObjectDisposedException">The <see cref="T:System.Threading.Tasks.Task" /> has been disposed.</exception>
+      <exception cref="T:System.ArgumentNullException">The <paramref name="tasks" /> argument is null.</exception>
+      <exception cref="T:System.ArgumentOutOfRangeException">
+        <paramref name="millisecondsTimeout" /> is a negative number other than -1, which represents an infinite time-out.</exception>
+      <exception cref="T:System.ArgumentException">The <paramref name="tasks" /> argument contains a null element.</exception>
+    </member>
+    <member name="M:System.Threading.Tasks.Task.WaitAny(System.Threading.Tasks.Task[],System.Int32,System.Threading.CancellationToken)">
+      <summary>ç­‰å¾…æ‰€æœ‰æä¾›çš„ <see cref="T:System.Threading.Tasks.Task" /> ç‰©ä»¶åœ¨æŒ‡å®šçš„æ¯«ç§’æ•¸å…§å®ŒæˆåŸ·è¡Œã€‚</summary>
+      <returns>
+        <paramref name="tasks" /> é™£åˆ—å¼•æ•¸ä¸­å·²å®Œæˆå·¥ä½œçš„ç´¢å¼•ï¼›å¦‚æœç™¼ç”Ÿé€¾æ™‚ï¼Œå‰‡ç‚º -1ã€‚</returns>
+      <param name="tasks">è¦ç­‰å¾…ä¹‹ <see cref="T:System.Threading.Tasks.Task" /> åŸ·è¡Œå€‹é«”çš„é™£åˆ—ã€‚</param>
+      <param name="millisecondsTimeout">è¦ç­‰å€™çš„æ¯«ç§’æ•¸ï¼Œå¦‚æœè¦ç„¡é™æœŸç­‰å€™ï¼Œå‰‡ç‚º <see cref="F:System.Threading.Timeout.Infinite" /> (-1)ã€‚</param>
+      <param name="cancellationToken">ç­‰å€™å·¥ä½œå®Œæˆæ™‚è¦è§€å¯Ÿçš„ <see cref="P:System.Threading.Tasks.TaskFactory.CancellationToken" />ã€‚</param>
+      <exception cref="T:System.ObjectDisposedException">The <see cref="T:System.Threading.Tasks.Task" /> has been disposed.</exception>
+      <exception cref="T:System.ArgumentNullException">The <paramref name="tasks" /> argument is null.</exception>
+      <exception cref="T:System.ArgumentOutOfRangeException">
+        <paramref name="millisecondsTimeout" /> is a negative number other than -1, which represents an infinite time-out.</exception>
+      <exception cref="T:System.ArgumentException">The <paramref name="tasks" /> argument contains a null element.</exception>
+      <exception cref="T:System.OperationCanceledException">The <paramref name="cancellationToken" /> was canceled. </exception>
+    </membeo‹  
+Ş,o  
+Ü
+oG 
+(1  
+9¤       _1?(Ó  (ò  oË 
+oi 
+oi 
+( 
+oI 
+(V 
+o. 
+&    _1OoS 
+on  
+
+oG 
+oˆ  
+o|  
+(ò  {>  sÁ o‹  
+Ş,o  
+Ü{=  oi 
+o9 *  (   šp
+     0;     æñ    0 s  S  ua  
+u`  s
+ 
+oF 
+(e  o 
+oC 
+(  (ò  oó 
+	(6  +(Ê  -LoW 
+oX 
++oY 
+(ò  oË 
+(G  +&od  
+-Øİ¦   ,o  
+Ür7 poğ 
+~Z 
+(b 
+(ñ 
+(  (H  +	_1(ò  oË 
+	(G  +& €   _1)oF 
+(Ë  
+
+,(ò  oË 
+	
+(I  +&{=  	oi 
+o9 ,.,+oF 
+(Í  ,(ò  oË 
+(>  +&*    i /˜     0 Ø   T  -3s
+ 
+
+(_  o 
+   o( 
+(  (J  +{=  oi 
+o: _1(Ê  _1--o/  
+(Í  oi 
+(ò  oË 
+(@  +& €   _1$oF 
+(Í  (ò  oË 
+(A  +&{=  oi 
+o9 *0 ç   U  
+o2 
+8»   (3 
+- ( 
+( 
++o[ 
+oğ 
+~Z 
+ ( 
+( 
+(b 
+(ñ 
+(  (ò  oó 
+	(K  +_1oË 
+(G  +& €   _1 (Ë  ,oË 
+(I  +&{=  oi 
+o9 X
+(4 
+:9ÿÿÿŞşT  o  
+Ü*    
+ ÎØ     0    V  
+oº  
+o? 
+8ñ   o@ 
+o€ 
+o 
+oğ 
+~Z 
+(b 
+(ñ 
+o€ 
+o 
+(  	(ù  _1'oC 
+o\ 
+oB 
+o] 
+oƒ 
+o^ 
+_1,o  
+,oË 
+(L  +&+oË 
+(G  +& €   _1%oA 
+(Ë  ,oË 
+(I  +&{=  oi 
+o9 X
+od  
+:ÿÿÿŞ,o  
+Ü*A                   (  
+*0 z   W  {/ %(I  
+s_ 
+
+{0 (Î  oi 
+(C  {0 {>  oÊ 
+oË 
+oi 
+{1 (M  +&o` 
+Ş
+,o  
+ÜŞ
+,	(K  
+Ü*      Lc 
+      mo 
+    0 u   X  s4 }1 }0 {=  {1 o8 
+-*(a 
+-*s  
+}/ {>  ş5 sb 
+s  {=  oE o  {1 oc 
+*(  
+*(  
+*®on  
+oÌ  
+od 
+{5 o/  
+o‚  
+od 
+(6 
+*   0 X   K  {4 {2 {6 (Î  
+oi 
+(C  {4 {2 {>  oÊ 
+oË 
+{4 {3 oi 
+(M  +&*0   Y  s6 }3 }2 {=  {3 o8 
+-*o oi  
+8¶   oj  
+s7 }4 (0 u  }5 {5 (%  
+-z{5 (0  ,l{=  oE ş8 se 
+(N  +(O  +}6 s_ 
+{5 {6 on  
+	-ş9 sh 
+	(-  o` 
+Ş
+,o  
+Üod  
+:>ÿÿÿŞ,o  
+Ü{3 oc 
+*    ¹ 3ì 
+     ; É    0 ¹   Z  (i 
+,on  
+oj 
+ok 
+, ~l 
+(m 
+(n 
+(o 
+(  +#s
+ 
+(X  o 
+ o( 
+(  (ò  oó 
+ {R  op 
+	-(P  +oi 
++{=  	o8 o 	(Ó  
+( oÔ  
+	*o 
+*   0 `  [  (ã 
+o‰ 
+,>{=  o8 
+-*o 
+
+(+ o 
+o (  (Ü  &*~l 
+(m 
+(n 
+	of 
+(q 
+,of 
+~l 
+oQ  +-( 
+:Ñ   {=  oE os 
+8    ot 
+on  
+oÌ  
+ou 
+~B  -şÿ  sv 
+€B  ~B  (R  +(S  +oy 
++7oz 
+-o) 
+o{ 
+,(Ü  	o| 
+	o} 
+&od  
+-ÀŞ,o  
+Üod  
+:TÿÿÿŞ,o  
+Ü*   õ D9       ³S    (  
+*6{9 o~ 
+&*  0 ”   \  o·  u	 ,d%{; Y%}; 1Pd{; YZ( 
+{= {8 {7 {: (ß  ŞB
+{> oL  
+oO  
+{9 o~ 
+&Ş"{> oL  
+o·  oO  
+{9 o~ 
+&*    2 Q  V  z{< o€ 
+o 
+o‚ 
+oJ  
+* 0 2  ]  s: }> }= {=  o8 
+-*o }7 |7 (0 }8 {8 ,{8 u   -{8 u  -*(a 
+-*sƒ 
+}9 {> s }: 
+}; {: ş; s„ 
+o
+ {: ş< s… 
+o {> o  +}< {: ş= s† 
+o {8 {7 {: (ß  ] 	{< oQ  
+(‡ 
+¢	{9 ¢	(ˆ 
+&*  0 [   ^  (  o‰ 
+uc  
+u  (3  
+,(;  (á  *u   (·  
+,(5  (à  *rC psC  
+z 0 *   _  oŠ 
+{>  o  +oQ  
+(‹ 
+Ş
+
+oŒ 
+Ş *         
+_ zoŠ 
+{>  o  +oQ  
+( 
+* 0 ˜       _1$o 
+o 
+o 
+o‘ 
+oq 
+o’ 
+_1%oi 
+o“ 
+o” 
+o• 
+o– 
+(Â  oi 
+(G  -o 
+(  +(E  {>  (I  ,oi 
+{=  oc o- 
+*0 r   `  o.  
+,hoº  
+o»  
+1*o° 
+o 
+1Jo° 
+o— 
+
+Ğ<  (  
+rY p$o˜ 
+o™ 
+¥b şb o) 
+rk poš 
+,**  0   a  {=  o8 
+-*(ã 
+o‰ 
+9ğ   o (+ o´  
+(·  
+,7o (  o´  
+(Í  (ò  oË 
+oi 
+(T  +&o› 
+9   o› 
+o©  
++jo«  
+o (  	(Í  o„  
+,(ò  oË 
+(U  +&+)(ò  oË 
+of 
+oi 
+of 
+(œ 
+o@ 
+&od  
+-Ş,o  
+Ü*      w    (  
+*(  
+*0 Œ     {G {D {G {E {G {? {H {G {C (æ  
+{G {C % (I  
+{G {@ {G %{B X%}B {G {A oJ  
+Ş
+,(K  
+Ü*   9 H 
+    r{F oL  
+oM  
+oN  
+oO  
+*   0 ­  b  s> }E }F }D {=  {E o8 
+-*o (+ }? {? (°  
+,*sP  
+{F o  +}@ {@ oQ  
+}A }B s  
+}C {? (5  }? {? o 
+(@  
+,*(a 
+-*{=  oE os 
+	8   	ot 
+s@ }G 	on  
+{? o 
+oÆ  
+(°  
+-g	}H %{A X}A (\  
+şA s]  
+(^  
+o_  
+-ş? s`  
+    (a  
+ob  
+&oc  
+	od  
+:VÿÿÿŞ	,	o  
+Üof  
+(g  
+*      ã ±”    0 Ú  c  o 
+
+s5 
+s5 
+on  
+oÌ  
+ou 
+o©  
+8‡   o«  
+	o´  
+(·  
+,	o´  
+(5  o 
+oG  
+,	o 
+o„  
+,J	o› 
+o©  
++$o«  
+(5  o 
+oG  
+,	o 
+od  
+-ÓŞ,o  
+Üod  
+:mÿÿÿŞ,o  
+Ü
+%
+(I  
+s_ 
+o2 
++0(3 
+(Í  (ò  oË 
+oi 
+(T  +&(4 
+-ÇŞşT  o  
+Üo2 
++Z(3 
+(Í  	o„  
+,(ò  oË 
+	oi 
+(T  +&+(ò  oË 
+	oi 
+(œ 
+oI 
+&(4 
+-ŞşT  o  
+Üo` 
+Ş,o  
+ÜŞ
+,(K  
+Ü*  L   y 1ª      * šÄ      î =+     Ag¨     æ Ù¿     Ó úÍ    oŸ 
+*oŸ 
+*0 .  d  {=  o8 
+-*r{ ps  
+o oi  
+8Ğ  oj  
+(¡ 
+o‰ 
+9…   (* (i 
+,(à sì  
+zo± 
+~C  -ş  s¢ 
+€C  ~C  (V  +o©  
++o«  
+(  (è  od  
+-Üİ?  ,o  
+Ü(ã 
+o‰ 
+9œ   (+ (·  
+9  oŸ 
+o©  
++o«  
+(  (è  od  
+-ÜŞ,o  
+Üo 
+9¿   (  o 
+(Í  9¡   oÊ 
+oË 
+(W  +&8‡   (£ 
+o‰ 
+,zo (. 		on  
+oÌ  
+ou 
+~D  -ş s¢ 
+€D  ~D  (V  +o©  
++o«  
+
+	
+(è  od  
+-áŞ,o  
+Üod  
+:$şÿÿŞ,o  
+Üo` 
+Ş
+,o  
+Ü*  A|     —   +   Â               (   *            Ò  #   õ            ,   ã                   #  
+       0 o   e  ï_(Í  
+,\_1T(£ 
+o‰ 
+,$oÊ 
+oË 
+of 
+oğ 
+(? 
+o@ 
+&*oÊ 
+oË 
+of 
+oğ 
+( 
+o@ 
+&*(  
+*Jo) 
+{I (Ò  
+*  0 0   f  sB 
+}I (·  
+,(6  şC s¤ 
+(X  +**0 …  g  
+(ë  o0  
+-r› p(é  ,?(Y  +(â  _1,(ò  oË 
+oi 
+(Z  +&
+8n  o¥ 
+-oq 
+-o 
+,h([  +	(â  _1,(ò  oË 
+	oi 
+(\  +&@_1!	oi 
+o 
+o+ 
+o, 
+(Æ  	
+8î  oÄ  
+,C(]  +(â  _1,(ò  oË 
+oi 
+(^  +&
+8£  oÅ  
+,C(_  +(â  _1,(ò  oË 
+oi 
+(`  +&
+8X  o„  
+,C(a  +(â  _1,(ò  oË 
+oi 
+(b  +&
+8  o 
+,([  +(â   €   _1'o 
+(Í  (ò  oË 
+(c  +&_1',$(Ü  		,(ò  oË 
+	(5  +&
+8†   o# 
+,~(d  +
+
+(â   €   _1+o 
+(Í  ,(ò  oË 
+
+(4  +&_1',$(Ü  ,(ò  oË 
+
+(5  +&
+
+ _1{o‚  
+uK  (/ 
+,do 
+o´ 
++>oµ 
+(ı  {>  oÊ 
+oË 
+of 
+oğ 
+( 
+o@ 
+&od  
+-¹Ş

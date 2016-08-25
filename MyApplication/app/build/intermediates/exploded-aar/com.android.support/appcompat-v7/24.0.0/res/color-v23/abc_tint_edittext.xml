@@ -1,0 +1,12 @@
+et must be bound to a specific port. This control code is supported on Windows 2000 and later operating systems. This value is equal to the Winsock 2 SIO_RCVALL_IGMPMCAST constant.</summary>
+    </member>
+    <member name="F:System.Net.Sockets.IOControlCode.KeepAliveValues">
+      <summary>Control sending TCP keep-alive packets and the interval at which they are sent. This control code is supported on Windows 2000 and later operating systems. For additional information, see RFC 1122 section 4.2.3.6. This value is equal to the Winsock 2 SIO_KEEPALIVE_VALS constant.</summary>
+    </member>
+    <member name="F:System.Net.Sockets.IOControlCode.AbsorbRouterAlert">
+      <summary>This value is equal to the Winsock 2 SIO_ABSORB_RTRALERT constant.</summary>
+    </member>
+    <member name="F:System.Net.Sockets.IOControlCode.UnicastInterface">
+      <summary>Set the interface used for outgoing unicast packets. This value is equal to the Winsock 2 SIO_UCAST_IF constant.</summary>
+    </member>
+    <member name="F:System.Net.Soc

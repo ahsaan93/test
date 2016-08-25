@@ -1,0 +1,120 @@
+nToken" /> was disposed.</exception>
+    </member>
+    <member name="M:System.Threading.Tasks.Task.Run``1(System.Func{``0})">
+      <summary>將指定在執行緒集區執行工作排入佇列，並傳回代表該工作的 <see cref="T:System.Threading.Tasks.Task`1" /> 物件。</summary>
+      <returns>代表已排入佇列要在執行緒集區中執行之工作 (work) 的工作 (task) 物件。</returns>
+      <param name="function">要以非同步方式執行的工作。</param>
+      <typeparam name="TResult">工作的傳回類型。</typeparam>
+      <exception cref="T:System.ArgumentNullException">The <paramref name="function" /> parameter is null. </exception>
+    </member>
+    <member name="M:System.Threading.Tasks.Task.Run``1(System.Func{``0},System.Threading.CancellationToken)">
+      <summary>將指定在執行緒集區執行工作排入佇列，並傳回該工作的 Task(TResult) 控制代碼。</summary>
+      <returns>Task(TResult)，代表已排入佇列要在 ThreadPool 中執行的工作。</returns>
+      <param name="function">要以非同步方式執行的工作</param>
+      <param name="cancellationToken">應該用來取消工作的取消語彙基元</param>
+      <typeparam name="TResult">工作的結果類型。</typeparam>
+      <exception cref="T:System.ArgumentNullException">The <paramref name="function" /> parameter was null.</exception>
+      <exception cref="T:System.Threading.Tasks.TaskCanceledException">The task has been canceled.</exception>
+      <exception cref="T:System.ObjectDisposedException">The <see cref="T:System.Threading.CancellationTokenSource" /> associated with <paramref name="cancellationToken" /> was disposed.</exception>
+    </member>
+    <member name="M:System.Threading.Tasks.Task.RunSynchronously">
+      <summary>在目前的 <see cref="T:System.Threading.Tasks.Task" /> 上同步執行 <see cref="T:System.Threading.Tasks.TaskScheduler" />。</summary>
+      <exception cref="T:System.ObjectDisposedException">The <see cref="T:System.Threading.Tasks.Task" /> instance has been disposed.</exception>
+      <exception cref="T:System.InvalidOperationException">The <see cref="T:System.Threading.Tasks.Task" /> is not in a valid state to be started.It may have already been started, executed, or canceled, or it may have been created in a manner that doesn't support direct scheduling.</exception>
+    </member>
+    <member name="M:System.Threading.Tasks.Task.RunSynchronously(System.Threading.Tasks.TaskScheduler)">
+      <summary>在提供的 <see cref="T:System.Threading.Tasks.Task" /> 上同步執行 <see cref="T:System.Threading.Tasks.TaskScheduler" />。</summary>
+      <param name="scheduler">排程器，要嘗試在其上以內嵌方式執行這個工作。</param>
+      <exception cref="T:System.ObjectDisposedException">The <see cref="T:System.Threading.Tasks.Task" /> instance has been disposed.</exception>
+      <exception cref="T:System.ArgumentNullException">The <paramref name="scheduler" /> argument is null.</exception>
+      <exception cref="T:System.InvalidOperationException">The <see cref="T:System.Threading.Tasks.Task" /> is not in a valid state to be started.It may have already been started, executed, or canceled, or it may have been created in a manner that doesn't support direct scheduling.</exception>
+    </member>
+    <member name="M:System.Threading.Tasks.Task.Start">
+      <summary>啟動 <see cref="T:System.Threading.Tasks.Task" />，並排定它在目前的 <see cref="T:System.Threading.Tasks.TaskScheduler" /> 執行。</summary>
+      <exception cref="T:System.ObjectDisposedException">The <see cref="T:System.Threading.Tasks.Task" /> instance has been disposed.</exception>
+      <exception cref="T:System.InvalidOperationException">The <see cref="T:System.Threading.Tasks.Task" /> is not in a valid state to be started.It may have already been started, executed, or canceled, or it may have been created in a manner that doesn't support direct scheduling.</exception>
+    </member>
+    <member name="M:System.Threading.Tasks.Task.Start(System.Threading.Tasks.TaskScheduler)">
+      <summary>啟動 <see cref="T:System.Threading.Tasks.Task" />，並排定它在指定的 <see cref="T:System.Threading.Tasks.TaskScheduler" /> 執行。</summary>
+      <param name="scheduler">要與這個工作產生關聯，並用於執行這個工作的 <see cref="T:System.Threading.Tasks.TaskScheduler" />。</param>
+      <exception cref="T:System.ObjectDisposedException">The <see cref="T:System.Threading.Tasks.Task" /> instance has been disposed.</exception>
+      <exception cref="T:System.ArgumentNullException">The <paramref name="scheduler" /> argument is null.</exception>
+      <exception cref="T:System.InvalidOperationException">The <see cref="T:System.Threading.Tasks.Task" /> is not in a valid state to be started.It may have already been started, executed, or canceled, or it may have been created in a manner that doesn't support direct scheduling.</exception>
+    </member>
+    <member name="P:System.Threading.Tasks.Task.Status">
+      <summary>取得這個工作的 <see cref="T:System.Threading.Tasks.TaskStatus" />。</summary>
+      <returns>這個工作執行個體目前的 <see cref="T:System.Threading.Tasks.TaskStatus" />。</returns>
+    </member>
+    <member name="P:System.Threading.Tasks.Task.System#IAsyncResult#AsyncWaitHandle">
+      <summary>取得 <see cref="T:System.Threading.WaitHandle" />，這個項目可用來等候工作完成。</summary>
+      <returns>
+        <see cref="T:System.Threading.WaitHandle" />，可用來等候工作完成。</returns>
+      <exception cref="T:System.ObjectDisposedException">The <see cref="T:System.Threading.Tasks.Task" /> has been disposed.</exception>
+    </member>
+    <member name="P:System.Threading.Tasks.Task.System#IAsyncResult#CompletedSynchronously">
+      <summary>取得作業是否已同步完成的指示。</summary>
+      <returns>如果作業同步完成，則為 true，否則為 false。</returns>
+    </member>
+    <member name="M:System.Threading.Tasks.Task.Wait">
+      <summary>等候 <see cref="T:System.Threading.Tasks.Task" /> 完成執行。</summary>
+      <exception cref="T:System.ObjectDisposedException">The <see cref="T:System.Threading.Tasks.Task" /> has been disposed.</exception>
+      <exception cref="T:System.AggregateException">The task was canceled.The <see cref="P:System.AggregateException.InnerExceptions" /> collection contains a <see cref="T:System.Threading.Tasks.TaskCanceledException" /> object.-or-An exception was thrown during the execution of the task.The <see cref="P:System.AggregateException.InnerExceptions" /> collection contains information about the exception or exceptions.</exception>
+    </member>
+    <member name="M:System.Threading.Tasks.Task.Wait(System.Int32)">
+      <summary>等待 <see cref="T:System.Threading.Tasks.Task" /> 在指定的毫秒數內完成執行。</summary>
+      <returns>如果 true 在指定的時間內執行完成，則為 <see cref="T:System.Threading.Tasks.Task" />，否則為 false。</returns>
+      <param name="millisecondsTimeout">要等候的毫秒數，如果要無限期等候，則為 <see cref="F:System.Threading.Timeout.Infinite" /> (-1)。</param>
+      <exception cref="T:System.ObjectDisposedException">The <see cref="T:System.Threading.Tasks.Task" /> has been disposed.</exception>
+      <exception cref="T:System.ArgumentOutOfRangeException">
+        <paramref name="millisecondsTimeout" /> is a negative number other than -1, which represents an infinite time-out.</exception>
+      <exception cref="T:System.AggregateException">The task was canceled.The <see cref="P:System.AggregateException.InnerExceptions" /> collection contains a <see cref="T:System.Threading.Tasks.TaskCanceledException" /> object.-or-An exception was thrown during the execution of the task.The <see cref="P:System.AggregateException.InnerExceptions" /> collection contains information about the exception or exceptions.</exception>
+    </member>
+    <member name="M:System.Threading.Tasks.Task.Wait(System.Int32,System.Threading.CancellationToken)">
+      <summary>等候 <see cref="T:System.Threading.Tasks.Task" /> 完成執行。如果在工作完成之前經過逾時間隔或取消語彙基元已取消，則等候會終止。</summary>
+      <returns>如果 true 在指定的時間內執行完成，則為 <see cref="T:System.Threading.Tasks.Task" />，否則為 false。</returns>
+      <param name="millisecondsTimeout">要等候的毫秒數，如果要無限期等候，則為 <see cref="F:System.Threading.Timeout.Infinite" /> (-1)。</param>
+      <param name="cancellationToken">等候工作完成時要觀察的取消語彙基元。</param>
+      <exception cref="T:System.OperationCanceledException">The <paramref name="cancellationToken" /> was canceled.</exception>
+      <exception cref="T:System.ObjectDisposedException">The <see cref="T:System.Threading.Tasks.Task" /> has been disposed.</exception>
+      <exception cref="T:System.ArgumentOutOfRangeException">
+        <paramref name="millisecondsTimeout" /> is a negative number other than -1, which represents an infinite time-out.</exception>
+      <exception cref="T:System.AggregateException">The task was canceled.The <see cref="P:System.AggregateException.InnerExceptions" /> collection contains a <see cref="T:System.Threading.Tasks.TaskCanceledException" /> object.-or-An exception was thrown during the execution of the task.The <see cref="P:System.AggregateException.InnerExceptions" /> collection contains information about the exception or exceptions.</exception>
+    </member>
+    <member name="M:System.Threading.Tasks.Task.Wait(System.Threading.CancellationToken)">
+      <summary>等候 <see cref="T:System.Threading.Tasks.Task" /> 完成執行。如果在工作完成之前取消語彙基元已取消，則等候會終止。</summary>
+      <param name="cancellationToken">等候工作完成時要觀察的取消語彙基元。</param>
+      <exception cref="T:System.OperationCanceledException">The <paramref name="cancellationToken" /> was canceled.</exception>
+      <exception cref="T:System.ObjectDisposedException">The task has been disposed.</exception>
+      <exception cref="T:System.AggregateException">The task was canceled.The <see cref="P:System.AggregateException.InnerExceptions" /> collection contains a <see cref="T:System.Threading.Tasks.TaskCanceledException" /> object.-or-An exception was thrown during the execution of the task.The <see cref="P:System.AggregateException.InnerExceptions" /> collection contains information about the exception or exceptions.</exception>
+    </member>
+    <member name="M:System.Threading.Tasks.Task.Wait(System.TimeSpan)">
+      <summary>等待 <see cref="T:System.Threading.Tasks.Task" /> 在指定的時間間隔內完成執行。</summary>
+      <returns>如果 true 在指定的時間內執行完成，則為 <see cref="T:System.Threading.Tasks.Task" />，否則為 false。</returns>
+      <param name="timeout">
+        <see cref="T:System.TimeSpan" />，代表等候毫秒數；或是 <see cref="T:System.TimeSpan" />，代表無限期等候的 -1 毫秒。</param>
+      <exception cref="T:System.ObjectDisposedException">The <see cref="T:System.Threading.Tasks.Task" /> has been disposed.</exception>
+      <exception cref="T:System.ArgumentOutOfRangeException">
+        <paramref name="timeout" /> is a negative number other than -1 milliseconds, which represents an infinite time-out. -or-<paramref name="timeout" /> is greater than <see cref="F:System.Int32.MaxValue" />. </exception>
+      <exception cref="T:System.AggregateException">The task was canceled.The <see cref="P:System.AggregateException.InnerExceptions" /> collection contains a <see cref="T:System.Threading.Tasks.TaskCanceledException" /> object.-or-An exception was thrown during the execution of the task.The <see cref="P:System.AggregateException.InnerExceptions" /> collection contains information about the exception or exceptions.</exception>
+    </member>
+    <member name="M:System.Threading.Tasks.Task.WaitAll(System.Threading.Tasks.Task[])">
+      <summary>等候所有提供的 <see cref="T:System.Threading.Tasks.Task" /> 物件完成執行。</summary>
+      <param name="tasks">要等待之 <see cref="T:System.Threading.Tasks.Task" /> 執行個體的陣列。</param>
+      <exception cref="T:System.ObjectDisposedException">One or more of the <see cref="T:System.Threading.Tasks.Task" /> objects in <paramref name="tasks" /> has been disposed.</exception>
+      <exception cref="T:System.ArgumentNullException">The <paramref name="tasks" /> argument is null.-or-The <paramref name="tasks" /> argument contains a null element.</exception>
+      <exception cref="T:System.AggregateException">At least one of the <see cref="T:System.Threading.Tasks.Task" /> instances was canceled.If a task was canceled, the <see cref="T:System.AggregateException" /> exception contains an <see cref="T:System.OperationCanceledException" /> exception in its <see cref="P:System.AggregateException.InnerExceptions" /> collection.-or-An exception was thrown during the execution of at least one of the <see cref="T:System.Threading.Tasks.Task" /> instances. </exception>
+    </member>
+    <member name="M:System.Threading.Tasks.Task.WaitAll(System.Threading.Tasks.Task[],System.Int32)">
+      <summary>等待所有提供的 <see cref="T:System.Threading.Tasks.Task" /> 物件在指定的毫秒數內完成執行。</summary>
+      <returns>如果所有 true 執行個體在指定的時間內執行完成，則為 <see cref="T:System.Threading.Tasks.Task" />，否則為 false。</returns>
+      <param name="tasks">要等待之 <see cref="T:System.Threading.Tasks.Task" /> 執行個體的陣列。</param>
+      <param name="millisecondsTimeout">要等候的毫秒數，如果要無限期等候，則為 <see cref="F:System.Threading.Timeout.Infinite" /> (-1)。</param>
+      <exception cref="T:System.ObjectDisposedException">One or more of the <see cref="T:System.Threading.Tasks.Task" /> objects in <paramref name="tasks" /> has been disposed.</exception>
+      <exception cref="T:System.ArgumentNullException">The <paramref name="tasks" /> argument is null.</exception>
+      <exception cref="T:System.AggregateException">At least one of the <see cref="T:System.Threading.Tasks.Task" /> instances was canceled.If a task was canceled, the <see cref="T:System.AggregateException" /> contains an <see cref="T:System.OperationCanceledException" /> in its <see cref="P:System.AggregateException.InnerExceptions" /> collection.-or-An exception was thrown during the execution of at least one of the <see cref="T:System.Threading.Tasks.Task" /> instances. </exception>
+      <exception cref="T:System.ArgumentOutOfRangeException">
+        <paramref name="millisecondsTimeout" /> is a negative number other than -1, which represents an infinite time-out.</exception>
+      <exception cref="T:System.ArgumentException">The <paramref name="tasks" /> argument contains a null element.</exception>
+    </member>
+    <member name="M:System.Threading.Tasks.Task.WaitAll(System.Threading.Tasks.Task[],System.Int32,System.Threading.CancellationToken)">
+      <summary>

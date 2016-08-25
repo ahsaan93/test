@@ -1,0 +1,10 @@
+yKeyNameAttribute.#ctor(System.String)">
+      <summary>Initialisiert eine neue Instanz der <see cref="T:System.Reflection.AssemblyKeyNameAttribute" />-Klasse mit dem Namen des Containers, der das Schlüsselpaar zum Generieren eines starken Namens für die Assembly enthält, die mit Attributen versehen wird.</summary>
+      <param name="keyName">Der Name des Containers mit dem Schlüsselpaar. </param>
+    </member>
+    <member name="P:System.Reflection.AssemblyKeyNameAttribute.KeyName">
+      <summary>Ruft den Namen des Containers ab, der das Schlüsselpaar zum Generieren eines starken Namens für die mit Attributen versehene Assembly enthält.</summary>
+      <returns>Eine Zeichenfolge mit dem Namen der Containers, der das zutreffende Schlüsselpaar enthält.</returns>
+    </member>
+    <member name="T:System.Reflection.AssemblyMetadataAttribute">
+      <summary>Definiert ein Schlüssel-Wert-Metadatenpaar 

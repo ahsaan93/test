@@ -1,0 +1,633 @@
+t.</summary>
+      <returns>Ein Objekt, das <paramref name="value" /> darstellt.</returns>
+      <param name="value">Eine Anzahl von Minuten, auf die nÃ¤chste Millisekunde gerundet. </param>
+      <exception cref="T:System.OverflowException">
+        <paramref name="value" /> is less than <see cref="F:System.TimeSpan.MinValue" /> or greater than <see cref="F:System.TimeSpan.MaxValue" />.-or-<paramref name="value" /> is <see cref="F:System.Double.PositiveInfinity" />.-or-<paramref name="value" /> is <see cref="F:System.Double.NegativeInfinity" />. </exception>
+      <exception cref="T:System.ArgumentException">
+        <paramref name="value" /> is equal to <see cref="F:System.Double.NaN" />. </exception>
+      <filterpriority>1</filterpriority>
+    </member>
+    <member name="M:System.TimeSpan.FromSeconds(System.Double)">
+      <summary>Gibt eine <see cref="T:System.TimeSpan" /> zurÃ¼ck, die eine angegebene Anzahl von Sekunden darstellt. Die Angabe wird auf die nÃ¤chste Millisekunde gerundet.</summary>
+      <returns>Ein Objekt, das <paramref name="value" /> darstellt.</returns>
+      <param name="value">Eine Anzahl von Sekunden, auf die nÃ¤chste Millisekunde gerundet. </param>
+      <exception cref="T:System.OverflowException">
+        <paramref name="value" /> is less than <see cref="F:System.TimeSpan.MinValue" /> or greater than <see cref="F:System.TimeSpan.MaxValue" />.-or-<paramref name="value" /> is <see cref="F:System.Double.PositiveInfinity" />.-or-<paramref name="value" /> is <see cref="F:System.Double.NegativeInfinity" />. </exception>
+      <exception cref="T:System.ArgumentException">
+        <paramref name="value" /> is equal to <see cref="F:System.Double.NaN" />. </exception>
+      <filterpriority>1</filterpriority>
+    </member>
+    <member name="M:System.TimeSpan.FromTicks(System.Int64)">
+      <summary>Gibt eine <see cref="T:System.TimeSpan" /> zurÃ¼ck, die einen angegebenen Zeitraum darstellt. Die Angabe erfolgt in der Einheit Ticks.</summary>
+      <returns>Ein Objekt, das <paramref name="value" /> darstellt.</returns>
+      <param name="value">Eine Anzahl von Ticks, die eine Zeitspanne darstellt. </param>
+      <filterpriority>1</filterpriority>
+    </member>
+    <member name="M:System.TimeSpan.GetHashCode">
+      <summary>Gibt einen Hashcode fÃ¼r diese Instanz zurÃ¼ck.</summary>
+      <returns>Ein 32-Bit-Hashcode als ganze Zahl mit Vorzeichen.</returns>
+      <filterpriority>2</filterpriority>
+    </member>
+    <member name="P:System.TimeSpan.Hours">
+      <summary>Ruft die Stundenkomponente des Zeitintervalls ab, das durch die aktuelle <see cref="T:System.TimeSpan" />-Struktur dargestellt wird.</summary>
+      <returns>Die Stundenkomponente der aktuellen <see cref="T:System.TimeSpan" />-Struktur.Der RÃ¼ckgabewert liegt im Bereich von -23Â bisÂ 23.</returns>
+      <filterpriority>1</filterpriority>
+    </member>
+    <member name="F:System.TimeSpan.MaxValue">
+      <summary>Stellt den maximalen <see cref="T:System.TimeSpan" />-Wert dar.Dieses Feld ist schreibgeschÃ¼tzt.</summary>
+      <filterpriority>1</filterpriority>
+    </member>
+    <member name="P:System.TimeSpan.Milliseconds">
+      <summary>Ruft die Stundenkomponente des Zeitintervalls ab, das durch die aktuelle <see cref="T:System.TimeSpan" />-Struktur dargestellt wird.</summary>
+      <returns>Die Millisekundenkomponente der aktuellen <see cref="T:System.TimeSpan" />-Struktur.Der RÃ¼ckgabewert liegt im Bereich von -999Â bisÂ 999.</returns>
+      <filterpriority>1</filterpriority>
+    </member>
+    <member name="P:System.TimeSpan.Minutes">
+      <summary>Ruft die Minutenkomponente des Zeitintervalls ab, das durch die aktuelle <see cref="T:System.TimeSpan" />-Struktur dargestellt wird.</summary>
+      <returns>Die Minutenkomponente der aktuellen <see cref="T:System.TimeSpan" />-Struktur.Der RÃ¼ckgabewert liegt im Bereich von -59Â bisÂ 59.</returns>
+      <filterpriority>1</filterpriority>
+    </member>
+    <member name="F:System.TimeSpan.MinValue">
+      <summary>Stellt den minimalen <see cref="T:System.TimeSpan" />-Wert dar.Dieses Feld ist schreibgeschÃ¼tzt.</summary>
+      <filterpriority>1</filterpriority>
+    </member>
+    <member name="M:System.TimeSpan.Negate">
+      <summary>Gibt ein neues <see cref="T:System.TimeSpan" />-Objekt zurÃ¼ck, dessen Wert der negierte Wert dieser Instanz ist.</summary>
+      <returns>Ein neues Objekt mit demselben numerischen Wert wie diese Instanz, jedoch mit umgekehrtem Vorzeichen.</returns>
+      <exception cref="T:System.OverflowException">The negated value of this instance cannot be represented by a <see cref="T:System.TimeSpan" />; that is, the value of this instance is <see cref="F:System.TimeSpan.MinValue" />. </exception>
+      <filterpriority>1</filterpriority>
+    </member>
+    <member name="M:System.TimeSpan.op_Addition(System.TimeSpan,System.TimeSpan)">
+      <summary>Addiert zwei angegebene <see cref="T:System.TimeSpan" />-Instanzen.</summary>
+      <returns>Ein Objekt, dessen Wert die Summe der Werte von <paramref name="t1" /> und <paramref name="t2" /> ist.</returns>
+      <param name="t1">Das erste hinzuzufÃ¼gende Zeitintervall. </param>
+      <param name="t2">Das zweite hinzuzufÃ¼gende Zeitintervall.</param>
+      <exception cref="T:System.OverflowException">The resulting <see cref="T:System.TimeSpan" /> is less than <see cref="F:System.TimeSpan.MinValue" /> or greater than <see cref="F:System.TimeSpan.MaxValue" />. </exception>
+      <filterpriority>3</filterpriority>
+    </member>
+    <member name="M:System.TimeSpan.op_Equality(System.TimeSpan,System.TimeSpan)">
+      <summary>Gibt an, ob zwei <see cref="T:System.TimeSpan" />-Instanzen gleich sind.</summary>
+      <returns>true, wenn die Werte von <paramref name="t1" /> und <paramref name="t2" /> gleich sind, andernfalls false.</returns>
+      <param name="t1">Das erste zu vergleichende Zeitintervall. </param>
+      <param name="t2">Das zweite zu vergleichende Zeitintervall. </param>
+      <filterpriority>3</filterpriority>
+    </member>
+    <member name="M:System.TimeSpan.op_GreaterThan(System.TimeSpan,System.TimeSpan)">
+      <summary>Gibt an, ob eine angegebene <see cref="T:System.TimeSpan" /> grÃ¶ÃŸer als eine andere angegebene <see cref="T:System.TimeSpan" /> ist.</summary>
+      <returns>true, wenn der Wert von <paramref name="t1" /> grÃ¶ÃŸer als der Wert von <paramref name="t2" /> ist, andernfalls false.</returns>
+      <param name="t1">Das erste zu vergleichende Zeitintervall. </param>
+      <param name="t2">Das zweite zu vergleichende Zeitintervall. </param>
+      <filterpriority>3</filterpriority>
+    </member>
+    <member name="M:System.TimeSpan.op_GreaterThanOrEqual(System.TimeSpan,System.TimeSpan)">
+      <summary>Gibt an, ob eine angegebene <see cref="T:System.TimeSpan" /> grÃ¶ÃŸer oder gleich einer anderen angegebenen <see cref="T:System.TimeSpan" /> ist.</summary>
+      <returns>true, wenn der Wert von <paramref name="t1" /> grÃ¶ÃŸer oder gleich dem Wert von <paramref name="t2" /> ist, andernfalls false.</returns>
+      <param name="t1">Das erste zu vergleichende Zeitintervall.</param>
+      <param name="t2">Das zweite zu vergleichende Zeitintervall.</param>
+      <filterpriority>3</filterpriority>
+    </member>
+    <member name="M:System.TimeSpan.op_Inequality(System.TimeSpan,System.TimeSpan)">
+      <summary>Gibt an, ob zwei <see cref="T:System.TimeSpan" />-Instanzen ungleich sind.</summary>
+      <returns>true, wenn die Werte von <paramref name="t1" /> und <paramref name="t2" /> ungleich sind, andernfalls false.</returns>
+      <param name="t1">Das erste zu vergleichende Zeitintervall.</param>
+      <param name="t2">Das zweite zu vergleichende Zeitintervall.</param>
+      <filterpriority>3</filterpriority>
+    </member>
+    <member name="M:System.TimeSpan.op_LessThan(System.TimeSpan,System.TimeSpan)">
+      <summary>Gibt an, ob eine angegebene <see cref="T:System.TimeSpan" /> kleiner als eine andere angegebene <see cref="T:System.TimeSpan" /> ist.</summary>
+      <returns>true, wenn der Wert von <paramref name="t1" /> kleiner als der Wert von 
+oÌ  
+(Š 
+ou 
+o©  
+8‹  o«  
+o 
+o´ 
++Koµ 
+		oÙ  
+&	oÙ  
+(Ú  
+,(	oÙ  
+(Ú  
+s 
+
+
+oR 
+,	+	od  
+-¬Ş,o  
+Ü(Ø  
+9   o* 
+(°  
+,{w  o 
+oÜ  {w  oê  o 
+o 
+1	(E  o* 
+(°  
+,`of 
+o (‰  +1((/ {w  o² 
+(Ú  
+oû  oÊ 
+oË 
+oğ 
+( 
+o@ 
+&+<{w  o* 
+oÍ  oÊ 
+oË 
+oğ 
+oğ 
+( 
+o@ 
+&od  
+:işÿÿŞ,o  
+ÜŞoL  
+oO  
+Ş od  
+:şÿÿŞ,o  
+Üo` 
+Ş
+,o  
+ÜŞ,o  
+Ü* A”     ®   X                    -             b   Ù  ;     |    U     Z            H   &  n  
+             l  z         0 Z   {  {}  %(I  
+s_ 
+
+o½ 
+oË 
+o¾ 
+(	 X(
+ (] o` 
+Ş
+,o  
+ÜŞ
+,(K  
+Ü*      ,C 
+      MO 
+    *([ *Ro¿ 
+uÜ  ([ *0 Ô   §  
+oÊ 
+oÙ 
+8¥   oÚ 
+oD  
+:   o0 
+:†   (À 
+~R 
+oŠ  +( 
+,oof 
+(S 
+( 
+-[-	
+(E &,(F oš 
+&+	(K 	,-	oÂ 
+(‹ 
+,(À 
+	oÂ 
+o‘ 
+o  +&oc 
+od  
+:OÿÿÿŞ,o  
+Ü*    ¸Ç     Š(1 ~t  (/ 
+-oÃ 
+*(] *(  
+*(  
+*6{{ oÄ 
+*Ê{x oÅ 
+oÆ 
+(‹  +oÅ 
+oË 
+oÌ 
+oÇ 
+oJ  
+*0 X  ¨  s_ 
+
+sm }z sÈ 
+}{ {{ {x o½ 
+oÉ 
+{{ Ğ$  (  
+{x oâ  
+{{ oË 
+{x oÊ 
+oË 
+{y ,{{ (H  şn s„ 
+-şl sÌ 
+{x oÍ 
+{{ oÎ 
+{x o  
+    3{w {{ (Q 8³  {x o  
+    3{w {{ (R 8Š  {x oÊ 
+oÙ 
+8Y  oÚ 
+{x oQ  
+(³ 
+:D  sÏ 
+{w {w  {{ oú  {w {v  oĞ 
+8Ô   (Ñ 
+{w 	{x o 
+{x o 
+{x o  
+(^ 9–   ,{w 	(8 9†   {–  oÒ 
++SoÓ 
+oÔ 
+oÕ 
+-:oÔ 
+oÖ 
+&{{ 	o× 
+&	{{ oz {{ 	oc 
+od  
+-¤Ş,o  
+Ü(Ø 
+: ÿÿÿŞş  o  
+ÜŞ,o  
+Üod  
+:›şÿÿŞ,o  
+Ü{{ oÙ 
+oÙ 
++oÚ 
+	{x oÚ 
+	oÛ 
+&od  
+-ÛŞ,o  
+Ü{{ oÜ 
+oİ 
++oŞ 
+
+{x 
+oß 
+od  
+-áŞ,o  
+ÜŞ{x oà 
+{{ oá 
+Üo` 
+Ş
+,o  
+Ü*AÄ     ï  `   O            ‚  ç   i            p  	  y            '  l  “            ²  )   Û            ú  #               ª     +            	   D  M  
+       0 d   ©  sj }x }y }w 
+{}  % (I  
+-şk s„ 
+(* {y -{x oÃ 
+Ş
+,	(K  
+Ü*    :Y 
+    (  
+*J{| {“  oâ 
+* 0 Î   ª  
+so }| {| {—  _@¨   {| {’  ,{| {’  oã 
+9„   {| {“  ,!(%  +,-şp sä 
+
+(Œ  +,V{| {•  ,"(%  +,{| {•  (  +(%  +,'{| {”  ,,{| {”  (  +,**  0 œ   «  (1 u:  
+, ~t  (/ 
+,:  ¢(a -
+ş)  *Ğ)  (  
+Ğ	  (  
+(ë  
+,{y  u)  ¥)  *Ğ)  (  
+Ğ  (  
+(ë  
+,{z  u)  ¥)  *ş)  	*:oæ 
+(… 
+ş* 0 Í   ¬  (1 ~t  (/ 
+,	(a -*sç 
+
+oÙ 
+8…   	oÚ 
+(è 
+oé 
+(ê 
+o‰ 
+,1~‘  -şw së 
+€‘  ~‘  oì 
+&~Œ  oé 
++2(ˆ 
+o‰ 
+,~  oé 
++(í 
+o‰ 
+,~  oé 
+	od  
+:pÿÿÿŞ
+	,	o  
+Ü*      * —Á 
+    (  
+*(  
+*0 %   ‹  {€ {~ {} (8 
+şş} *   0 ù   ­  oÙ 
+8Í   sq 	oÚ 
+}} sr 	}~ }€ } 	{} (š 
+o‰ 
+,	{} (ß  
+o	  +
+} +d	{} (¸ 
+o‰ 
+-_	{} ( 
+o‰ 
+,	{} (b } +-	{} (S  oá  
+,Ş?-şs s„ 
+(* { ,Şod  
+:'ÿÿÿŞ,o  
+Ü**       àè     0 @   ®  
+of 
+(î 
+(‹ 
+,'oï 
+rÉ poğ 
+,
++oï 
+~u  (ñ 
+
+*6{z  oª  *6{z  o«  *&}‚  *
+*
+*
+*
+*
+*
+*
+*
+*
+*"(I *&(J *0 N  ¯  r] psò 
+€t  r« psò 
+€u  ~  
+(ó 
+{  (ˆ 
+¢{  (ô 
+¢sõ 
+¢(ó 
+{  	(ê 
+¢	{  (ô 
+¢sõ 
+¢(ö 
+{  (ˆ 
+¢{  (ô 
+¢sõ 
+¢(ö 
+{  (ê 
+¢{  (ô 
+¢sõ 
+¢(ö 
+{  		(í 
+¢	{  
+
+(ô 
+¢
+sõ 
+¢€Œ  ~  (ó 
+{  (ê 
+¢{  (ô 
+¢sõ 
+¢(ö 
+{  (ê 
+¢{  (ô 
+¢sõ 
+¢(ö 
+{  (í 
+¢{  (ô 
+¢sõ 
+¢€  ~  (ó 
+{  (ˆ 
+¢{  (ô 
+¢sõ 
+¢(ó 
+{  (ê 
+¢{  (ô 
+¢sõ 
+¢€  *Js  
+}}  (  
+*ò(  
+}—  }“  }”  }–  }•  ,sø 
+}’  *(  *  0 P       (°  
+,r ps  
+zo 
+- oq 
+-o 
+-o# 
+-o 
+,*(‚ (ƒ (  *š(%  
+,r¡ ps  
+z(„ (… (  *&Z(  *òo0  
+,*oÅ  
+,*oÄ  
+,l*o¥ 
+,*o„  
+,0* ì   *Êo“ 
+,*o• 
+-où 
+,*o– 
+,*o” 
+,**   0 Ø       o	 
+,*o} 
+,*oL 
+,*o= 
+-0o.  
+-(o5 
+- oL 
+-oM 
+-oú 
+-oû 
+,Q(ü 
+,Fo½  
+, à   *o¾  
+-o¿  
+, ß   *oÀ  
+, İ   *oÁ  
+, Ü   * Ü   *H*o> 
+-o  
+,f*o   
+,**o  
+,`* ì   *Êo½  
+,*o¾  
+-o¿  
+,*oÀ  
+,*oÁ  
+,**{˜  *{™  *"}™  *0 Q       ("  
+(­ (º s#  
+}˜  }š  }›  }™  }œ  (³ &Ğ  (  
+(« &*J(© (º (ı 
+*0 n   °  {›  oD  
+,*rù p(‡ (  +
+o (· oş 
++Ğ  (  
+o“ oÿ 
+(;  
+-ßŞ
+,o  
+ÜŞ
+,o  
+Ü*     + ,W 
+      Dc 
+    *  0 ù   ±  {›  oD  
+,*o4  
+(…  
+,*~R 
+
+o4  
+oä  
+3o4  
+t£ o  
+o 
+o) 
+
++=o4  
+oä  
+I3o4  
+o2  
+Œß  o) 
+
++o4  
+oä  
+Œ o) 
+
+r p(‡ (  +o$  
+(·  
+,9{š  {œ  o$  
+oÍ  ,{™  oË 
+o ~R 
+(‘  +&(&  
+Ş
+,o  
+Ü*       Pî 
+    0 «   ²  {›  oD  
+,*r% po 
+o 
+(‡ (’  +
+{š  {œ  o 
+o$  
+oÍ  ,{™  oË 
+o ~R 
+(‘  +&(» o 
+o 
+o u  o½ o 
+Ğ§ (  
+o“ Ş
+,o  
+Ü*    * v  
+    0 =  ³  {›  oD  
+,*o 
+
+o 
+(%  
+,$o 
+uƒ  ,o 
+Ğ¨ (  
+o“ *(%  
+,*r= poA  
+o 
+(‡ (“  +o 
+{š  {œ  oÎ  {™  oË 
+o¦ oi 
+(? 
+oI 
+&{š  {œ  oF 
+aoÍ  	,{™  oË 
+o 	~R 
+(‘  +&o 
+(;  
+,o 
+Ğ¨ (  
+o“ +$o 
+(;  
+,o 
+Ğ¨ (  
+o“ Ş
+,o  
+Ü*      m Å2
+    0 3   ´  {›  oD  
+,*r- p(‡ (”  +
+(	 
+Ş
+,o  
+Ü*     	( 
+    0 3   ´  {›  oD  
+,*rQ p(‡ (•  +
+(
+ 
+Ş
+,o  
+Ü*     	( 
+    0 _   ´  {›  oD  
+,*r[ p(‡ (–  +
+( 
+o 
+Ğ­ (  
+o“ o 
+Ğ® (  
+o“ Ş
+,o  
+Ü*     5T 
+    {›  oD  
+,*(« &o‹  
+(¬ &*0 ‘   ²  {›  oD  
+,*rq p(‡ (—  +
+{š  {œ  o$  
+oÍ  ,{™  oË 
+o ~R 
+(‘  +&o 
+Ğ° (  
+o“ o 
+Ğ± (  
+o“ Ş
+,o  
+Ü*       g† 
+    0 m   ²  r} p(‡ (˜  +
+{š  {œ  o$  
+oÍ  ,{™  oË 
+o ~R 
+(‘  +&o 
+Ğ³ (  
+o“ Ş
+,o  
+Ü*       Qb 
+    0 m   ²  r™ p(‡ (™  +
+{š  {œ  o$  
+oÍ  ,{™  oË 
+o ~R 
+(‘  +&o 
+Ğµ (  
+o“ Ş
+,o  
+Ü*       Qb 
+    *  0 |   ²  {›  oD  
+,*o 
+(;  
+,o 
+o‹  
+*rÁ p(‡ (š  +
+{š  {œ  o$  
+oÍ  ,(‡ oË 
+o (‘  +&Ş
+,o  
+Ü*   : 7q 
+    0 Ÿ   µ  {›  oD  
+,*rİ p(‡ (›  +
+o 
+u  ,-o 
+u  o 
+(;  
+,6Ğ· (  
+o“ +#o 
+u  ,o 
+Ğ· (  
+o“ o 
+Ğ¸ (  
+o“ Ş
+,o  
+Ü*     u” 
+    æo= 
+-/o.  
+-'o5 
+-o> 
+-o  
+-o  
+-oL 
+**{  *"}  *{Ÿ  *"}Ÿ  *{¢  *"}¢  *V(  
+(¥ (  *²(  
+(¥ ( oğ 
+oô 
+s  (  *Î(  
+(¥ ( oğ 
+oô 
+s  (  }  *{£  *"}£  *‚{Ÿ  ,{Ÿ  oi 
+*{  oi 
+*:(´ &(ı 
+*~   *€   *"(² *b~¡  o 
+~¡  (œ  +Y*.~¡  o 
+*.~¡  o 
+*

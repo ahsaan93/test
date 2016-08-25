@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">Facebook</string>
+    <string name="description">Facebook login page</string>
+    <string name="loginHint">Email or Phone</string>
+    <string name="passwordHint">Password</string>
+    <string name="ifMatched">User name is matched</string>
+    <string name="ifNotMatched">User name is not matched</string>
+    <string name="name">Muhammad Ahsan</string>
+</resources>

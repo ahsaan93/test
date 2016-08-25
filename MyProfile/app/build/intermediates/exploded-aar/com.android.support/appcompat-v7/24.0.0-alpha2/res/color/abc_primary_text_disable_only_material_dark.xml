@@ -1,0 +1,6 @@
+으로 간주됩니다. 사용 약관을 보려면 인터넷에 연결된 장치를 사용하여 {0}!@! 및 !$!http://go.microsoft.com/fwlink/?LinkID=[[VSEIPAndPrivacyFwlinkId]]&amp;clcid=[[clcid]]!,!개인 정보 취급 방침!,!!,! 페이지로 이동하세요. 개인 정보 취급 방침을 보려면 인터넷에 연결된 장치를 사용하여 {0}!@! 페이지로 이동합니다.</text>
+      <tooltiptext _locID="welcomeLicenseNextTip">[다음] 단추를 클릭하면 사용 약관 및 개인 정보 취급 방침에 동의하는 것으로 간주됩니다.</tooltiptext>
+    </agreetextnextonline>
+    <agreetextinstall>
+      <text _locID="welcomeLicenseInstall">[설치] 단추를 클릭하면 !$!{0}!,!사용 약관!@! 및 !$!http://go.microsoft.com/fwlink/?LinkID=[[VSEIPAndPrivacyFwlinkId]]&amp;clcid=[[clcid]]!,!개인 정보 취급 방침!@!에 동의하는 것으로 간주됩니다.</text>
+      <toolti

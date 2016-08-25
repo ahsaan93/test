@@ -1,0 +1,170 @@
+icode-Zeichen oder null. </param>
+      <filterpriority>1</filterpriority>
+    </member>
+    <member name="M:System.String.TrimEnd(System.Char[])">
+      <summary>Entfernt alle nachgestellten Vorkommen der Zeichen im angegebenen Array aus dem aktuellen <see cref="T:System.String" />-Objekt.</summary>
+      <returns>Die resultierende Zeichenfolge, nachdem alle im <paramref name="trimChars" />-Parameter übergebenen Zeichen am Ende der aktuellen Zeichenfolge entfernt wurden.Wenn <paramref name="trimChars" />null oder ein leeres Array ist, werden stattdessen Leerzeichen entfernt.Wenn keine Zeichen in der aktuellen Instanz gekürzt werden können, gibt die Methode die aktuelle Instanz unverändert zurück.</returns>
+      <param name="trimChars">Ein Array mit den zu entfernenden Unicode-Zeichen oder null. </param>
+      <filterpriority>2</filterpriority>
+    </member>
+    <member name="M:System.String.TrimStart(System.Char[])">
+      <summary>Entfernt alle nachgestellten Vorkommen der Zeichen im angegebenen Array aus dem aktuellen <see cref="T:System.String" />-Objekt.</summary>
+      <returns>Die resultierende Zeichenfolge, nachdem alle im <paramref name="trimChars" />-Parameter übergebenen Zeichen am Anfang der aktuellen Zeichenfolge entfernt wurden.Wenn <paramref name="trimChars" />null oder ein leeres Array ist, werden stattdessen Leerzeichen entfernt.</returns>
+      <param name="trimChars">Ein Array mit den zu entfernenden Unicode-Zeichen oder null. </param>
+      <filterpriority>2</filterpriority>
+    </member>
+    <member name="T:System.StringComparison">
+      <summary>Gibt die Kultur, die Groß-/Kleinschreibung und die Sortierreihenfolge an, die von bestimmten Überladungen der <see cref="M:System.String.Compare(System.String,System.String)" />-Methode und der <see cref="M:System.String.Equals(System.Object)" />-Methode verwendet werden sollen.</summary>
+      <filterpriority>2</filterpriority>
+    </member>
+    <member name="F:System.StringComparison.CurrentCulture">
+      <summary>Vergleichen Sie Zeichenfolgen mit kulturabhängigen Sortierregeln und der aktuellen Kultur.</summary>
+    </member>
+    <member name="F:System.StringComparison.CurrentCultureIgnoreCase">
+      <summary>Vergleichen Sie Zeichenfolgen anhand der kulturabhängigen Sortierregeln und der aktuellen Kultur ohne Berücksichtigung der Groß- und Kleinschreibung der verglichenen Zeichenfolgen.</summary>
+    </member>
+    <member name="F:System.StringComparison.Ordinal">
+      <summary>Vergleich von Zeichenfolgen anhand der ordinalen Sortierregeln.</summary>
+    </member>
+    <member name="F:System.StringComparison.OrdinalIgnoreCase">
+      <summary>Vergleich von Zeichenfolgen anhand der ordinalen Sortierregeln und unter Nichtbeachtung der Groß- und Kleinschreibung der verglichenen Zeichenfolgen.</summary>
+    </member>
+    <member name="T:System.StringSplitOptions">
+      <summary>Gibt an, ob anwendbare <see cref="Overload:System.String.Split" />-Methodenüberladungen leere Teilzeichenfolgen im Rückgabewert einschließen oder weglassen.</summary>
+      <filterpriority>1</filterpriority>
+    </member>
+    <member name="F:System.StringSplitOptions.None">
+      <summary>Der Rückgabewert schließt Arrayelemente ein, die eine leere Zeichenfolge enthalten.</summary>
+    </member>
+    <member name="F:System.StringSplitOptions.RemoveEmptyEntries">
+      <summary>Der Rückgabewert schließt keine Arrayelemente ein, die eine leere Zeichenfolge enthalten.</summary>
+    </member>
+    <member name="T:System.ThreadStaticAttribute">
+      <summary>Gibt an, dass der Wert eines statischen Felds für jeden Thread eindeutig ist.</summary>
+      <filterpriority>1</filterpriority>
+    </member>
+    <member name="M:System.ThreadStaticAttribute.#ctor">
+      <summary>Initialisiert eine neue Instanz der <see cref="T:System.ThreadStaticAttribute" />-Klasse.</summary>
+    </member>
+    <member name="T:System.TimeoutException">
+      <summary>Die Ausnahme, die ausgelöst wird, wenn die für einen Prozess oder einen Vorgang vorgesehene Zeit abgelaufen ist.</summary>
+      <filterpriority>2</filterpriority>
+    </member>
+    <member name="M:System.TimeoutException.#ctor">
+      <summary>Initialisiert eine neue Instanz der <see cref="T:System.TimeoutException" />-Klasse.</summary>
+    </member>
+    <member name="M:System.TimeoutException.#ctor(System.String)">
+      <summary>Initialisiert eine neue Instanz der <see cref="T:System.TimeoutException" />-Klasse mit der angegebenen Fehlermeldung.</summary>
+      <param name="message">Die Meldung, in der der Fehler beschrieben wird. </param>
+    </member>
+    <member name="M:System.TimeoutException.#ctor(System.String,System.Exception)">
+      <summary>Initialisiert eine neue Instanz der <see cref="T:System.TimeoutException" />-Klasse mit der angegebenen Fehlermeldung und der angegebenen internen Ausnahme.</summary>
+      <param name="message">Die Meldung, in der der Fehler beschrieben wird. </param>
+      <param name="innerException">Die Ausnahme, die die Ursache der aktuellen Ausnahme ist.Wenn der <paramref name="innerException" />-Parameter nicht null ist, wird die aktuelle Ausnahme in einem catch-Block ausgelöst, der die innere Ausnahme behandelt.</param>
+    </member>
+    <member name="T:System.TimeSpan">
+      <summary>Stellt ein Zeitintervall dar.Weitere Informationen zum Durchsuchen des .NET Framework-Quellcodes für diesen Typ finden Sie unter Verweisquelle.</summary>
+      <filterpriority>1</filterpriority>
+    </member>
+    <member name="M:System.TimeSpan.#ctor(System.Int32,System.Int32,System.Int32)">
+      <summary>Initialisiert eine neue Instanz der <see cref="T:System.TimeSpan" />-Struktur mit der angegebenen Anzahl von Stunden, Minuten und Sekunden.</summary>
+      <param name="hours">Anzahl der Stunden. </param>
+      <param name="minutes">Anzahl der Minuten. </param>
+      <param name="seconds">Anzahl der Sekunden. </param>
+      <exception cref="T:System.ArgumentOutOfRangeException">The parameters specify a <see cref="T:System.TimeSpan" /> value less than <see cref="F:System.TimeSpan.MinValue" /> or greater than <see cref="F:System.TimeSpan.MaxValue" />. </exception>
+    </member>
+    <member name="M:System.TimeSpan.#ctor(System.Int32,System.Int32,System.Int32,System.Int32)">
+      <summary>Initialisiert eine neue Instanz der <see cref="T:System.TimeSpan" />-Struktur mit der angegebenen Anzahl von Tagen, Stunden, Minuten und Sekunden.</summary>
+      <param name="days">Anzahl der Tage. </param>
+      <param name="hours">Anzahl der Stunden. </param>
+      <param name="minutes">Anzahl der Minuten. </param>
+      <param name="seconds">Anzahl der Sekunden. </param>
+      <exception cref="T:System.ArgumentOutOfRangeException">The parameters specify a <see cref="T:System.TimeSpan" /> value less than <see cref="F:System.TimeSpan.MinValue" /> or greater than <see cref="F:System.TimeSpan.MaxValue" />. </exception>
+    </member>
+    <member name="M:System.TimeSpan.#ctor(System.Int32,System.Int32,System.Int32,System.Int32,System.Int32)">
+      <summary>Initialisiert eine neue Instanz der <see cref="T:System.TimeSpan" />-Struktur mit der angegebenen Anzahl von Tagen, Stunden, Minuten, Sekunden und Millisekunden.</summary>
+      <param name="days">Anzahl der Tage. </param>
+      <param name="hours">Anzahl der Stunden. </param>
+      <param name="minutes">Anzahl der Minuten. </param>
+      <param name="seconds">Anzahl der Sekunden. </param>
+      <param name="milliseconds">Anzahl der Millisekunden. </param>
+      <exception cref="T:System.ArgumentOutOfRangeException">The parameters specify a <see cref="T:System.TimeSpan" /> value less than <see cref="F:System.TimeSpan.MinValue" /> or greater than <see cref="F:System.TimeSpan.MaxValue" />. </exception>
+    </member>
+    <member name="M:System.TimeSpan.#ctor(System.Int64)">
+      <summary>Initialisiert eine neue Instanz der <see cref="T:System.TimeSpan" />-Struktur mit der angegebenen Anzahl von Ticks.</summary>
+      <param name="ticks">Eine in der Einheit 100 Nanosekunden ausgedrückte Zeitspanne. </param>
+    </member>
+    <member name="M:System.TimeSpan.Add(System.TimeSpan)">
+      <summary>Gibt ein neues <see cref="T:System.TimeSpan" />-Objekt zurück, dessen Wert die Summe aus dem angegebenen <see cref="T:System.TimeSpan" />-Objekt und dieser Instanz ist.</summary>
+      <returns>Ein neues Objekt, das die Summe des Werts dieser Instanz und des Werts von <paramref name="ts" /> darstellt.</returns>
+      <param name="ts">Das hinzuzufügende Zeitintervall.</param>
+      <exception cref="T:System.OverflowException">The resulting <see cref="T:System.TimeSpan" /> is less than <see cref="F:System.TimeSpan.MinValue" /> or greater than <see cref="F:System.TimeSpan.MaxValue" />. </exception>
+      <filterpriority>1</filterpriority>
+    </member>
+    <member name="M:System.TimeSpan.Compare(System.TimeSpan,System.TimeSpan)">
+      <summary>Vergleicht zwei <see cref="T:System.TimeSpan" />-Werte und gibt eine Ganzzahl zurück, die angibt, ob der erste Wert kürzer oder länger als der zweite Wert ist oder ob beide Werte die gleiche Länge aufweisen.</summary>
+      <returns>Einer der folgenden Werte.Wert Beschreibung -1 <paramref name="t1" /> ist kürzer als <paramref name="t2" />. 0 <paramref name="t1" /> ist gleich <paramref name="t2" />. 1 <paramref name="t1" /> ist länger als <paramref name="t2" />. </returns>
+      <param name="t1">Das erste zu vergleichende Zeitintervall. </param>
+      <param name="t2">Das zweite zu vergleichende Zeitintervall. </param>
+      <filterpriority>1</filterpriority>
+    </member>
+    <member name="M:System.TimeSpan.CompareTo(System.TimeSpan)">
+      <summary>Vergleicht diese Instanz mit einem angegebenen <see cref="T:System.TimeSpan" />-Objekt und gibt eine Ganzzahl zurück, die angibt, ob diese Instanz kürzer oder länger als das angegebene <see cref="T:System.TimeSpan" />-Objekt ist oder ob sie die gleiche Länge aufweist.</summary>
+      <returns>Eine Zahl mit Vorzeichen, die das Verhältnis zwischen dem Wert dieser Instanz und <paramref name="value" /> angibt.Wert Beschreibung Eine negative ganze Zahl Diese Instanz ist kürzer als <paramref name="value" />. Zero Diese Instanz ist gleich <paramref name="value" />. Eine positive ganze Zahl Diese Instanz ist länger als <paramref name="value" />. </returns>
+      <param name="value">Ein mit dieser Instanz zu vergleichendes Objekt.</param>
+      <filterpriority>1</filterpriority>
+    </member>
+    <member name="P:System.TimeSpan.Days">
+      <summary>Ruft die Tageskomponente des Zeitintervalls ab, das durch die aktuelle <see cref="T:System.TimeSpan" />-Struktur dargestellt wird.</summary>
+      <returns>Die Tagkomponente in dieser Instanz.Der Rückgabewert kann negativ oder positiv sein.</returns>
+      <filterpriority>1</filterpriority>
+    </member>
+    <member name="M:System.TimeSpan.Duration">
+      <summary>Gibt ein neues <see cref="T:System.TimeSpan" />-Objekt zurück, dessen Wert den absoluten Wert des aktuellen <see cref="T:System.TimeSpan" />-Objekts darstellt.</summary>
+      <returns>Ein neues Objekt, dessen Wert den absoluten Wert des aktuellen <see cref="T:System.TimeSpan" />-Objekts darstellt.</returns>
+      <exception cref="T:System.OverflowException">The value of this instance is <see cref="F:System.TimeSpan.MinValue" />. </exception>
+      <filterpriority>1</filterpriority>
+    </member>
+    <member name="M:System.TimeSpan.Equals(System.Object)">
+      <summary>Gibt einen Wert zurück, der angibt, ob diese Instanz gleich einem angegebenen Objekt ist.</summary>
+      <returns>true wenn <paramref name="value" /> ein <see cref="T:System.TimeSpan" />-Objekt ist, das das gleiche Zeitintervall wie die aktuelle <see cref="T:System.TimeSpan" />-Struktur darstellt, andernfalls false.</returns>
+      <param name="value">Ein Objekt, das mit dieser Instanz verglichen werden soll. </param>
+      <filterpriority>1</filterpriority>
+    </member>
+    <member name="M:System.TimeSpan.Equals(System.TimeSpan)">
+      <summary>Gibt einen Wert zurück, der angibt, ob diese Instanz gleich einem angegebenen <see cref="T:System.TimeSpan" />-Objekt ist.</summary>
+      <returns>true, wenn <paramref name="obj" /> das gleiche Zeitintervall darstellt wie diese Instanz, andernfalls false.</returns>
+      <param name="obj">Ein Objekt, das mit dieser Instanz verglichen werden soll. </param>
+      <filterpriority>1</filterpriority>
+    </member>
+    <member name="M:System.TimeSpan.Equals(System.TimeSpan,System.TimeSpan)">
+      <summary>Gibt einen Wert zurück, der angibt, ob zwei angegebene Instanzen von <see cref="T:System.TimeSpan" /> gleich sind.</summary>
+      <returns>true, wenn die Werte von <paramref name="t1" /> und <paramref name="t2" /> gleich sind, andernfalls false.</returns>
+      <param name="t1">Das erste zu vergleichende Zeitintervall. </param>
+      <param name="t2">Das zweite zu vergleichende Zeitintervall. </param>
+      <filterpriority>1</filterpriority>
+    </member>
+    <member name="M:System.TimeSpan.FromDays(System.Double)">
+      <summary>Gibt eine <see cref="T:System.TimeSpan" /> zurück, die eine angegebene Anzahl von Tagen darstellt. Die Angabe wird auf die nächste Millisekunde gerundet.</summary>
+      <returns>Ein Objekt, das <paramref name="value" /> darstellt.</returns>
+      <param name="value">Eine Anzahl von Tagen, auf die nächste Millisekunde gerundet. </param>
+      <exception cref="T:System.OverflowException">
+        <paramref name="value" /> is less than <see cref="F:System.TimeSpan.MinValue" /> or greater than <see cref="F:System.TimeSpan.MaxValue" />. -or-<paramref name="value" /> is <see cref="F:System.Double.PositiveInfinity" />.-or-<paramref name="value" /> is <see cref="F:System.Double.NegativeInfinity" />.</exception>
+      <exception cref="T:System.ArgumentException">
+        <paramref name="value" /> is equal to <see cref="F:System.Double.NaN" />. </exception>
+      <filterpriority>1</filterpriority>
+    </member>
+    <member name="M:System.TimeSpan.FromHours(System.Double)">
+      <summary>Gibt eine <see cref="T:System.TimeSpan" /> zurück, die eine angegebene Anzahl von Stunden darstellt. Die Angabe wird auf die nächste Millisekunde gerundet.</summary>
+      <returns>Ein Objekt, das <paramref name="value" /> darstellt.</returns>
+      <param name="value">Eine Anzahl von Stunden, auf die nächste Millisekunde gerundet. </param>
+      <exception cref="T:System.OverflowException">
+        <paramref name="value" /> is less than <see cref="F:System.TimeSpan.MinValue" /> or greater than <see cref="F:System.TimeSpan.MaxValue" />. -or-<paramref name="value" /> is <see cref="F:System.Double.PositiveInfinity" />.-or-<paramref name="value" /> is <see cref="F:System.Double.NegativeInfinity" />.</exception>
+      <exception cref="T:System.ArgumentException">
+        <paramref name="value" /> is equal to <see cref="F:System.Double.NaN" />. </exception>
+      <filterpriority>1</filterpriority>
+    </member>
+    <member name="M:System.TimeSpan.FromMilliseconds(System.Double)">
+      <summary>Gibt eine <see cref="T:System.TimeSpan" /> zurück, die eine angegebene Anzahl von Millisekunden darstellt.</summary>
+      <returns>Ein Objekt, das <paramref name="value" /> darstellt.</returns>
+      <param name="value">Eine Anzahl von Millis

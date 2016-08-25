@@ -1,0 +1,8 @@
+tylusPointDescription" /> is null.</exception>
+    </member>
+    <member name="M:System.Windows.Input.StylusPointCollection.#ctor(System.Windows.Input.StylusPointDescription,System.Int32)">
+      <summary>Initializes a new instance of the <see cref="T:System.Windows.Input.StylusPointCollection" /> class that is the specified size and contains the properties specified in the <see cref="T:System.Windows.Input.StylusPointDescription" />.</summary>
+      <param name="stylusPointDescription">A <see cref="T:System.Windows.Input.StylusPointDescription" /> that specifies the additional properties stored in each <see cref="T:System.Windows.Input.StylusPoint" />.</param>
+      <param name="initialCapacity">The number of <see cref="T:System.Windows.Input.StylusPoint" /> objects the <see cref="T:System.Windows.Input.StylusPointCollection" /> can initially contain.</param>
+      <exception cref="T:System.ArgumentException">
+        <

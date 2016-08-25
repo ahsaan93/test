@@ -1,0 +1,21 @@
+xception">
+        <see cref="P:System.Threading.Tasks.TaskCompletionSource`1.Task" /> 已處置。</exception>
+      <exception cref="T:System.InvalidOperationException">基礎 <see cref="T:System.Threading.Tasks.Task`1" /> 已處於三種最終狀態的其中一種：<see cref="F:System.Threading.Tasks.TaskStatus.RanToCompletion" />、<see cref="F:System.Threading.Tasks.TaskStatus.Faulted" /> 或 <see cref="F:System.Threading.Tasks.TaskStatus.Canceled" />。</exception>
+    </member>
+    <member name="P:System.Threading.Tasks.TaskCompletionSource`1.Task">
+      <summary>取得這個 <see cref="T:System.Threading.Tasks.TaskCompletionSource`1" /> 所建立的 <see cref="T:System.Threading.Tasks.Task`1" />。</summary>
+      <returns>傳回這個 <see cref="T:System.Threading.Tasks.TaskCompletionSource`1" /> 所建立的 <see cref="T:System.Threading.Tasks.Task`1" />。</returns>
+    </member>
+    <member name="M:System.Threading.Tasks.TaskCompletionSource`1.TrySetCanceled">
+      <summary>嘗試將基礎 <see cref="T:System.Threading.Tasks.Task`1" /> 轉換為 <see cref="F:System.Threading.Tasks.TaskStatus.Canceled" /> 狀態。</summary>
+      <returns>如果作業成功則為 true，如果作業未成功或物件已處置則為 false。</returns>
+    </member>
+    <member name="M:System.Threading.Tasks.TaskCompletionSource`1.TrySetCanceled(System.Threading.CancellationToken)">
+      <summary>嘗試轉換基礎<see cref="T:System.Threading.Tasks.Task`1" />到<see cref="F:System.Threading.Tasks.TaskStatus.Canceled" />狀態，並可讓儲存在取消工作的取消語彙基元。</summary>
+      <returns>如果作業成功，則為 true，否則為 false。</returns>
+      <param name="cancellationToken">取消語彙基元。 </param>
+    </member>
+    <member name="M:System.Threading.Tasks.TaskCompletionSource`1.TrySetException(System.Collections.Generic.IEnumerable{System.Exception})">
+      <summary>嘗試將基礎 <see cref="T:System.Threading.Tasks.Task`1" /> 轉換為 <see cref="F:System.Threading.Tasks.TaskStatus.Faulted" /> 狀態。</summary>
+      <returns>如果作業成功則為 true，否則為 false。</returns>
+      <param name="exceptions">要繫結至這個 <see cre

@@ -1,0 +1,18 @@
+
+      <returns>Nom abrégé spécifique à la culture du mois représenté par <paramref name="month" />.</returns>
+      <param name="month">Entier compris entre 1 et 13, représentant le nom du mois à récupérer. </param>
+      <exception cref="T:System.ArgumentOutOfRangeException">
+        <paramref name="month" /> is less than 1 or greater than 13. </exception>
+    </member>
+    <member name="M:System.Globalization.DateTimeFormatInfo.GetDayName(System.DayOfWeek)">
+      <summary>Retourne le nom complet spécifique à la culture du jour de la semaine spécifié en fonction de la culture associée à l'objet <see cref="T:System.Globalization.DateTimeFormatInfo" /> actuel.</summary>
+      <returns>Nom complet spécifique à la culture du jour de la semaine représenté par <paramref name="dayofweek" />.</returns>
+      <param name="dayofweek">Valeur <see cref="T:System.DayOfWeek" />. </param>
+      <exception cref="T:System.ArgumentOutOfRangeException">
+        <paramref name="dayofweek" /> is not a valid <see cref="T:System.DayOfWeek" /> value. </exception>
+    </member>
+    <member name="M:System.Globalization.DateTimeFormatInfo.GetEra(System.String)">
+      <summary>Retourne l'entier représentant l'ère spécifiée.</summary>
+      <returns>Entier représentant l'ère, si <paramref name="eraName" /> est valide ; sinon, -1.</returns>
+      <param name="eraName">Chaîne contenant le nom de l'ère. </param>
+      <exception cref="T:Syste

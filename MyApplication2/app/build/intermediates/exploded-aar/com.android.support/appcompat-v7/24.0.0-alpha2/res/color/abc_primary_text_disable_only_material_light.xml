@@ -1,0 +1,9 @@
+sion{System.Func{`0,System.Object}},System.Boolean,System.Object)">
+      <summary>Especifica un índice que se va a crear en la tabla.</summary>
+      <returns>La misma, de modo que se puedan encadenar varias llamadas.</returns>
+      <param name="indexExpression">Expresión lambda que representa la propiedad que se va a indexar.Si se deben indexar varias propiedades, se ha de especificar un tipo anónimo que incluya las propiedades.</param>
+      <param name="unique">Valor que indica si se trata de un índice único.</param>
+      <param name="anonymousArguments">Argumentos adicionales que pueden procesar proveedores. Use sintaxis de tipo anónimo para especificar argumentos, por ejemplo 'new { SampleArgument = "MyValue" }'.</param>
+    </member>
+    <member name="M:System.Data.Entity.Migrations.Builders.TableBuilder`1.MemberwiseClone">
+      <summary>Crea una copia superficial del objeto actual.</summary

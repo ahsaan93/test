@@ -1,0 +1,20 @@
+ember name="F:System.Windows.Forms.ButtonState.All">
+      <summary>All flags except Normal are set.</summary>
+    </member>
+    <member name="F:System.Windows.Forms.ButtonState.Checked">
+      <summary>The button has a checked or latched appearance. Use this appearance to show that a toggle button has been pressed.</summary>
+    </member>
+    <member name="F:System.Windows.Forms.ButtonState.Flat">
+      <summary>The button has a flat, two-dimensional appearance.</summary>
+    </member>
+    <member name="F:System.Windows.Forms.ButtonState.Inactive">
+      <summary>The button is inactive (grayed).</summary>
+    </member>
+    <member name="F:System.Windows.Forms.ButtonState.Normal">
+      <summary>The button has its normal appearance (three-dimensional).</summary>
+    </member>
+    <member name="F:System.Windows.Forms.ButtonState.Pushed">
+      <summary>The button appears pressed.</summary>
+    </member>
+    <member name="T:System.Windows.Forms.CacheVirtualItemsEventArgs">
+      <summary>Provides data for the <see cref="E:System.Windows.Form

@@ -1,0 +1,11 @@
+�하거나 만드십시오.</text>
+    </browseforfolderdescription>
+    <insufficientspace>
+      <text _locID="txtInsufficientSpace">설치하려면 디스크 여유 공간을 늘려야 합니다.</text>
+    </insufficientspace>
+    <signintext>
+      <text _locID="txtSignIn">!$!http://go.microsoft.com/fwlink/?LinkID=[[VSEIPAndPrivacyFwlinkId]]&amp;clcid=[[clcid]]!,!로그인!@!해서 설치 환경을 설정하세요.</text>
+      <tooltiptext _locID="txtSignInTip">로그인</tooltiptext>
+    </signintext>
+    <acceptlicenseprivacytext>
+      <text _locID="txtAgreeLicensePrivacy">[승인 및 설치] 단추를 클릭하면 !$!{0}!,!사용 약관!,!에 동의하는 것으로 간주됩니다. 사용 약관을 보려면 인터넷 사용 장치에서 http://aka.ms/VSEula!@! 및 !$!http://go.microsoft.com/fwlink/?LinkID=[[VSEIPAndPrivacyFwlinkId]]&amp;clcid=[[clcid]]!,!개인 정보 취급 방침!,! 페이지

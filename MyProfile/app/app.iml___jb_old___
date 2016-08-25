@@ -1,0 +1,290 @@
+* C style interface */
+
+    typedef struct IAppxPackageReaderVtbl
+    {
+        BEGIN_INTERFACE
+        
+        HRESULT ( STDMETHODCALLTYPE *QueryInterface )( 
+            __RPC__in IAppxPackageReader * This,
+            /* [in] */ __RPC__in REFIID riid,
+            /* [annotation][iid_is][out] */ 
+            _COM_Outptr_  void **ppvObject);
+        
+        ULONG ( STDMETHODCALLTYPE *AddRef )( 
+            __RPC__in IAppxPackageReader * This);
+        
+        ULONG ( STDMETHODCALLTYPE *Release )( 
+            __RPC__in IAppxPackageReader * This);
+        
+        HRESULT ( STDMETHODCALLTYPE *GetBlockMap )( 
+            __RPC__in IAppxPackageReader * This,
+            /* [retval][out] */ __RPC__deref_out_opt IAppxBlockMapReader **blockMapReader);
+        
+        HRESULT ( STDMETHODCALLTYPE *GetFootprintFile )( 
+            __RPC__in IAppxPackageReader * This,
+            /* [in] */ APPX_FOOTPRINT_FILE_TYPE type,
+            /* [retval][out] */ __RPC__deref_out_opt IAppxFile **file);
+        
+        HRESULT ( STDMETHODCALLTYPE *GetPayloadFile )( 
+            __RPC__in IAppxPackageReader * This,
+            /* [string][in] */ __RPC__in_string LPCWSTR fileName,
+            /* [retval][out] */ __RPC__deref_out_opt IAppxFile **file);
+        
+        HRESULT ( STDMETHODCALLTYPE *GetPayloadFiles )( 
+            __RPC__in IAppxPackageReader * This,
+            /* [retval][out] */ __RPC__deref_out_opt IAppxFilesEnumerator **filesEnumerator);
+        
+        HRESULT ( STDMETHODCALLTYPE *GetManifest )( 
+            __RPC__in IAppxPackageReader * This,
+            /* [retval][out] */ __RPC__deref_out_opt IAppxManifestReader **manifestReader);
+        
+        END_INTERFACE
+    } IAppxPackageReaderVtbl;
+
+    interface IAppxPackageReader
+    {
+        CONST_VTBL struct IAppxPackageReaderVtbl *lpVtbl;
+    };
+
+    
+
+#ifdef COBJMACROS
+
+
+#define IAppxPackageReader_QueryInterface(This,riid,ppvObject)	\
+    ( (This)->lpVtbl -> QueryInterface(This,riid,ppvObject) ) 
+
+#define IAppxPackageReader_AddRef(This)	\
+    ( (This)->lpVtbl -> AddRef(This) ) 
+
+#define IAppxPackageReader_Release(This)	\
+    ( (This)->lpVtbl -> Release(This) ) 
+
+
+#define IAppxPackageReader_GetBlockMap(This,blockMapReader)	\
+    ( (This)->lpVtbl -> GetBlockMap(This,blockMapReader) ) 
+
+#define IAppxPackageReader_GetFootprintFile(This,type,file)	\
+    ( (This)->lpVtbl -> GetFootprintFile(This,type,file) ) 
+
+#define IAppxPackageReader_GetPayloadFile(This,fileName,file)	\
+    ( (This)->lpVtbl -> GetPayloadFile(This,fileName,file) ) 
+
+#define IAppxPackageReader_GetPayloadFiles(This,filesEnumerator)	\
+    ( (This)->lpVtbl -> GetPayloadFiles(This,filesEnumerator) ) 
+
+#define IAppxPackageReader_GetManifest(This,manifestReader)	\
+    ( (This)->lpVtbl -> GetManifest(This,manifestReader) ) 
+
+#endif /* COBJMACROS */
+
+
+#endif 	/* C style interface */
+
+
+
+
+#endif 	/* __IAppxPackageReader_INTERFACE_DEFINED__ */
+
+
+#ifndef __IAppxFile_INTERFACE_DEFINED__
+#define __IAppxFile_INTERFACE_DEFINED__
+
+/* interface IAppxFile */
+/* [ref][uuid][object] */ 
+
+
+EXTERN_C const IID IID_IAppxFile;
+
+#if defined(__cplusplus) && !defined(CINTERFACE)
+    
+    MIDL_INTERFACE("91df827b-94fd-468f-827b-57f41b2f6f2e")
+    IAppxFile : public IUnknown
+    {
+    public:
+        virtual HRESULT STDMETHODCALLTYPE GetCompressionOption( 
+            /* [retval][out] */ __RPC__out APPX_COMPRESSION_OPTION *compressionOption) = 0;
+        
+        virtual HRESULT STDMETHODCALLTYPE GetContentType( 
+            /* [retval][string][out] */ __RPC__deref_out_opt_string LPWSTR *contentType) = 0;
+        
+        virtual HRESULT STDMETHODCALLTYPE GetName( 
+            /* [retval][string][out] */ __RPC__deref_out_opt_string LPWSTR *fileName) = 0;
+        
+        virtual HRESULT STDMETHODCALLTYPE GetSize( 
+            /* [retval][out] */ __RPC__out UINT64 *size) = 0;
+        
+        virtual HRESULT STDMETHODCALLTYPE GetStream( 
+            /* [retval][out] */ __RPC__deref_out_opt IStream **stream) = 0;
+        
+    };
+    
+    
+#else 	/* C style interface */
+
+    typedef struct IAppxFileVtbl
+    {
+        BEGIN_INTERFACE
+        
+        HRESULT ( STDMETHODCALLTYPE *QueryInterface )( 
+            __RPC__in IAppxFile * This,
+            /* [in] */ __RPC__in REFIID riid,
+            /* [annotation][iid_is][out] */ 
+            _COM_Outptr_  void **ppvObject);
+        
+        ULONG ( STDMETHODCALLTYPE *AddRef )( 
+            __RPC__in IAppxFile * This);
+        
+        ULONG ( STDMETHODCALLTYPE *Release )( 
+            __RPC__in IAppxFile * This);
+        
+        HRESULT ( STDMETHODCALLTYPE *GetCompressionOption )( 
+            __RPC__in IAppxFile * This,
+            /* [retval][out] */ __RPC__out APPX_COMPRESSION_OPTION *compressionOption);
+        
+        HRESULT ( STDMETHODCALLTYPE *GetContentType )( 
+            __RPC__in IAppxFile * This,
+            /* [retval][string][out] */ __RPC__deref_out_opt_string LPWSTR *contentType);
+        
+        HRESULT ( STDMETHODCALLTYPE *GetName )( 
+            __RPC__in IAppxFile * This,
+            /* [retval][string][out] */ __RPC__deref_out_opt_string LPWSTR *fileName);
+        
+        HRESULT ( STDMETHODCALLTYPE *GetSize )( 
+            __RPC__in IAppxFile * This,
+            /* [retval][out] */ __RPC__out UINT64 *size);
+        
+        HRESULT ( STDMETHODCALLTYPE *GetStream )( 
+            __RPC__in IAppxFile * This,
+            /* [retval][out] */ __RPC__deref_out_opt IStream **stream);
+        
+        END_INTERFACE
+    } IAppxFileVtbl;
+
+    interface IAppxFile
+    {
+        CONST_VTBL struct IAppxFileVtbl *lpVtbl;
+    };
+
+    
+
+#ifdef COBJMACROS
+
+
+#define IAppxFile_QueryInterface(This,riid,ppvObject)	\
+    ( (This)->lpVtbl -> QueryInterface(This,riid,ppvObject) ) 
+
+#define IAppxFile_AddRef(This)	\
+    ( (This)->lpVtbl -> AddRef(This) ) 
+
+#define IAppxFile_Release(This)	\
+    ( (This)->lpVtbl -> Release(This) ) 
+
+
+#define IAppxFile_GetCompressionOption(This,compressionOption)	\
+    ( (This)->lpVtbl -> GetCompressionOption(This,compressionOption) ) 
+
+#define IAppxFile_GetContentType(This,contentType)	\
+    ( (This)->lpVtbl -> GetContentType(This,contentType) ) 
+
+#define IAppxFile_GetName(This,fileName)	\
+    ( (This)->lpVtbl -> GetName(This,fileName) ) 
+
+#define IAppxFile_GetSize(This,size)	\
+    ( (This)->lpVtbl -> GetSize(This,size) ) 
+
+#define IAppxFile_GetStream(This,stream)	\
+    ( (This)->lpVtbl -> GetStream(This,stream) ) 
+
+#endif /* COBJMACROS */
+
+
+#endif 	/* C style interface */
+
+
+
+
+#endif 	/* __IAppxFile_INTERFACE_DEFINED__ */
+
+
+#ifndef __IAppxFilesEnumerator_INTERFACE_DEFINED__
+#define __IAppxFilesEnumerator_INTERFACE_DEFINED__
+
+/* interface IAppxFilesEnumerator */
+/* [ref][uuid][object] */ 
+
+
+EXTERN_C const IID IID_IAppxFilesEnumerator;
+
+#if defined(__cplusplus) && !defined(CINTERFACE)
+    
+    MIDL_INTERFACE("f007eeaf-9831-411c-9847-917cdc62d1fe")
+    IAppxFilesEnumerator : public IUnknown
+    {
+    public:
+        virtual HRESULT STDMETHODCALLTYPE GetCurrent( 
+            /* [retval][out] */ __RPC__deref_out_opt IAppxFile **file) = 0;
+        
+        virtual HRESULT STDMETHODCALLTYPE GetHasCurrent( 
+            /* [retval][out] */ __RPC__out BOOL *hasCurrent) = 0;
+        
+        virtual HRESULT STDMETHODCALLTYPE MoveNext( 
+            /* [retval][out] */ __RPC__out BOOL *hasNext) = 0;
+        
+    };
+    
+    
+#else 	/* C style interface */
+
+    typedef struct IAppxFilesEnumeratorVtbl
+    {
+        BEGIN_INTERFACE
+        
+        HRESULT ( STDMETHODCALLTYPE *QueryInterface )( 
+            __RPC__in IAppxFilesEnumerator * This,
+            /* [in] */ __RPC__in REFIID riid,
+            /* [annotation][iid_is][out] */ 
+            _COM_Outptr_  void **ppvObject);
+        
+        ULONG ( STDMETHODCALLTYPE *AddRef )( 
+            __RPC__in IAppxFilesEnumerator * This);
+        
+        ULONG ( STDMETHODCALLTYPE *Release )( 
+            __RPC__in IAppxFilesEnumerator * This);
+        
+        HRESULT ( STDMETHODCALLTYPE *GetCurrent )( 
+            __RPC__in IAppxFilesEnumerator * This,
+            /* [retval][out] */ __RPC__deref_out_opt IAppxFile **file);
+        
+        HRESULT ( STDMETHODCALLTYPE *GetHasCurrent )( 
+            __RPC__in IAppxFilesEnumerator * This,
+            /* [retval][out] */ __RPC__out BOOL *hasCurrent);
+        
+        HRESULT ( STDMETHODCALLTYPE *MoveNext )( 
+            __RPC__in IAppxFilesEnumerator * This,
+            /* [retval][out] */ __RPC__out BOOL *hasNext);
+        
+        END_INTERFACE
+    } IAppxFilesEnumeratorVtbl;
+
+    interface IAppxFilesEnumerator
+    {
+        CONST_VTBL struct IAppxFilesEnumeratorVtbl *lpVtbl;
+    };
+
+    
+
+#ifdef COBJMACROS
+
+
+#define IAppxFilesEnumerator_QueryInterface(This,riid,ppvObject)	\
+    ( (This)->lpVtbl -> QueryInterface(This,riid,ppvObject) ) 
+
+#define IAppxFilesEnumerator_AddRef(This)	\
+    ( (This)->lpVtbl -> AddRef(This) ) 
+
+#define IAppxFilesEnumerator_Release(This)	\
+    ( (This)->lpVtbl -> Release(This) ) 
+
+
+#define IAppxFilesEnumerator_GetCu

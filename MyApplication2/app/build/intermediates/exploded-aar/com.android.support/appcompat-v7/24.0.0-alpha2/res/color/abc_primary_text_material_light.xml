@@ -1,0 +1,10 @@
+clase generada.</param>
+      <param name="designer">Valor que indica si esta clase se está generando para un archivo de código subyacente.</param>
+      <param name="namespaces">Espacios de nombres para los que se van agregar directivas "using". Si es NULL, se usarán los espacios de nombre que se devuelven desde GetDefaultNamespaces.</param>
+    </member>
+    <member name="M:System.Data.Entity.Migrations.Design.CSharpMigrationCodeGenerator.WriteProperty(System.String,System.String,System.Data.Entity.Migrations.Utilities.IndentedTextWriter)">
+      <summary>Genera una propiedad para devolver el modelo de origen o de destino en el archivo subyacente de código.</summary>
+      <param name="name">Nombre de la propiedad.</param>
+      <param name="writer">Escritor de texto al que se va agregar el código generado.</param>
+    </member>
+    <member name="T:System.Data.Entity.Migrations.Design.MigrationCodeGen

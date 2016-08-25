@@ -1,0 +1,10 @@
+alization.DateTimeFormatInfo.InvariantInfo" /> contient "Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec" et "".</returns>
+      <exception cref="T:System.ArgumentNullException">The property is being set to null. </exception>
+      <exception cref="T:System.ArgumentException">The property is being set to an array that is multidimensional or that has a length that is not exactly 13. </exception>
+      <exception cref="T:System.InvalidOperationException">The property is being set and the <see cref="T:System.Globalization.DateTimeFormatInfo" /> object is read-only. </exception>
+    </member>
+    <member name="P:System.Globalization.DateTimeFormatInfo.AMDesignator">
+      <summary>Obtient ou définit l'indicateur de chaîne pour les heures du matin (avant midi).</summary>
+      <returns>Indicateur de chaîne pour les heures du matin.La valeur par défaut de <see cref="P:System.Globalization.DateTimeFormatInfo.InvariantInfo" /> est "AM".</returns>
+      <exception cref="T:System.ArgumentNullException">The property is being set to null. </exception>
+      <exception cref="T:System.InvalidOperationException">The property 

@@ -1,0 +1,13 @@
+GetCommittedText">
+      <summary>Gets the text used to generate an expression.</summary>
+      <returns>Returns a <see cref="T:System.String" /> that contains the text used to generate an expression.</returns>
+    </member>
+    <member name="M:System.Activities.Presentation.View.IExpressionEditorInstance.GlobalIntellisense">
+      <summary>Retrieves global IntelliSense on the expression in the expression editor and returns a value that indicates whether this operation was successful.</summary>
+      <returns>true if this method succeeds; otherwise, false.</returns>
+    </member>
+    <member name="E:System.Activities.Presentation.View.IExpressionEditorInstance.GotAggregateFocus">
+      <summary>Occurs when the expression editor instance has aggregate focus. </summary>
+    </member>
+    <member name="P:System.Activities.Presentation.View.IExpressionEditorInstance.HasAggregateFocus">
+      <summary>Gets a value that 

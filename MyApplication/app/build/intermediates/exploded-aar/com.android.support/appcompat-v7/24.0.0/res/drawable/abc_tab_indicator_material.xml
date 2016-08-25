@@ -1,0 +1,13 @@
+name="publicKey">Die öffentliche Schlüssel oder der Identitätsschlüssel.</param>
+      <param name="countersignature">Die Gegensignatur; dabei handelt es sich um den Signaturschlüsselteil in einem Schlüssel mit starkem Namen.</param>
+    </member>
+    <member name="P:System.Reflection.AssemblySignatureKeyAttribute.Countersignature">
+      <summary>Ruft die Gegensignatur für den starken Namen für diese Assembly ab.</summary>
+      <returns>Die Gegensignatur für diesen Signaturschlüssel.</returns>
+    </member>
+    <member name="P:System.Reflection.AssemblySignatureKeyAttribute.PublicKey">
+      <summary>Ruft den öffentlichen Schlüssels für den starken Namen ab, der verwendet wird, um die Assembly zu signieren.</summary>
+      <returns>Der öffentliche Schlüssel für diese Assembly.</returns>
+    </member>
+    <member name="T:System.Reflection.AssemblyTitleAttribute">
+      <s

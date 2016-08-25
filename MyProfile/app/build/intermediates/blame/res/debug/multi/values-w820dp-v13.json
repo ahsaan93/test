@@ -1,0 +1,28 @@
+ackageWriter;
+
+#if defined(__cplusplus) && !defined(CINTERFACE)
+    
+    MIDL_INTERFACE("9099e33b-246f-41e4-881a-008eb613f858")
+    IAppxPackageWriter : public IUnknown
+    {
+    public:
+        virtual HRESULT STDMETHODCALLTYPE AddPayloadFile( 
+            /* [string][in] */ __RPC__in_string LPCWSTR fileName,
+            /* [string][in] */ __RPC__in_string LPCWSTR contentType,
+            /* [in] */ APPX_COMPRESSION_OPTION compressionOption,
+            /* [in] */ __RPC__in_opt IStream *inputStream) = 0;
+        
+        virtual HRESULT STDMETHODCALLTYPE Close( 
+            /* [in] */ __RPC__in_opt IStream *manifest) = 0;
+        
+    };
+    
+    
+#else 	/* C style interface */
+
+    typedef struct IAppxPackageWriterVtbl
+    {
+        BEGIN_INTERFACE
+        
+        HRESULT ( STDMETHODCALLTYPE *QueryInterface )( 
+            __RPC__in 

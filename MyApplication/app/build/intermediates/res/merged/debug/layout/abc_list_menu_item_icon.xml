@@ -1,0 +1,9 @@
+is exception, see the "Handling MissingManifestResourceException and MissingSatelliteAssemblyException Exceptions" section in the <see cref="T:System.Resources.ResourceManager" /> class topic.</exception>
+    </member>
+    <member name="M:System.Resources.ResourceManager.GetString(System.String)">
+      <summary>Returns the value of the specified string resource.</summary>
+      <returns>The value of the resource localized for the caller's current UI culture, or null if <paramref name="name" /> cannot be found in a resource set.</returns>
+      <param name="name">The name of the resource to retrieve. </param>
+      <exception cref="T:System.ArgumentNullException">The <paramref name="name" /> parameter is null. </exception>
+      <exception cref="T:System.InvalidOperationException">The value of the specified resource is not a string. </exception>
+      <exception cref="T:System.Resources.MissingManifestResourceException">No usable set of resources has been found, and there are no resources for the default culture. For information about how to handle this exception, see the "Handling MissingManifestResourceException and MissingSatelliteAssemblyException Exceptions" section i

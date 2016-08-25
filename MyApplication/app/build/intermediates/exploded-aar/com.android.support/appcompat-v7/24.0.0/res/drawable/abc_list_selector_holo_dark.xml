@@ -1,0 +1,32 @@
+>
+            Wird aufgerufen, wenn das Verhalten vom &quot;AssociatedObject&quot; getrennt wird. Der Aufruf erfolgt vor dem eigentlichen Trennvorgang.
+            </summary>
+            <remarks>Setzen Sie dies außer Kraft, um die Bindung der Funktionalität zum &quot;AssociatedObject&quot; zu lösen.</remarks>
+        </member>
+        <member name="E:Microsoft.Expression.Interactivity.Layout.MouseDragElementBehavior.DragBegun">
+            <summary>
+            Tritt auf, wenn eine Ziehgeste initiiert wird.
+            </summary>
+        </member>
+        <member name="E:Microsoft.Expression.Interactivity.Layout.MouseDragElementBehavior.Dragging">
+            <summary>
+            Tritt auf, wenn eine Ziehgestenaktualisierung verarbeitet wird.
+            </summary>
+        </member>
+        <member name="E:Microsoft.Expression.Interactivity.Layout.MouseDragElementBehavior.DragFinished">
+            <summary>
+            Tritt auf, wenn eine Ziehgeste beendet wird.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Expression.Interactivity.Layout.MouseDragElementBehavior.X">
+            <summary>
+            Ruft die X-Position des gezogenen Elements relativ zum linken Rand des Stammelements ab oder legt diese fest. Hierbei handelt es sich um eine Abhängigkeitseigenschaft.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Expression.Interactivity.Layout.MouseDragElementBehavior.Y">
+            <summary>
+            Ruft die Y-Position des gezogenen Elements relativ zum oberen Rand des Stammelements ab oder legt diese fest. Hierbei handelt es sich um eine Abhängigkeitseigenschaft.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Expression.Interactivity.Layout.MouseDragElementBehavior.ConstrainToParentBounds">
+   

@@ -1,0 +1,178 @@
+mary>
+      <returns>Der allgemeine Anzeigenamen der Zeitzone.</returns>
+    </member>
+    <member name="M:System.TimeZoneInfo.Equals(System.TimeZoneInfo)">
+      <summary>Bestimmt, ob das aktuelle <see cref="T:System.TimeZoneInfo" />-Objekt und ein anderes <see cref="T:System.TimeZoneInfo" />-Objekt gleich sind.</summary>
+      <returns>true, wenn die beiden <see cref="T:System.TimeZoneInfo" />-Objekte gleich sind, andernfalls false.</returns>
+      <param name="other">Ein zweites Objekt, das mit dem aktuellen Objekt verglichen werden soll.  </param>
+      <filterpriority>2</filterpriority>
+    </member>
+    <member name="M:System.TimeZoneInfo.FindSystemTimeZoneById(System.String)">
+      <summary>Ruft ein <see cref="T:System.TimeZoneInfo" />-Objekt auf Grundlage seines Bezeichners aus der Registrierung ab.</summary>
+      <returns>Ein Objekt, dessen Bezeichner der Wert des <paramref name="id" />-Parameters ist.</returns>
+      <param name="id">Der Zeitzonenbezeichner, der der <see cref="P:System.TimeZoneInfo.Id" />-Eigenschaft entspricht.      </param>
+      <exception cref="T:System.OutOfMemoryException">Das System verfügt nicht über ausreichend Arbeitsspeicher, um Informationen zur Zeitzone zu speichern.</exception>
+      <exception cref="T:System.ArgumentNullException">Der <paramref name="id" />-Parameter ist null.</exception>
+      <exception cref="T:System.TimeZoneNotFoundException">Der von <paramref name="id" /> angegebene Zeitzonenbezeichner wurde nicht gefunden.Dies bedeutet, dass der Registrierungsschlüssel, dessen Name <paramref name="id" /> entspricht, nicht vorhanden ist oder dass der Schlüssel vorhanden ist, jedoch keine Zeitzonendaten enthält.</exception>
+      <exception cref="T:System.Security.SecurityException">Der Prozess verfügt nicht über die erforderlichen Berechtigungen, um aus dem Registrierungsschlüssel zu lesen, der die Zeitzoneninformationen enthält.</exception>
+      <exception cref="T:System.InvalidTimeZoneException">Der Zeitzonenbezeichner wurde gefunden, die Registrierungsdaten sind jedoch beschädigt.</exception>
+    </member>
+    <member name="M:System.TimeZoneInfo.GetAmbiguousTimeOffsets(System.DateTime)">
+      <summary>Gibt Informationen zu den möglichen Datums- und Zeitwerten zurück, denen ein mehrdeutiger Datums- und Zeitwert zugeordnet werden kann.</summary>
+      <returns>Ein Array von Objekten, das mögliche UTC-Offsets (Coordinated Universal Time) darstellt, denen ein bestimmter Datums- und Uhrzeitwert zugeordnet werden kann.</returns>
+      <param name="dateTime">Ein Datum und eine Uhrzeit.</param>
+      <exception cref="T:System.ArgumentException">
+        <paramref name="dateTime" /> ist keine mehrdeutige Zeit.</exception>
+      <filterpriority>2</filterpriority>
+    </member>
+    <member name="M:System.TimeZoneInfo.GetAmbiguousTimeOffsets(System.DateTimeOffset)">
+      <summary>Gibt Informationen zu den möglichen Datums- und Zeitwerten zurück, denen ein mehrdeutiger Datums- und Zeitwert zugeordnet werden kann.</summary>
+      <returns>Ein Array von Objekten, das mögliche UTC-Offsets (Coordinated Universal Time) darstellt, denen ein bestimmter Datums- und Uhrzeitwert zugeordnet werden kann.</returns>
+      <param name="dateTimeOffset">Ein Datum und eine Uhrzeit.</param>
+      <exception cref="T:System.ArgumentException">
+        <paramref name="dateTime" /> ist keine mehrdeutige Zeit.</exception>
+      <filterpriority>2</filterpriority>
+    </member>
+    <member name="M:System.TimeZoneInfo.GetHashCode">
+      <summary>Wird als Hashfunktion für Hashalgorithmen und Datenstrukturen wie Hashtabellen verwendet.</summary>
+      <returns>Eine 32-Bit-Ganzzahl mit Vorzeichen, die als Hash für dieses <see cref="T:System.TimeZoneInfo" />-Objekt verwendet wird.</returns>
+      <filterpriority>2</filterpriority>
+    </member>
+    <member name="M:System.TimeZoneInfo.GetSystemTimeZones">
+      <summary>Gibt eine sortierte Auflistung aller Zeitzonen zurück, zu denen im lokalen System Informationen verfügbar sind.</summary>
+      <returns>Eine schreibgeschützte Auflistung von <see cref="T:System.TimeZoneInfo" />-Objekten.</returns>
+      <exception cref="T:System.OutOfMemoryException">Es ist nicht ausreichend Arbeitsspeicher vorhanden, um alle Zeitzoneninformationen zu speichern.</exception>
+      <exception cref="T:System.Security.SecurityException">Der Benutzer verfügt nicht über die Berechtigung zum Lesen aus den Registrierungsschlüsseln, die Zeitzoneninformationen enthalten.</exception>
+    </member>
+    <member name="M:System.TimeZoneInfo.GetUtcOffset(System.DateTime)">
+      <summary>Berechnet den Offset oder die Differenz zwischen der Zeit in dieser Zeitzone und Coordinated Universal Time (UTC) für einen bestimmten Datums- und Zeitwert.</summary>
+      <returns>Ein Objekt, das den Zeitunterschied zwischen den beiden Zeitzonen angibt.</returns>
+      <param name="dateTime">Das Datum und die Zeit, für die der Offset bestimmt werden soll.   </param>
+    </member>
+    <member name="M:System.TimeZoneInfo.GetUtcOffset(System.DateTimeOffset)">
+      <summary>Berechnet den Offset oder die Differenz zwischen der Zeit in dieser Zeitzone und Coordinated Universal Time (UTC) für einen bestimmten Datums- und Zeitwert.</summary>
+      <returns>Ein Objekt, das den Zeitunterschied zwischen Coordinated Universal Time (UTC) und der aktuellen Zeitzone angibt.</returns>
+      <param name="dateTimeOffset">Das Datum und die Zeit, für die der Offset bestimmt werden soll.</param>
+    </member>
+    <member name="P:System.TimeZoneInfo.Id">
+      <summary>Ruft den Zeitzonenbezeichner ab.</summary>
+      <returns>Der Zeitzonenbezeichner.</returns>
+    </member>
+    <member name="M:System.TimeZoneInfo.IsAmbiguousTime(System.DateTime)">
+      <summary>Bestimmt, ob ein bestimmtes Datum und eine Uhrzeit in einer bestimmten Zeitzone mehrdeutig sind und zwei oder mehreren UTC-Zeiten (Coordinated Universal Time) zugeordnet werden können.</summary>
+      <returns>true, wenn der <paramref name="dateTime" />-Parameter mehrdeutig ist, andernfalls false.</returns>
+      <param name="dateTime">Ein Datums- und Uhrzeitwert.   </param>
+      <exception cref="T:System.ArgumentException">Die <see cref="P:System.DateTime.Kind" />-Eigenschaft des <paramref name="dateTime" />-Werts ist <see cref="F:System.DateTimeKind.Local" />, und <paramref name="dateTime" /> ist eine ungültige Zeit.</exception>
+      <filterpriority>2</filterpriority>
+    </member>
+    <member name="M:System.TimeZoneInfo.IsAmbiguousTime(System.DateTimeOffset)">
+      <summary>Bestimmt, ob ein bestimmtes Datum und eine Uhrzeit in einer bestimmten Zeitzone mehrdeutig sind und zwei oder mehreren UTC-Zeiten (Coordinated Universal Time) zugeordnet werden können.</summary>
+      <returns>true, wenn der <paramref name="dateTimeOffset" />-Parameter in der aktuellen Zeitzone mehrdeutig ist, andernfalls false.</returns>
+      <param name="dateTimeOffset">Ein Datum und eine Uhrzeit.</param>
+      <filterpriority>2</filterpriority>
+    </member>
+    <member name="M:System.TimeZoneInfo.IsDaylightSavingTime(System.DateTime)">
+      <summary>Gibt an, ob ein angegebenes Datum und eine Zeit in den Bereich der Sommerzeit für die Zeitzone des aktuellen <see cref="T:System.TimeZoneInfo" />-Objekts fallen.</summary>
+      <returns>true, wenn der <paramref name="dateTime" />-Parameter eine Sommerzeit darstellt, andernfalls false.</returns>
+      <param name="dateTime">Ein Datums- und Uhrzeitwert.   </param>
+      <exception cref="T:System.ArgumentException">Die <see cref="P:System.DateTime.Kind" />-Eigenschaft des <paramref name="dateTime" />-Werts ist <see cref="F:System.DateTimeKind.Local" />, und <paramref name="dateTime" /> ist eine ungültige Zeit.</exception>
+    </member>
+    <member name="M:System.TimeZoneInfo.IsDaylightSavingTime(System.DateTimeOffset)">
+      <summary>Gibt an, ob ein angegebenes Datum und eine Zeit in den Bereich der Sommerzeit für die Zeitzone des aktuellen <see cref="T:System.TimeZoneInfo" />-Objekts fallen.</summary>
+      <returns>true, wenn der <paramref name="dateTimeOffset" />-Parameter eine Sommerzeit darstellt, andernfalls false.</returns>
+      <param name="dateTimeOffset">Ein Datums- und Uhrzeitwert.</param>
+    </member>
+    <member name="M:System.TimeZoneInfo.IsInvalidTime(System.DateTime)">
+      <summary>Gibt an, ob ein bestimmtes Datum und eine Zeit ungültig sind.</summary>
+      <returns>true, wenn <paramref name="dateTime" /> ungültig ist, andernfalls false.</returns>
+      <param name="dateTime">Ein Datums- und Uhrzeitwert.   </param>
+      <filterpriority>2</filterpriority>
+    </member>
+    <member name="P:System.TimeZoneInfo.Local">
+      <summary>Ruft ein <see cref="T:System.TimeZoneInfo" />-Objekt ab, das die lokale Zeitzone darstellt.</summary>
+      <returns>Ein Objekt, das die lokale Zeitzone darstellt.</returns>
+    </member>
+    <member name="P:System.TimeZoneInfo.StandardName">
+      <summary>Ruft den Anzeigenamen für die Standardzeit der Zeitzone ab.</summary>
+      <returns>Der Name der Normalzeit der Zeitzone.</returns>
+    </member>
+    <member name="P:System.TimeZoneInfo.SupportsDaylightSavingTime">
+      <summary>Ruft einen Wert ab, der angibt, ob die Zeitzone über Sommerzeitregeln verfügt.</summary>
+      <returns>true, wenn die Zeitzone Sommerzeit unterstützt, andernfalls false.</returns>
+    </member>
+    <member name="M:System.TimeZoneInfo.ToString">
+      <summary>Gibt den Anzeigenamen des aktuellen <see cref="T:System.TimeZoneInfo" />-Objekts zurück.</summary>
+      <returns>Der Wert der <see cref="P:System.TimeZoneInfo.DisplayName" />-Eigenschaft des aktuellen <see cref="T:System.TimeZoneInfo" />-Objekts.</returns>
+    </member>
+    <member name="P:System.TimeZoneInfo.Utc">
+      <summary>Ruft ein <see cref="T:System.TimeZoneInfo" />-Objekt ab, das die UTC-Zone (Coordinated Universal Time) darstellt.</summary>
+      <returns>Ein Objekt, das die UTC (Coordinated Universal Time)-Zone darstellt.</returns>
+    </member>
+    <member name="T:System.Tuple">
+      <summary>Stellt statische Methoden zum Erstellen von Tupelobjekten bereit. Weitere Informationen zum Durchsuchen des .NET Framework-Quellcodes für diesen Typ finden Sie unter Verweisquelle.</summary>
+    </member>
+    <member name="M:System.Tuple.Create``1(``0)">
+      <summary>Erstellt ein neues 1-Tupel bzw. Singleton.</summary>
+      <returns>Ein Tupel mit dem Wert (<paramref name="item1" />).</returns>
+      <param name="item1">Der Wert der einzigen Komponente des Tupels.</param>
+      <typeparam name="T1">Der Typ der einzigen Komponente des Tupels.</typeparam>
+    </member>
+    <member name="M:System.Tuple.Create``2(``0,``1)">
+      <summary>Erstellt ein neues 2-Tupel bzw. Paar.</summary>
+      <returns>Ein 2-Tupel mit dem Wert (<paramref name="item1" />, <paramref name="item2" />).</returns>
+      <param name="item1">Der Wert der ersten Komponente des Tupels.</param>
+      <param name="item2">Der Wert der zweiten Komponente des Tupels.</param>
+      <typeparam name="T1">Der Typ der ersten Komponente des Tupels.</typeparam>
+      <typeparam name="T2">Der Typ der zweiten Komponente des Tupels.</typeparam>
+    </member>
+    <member name="M:System.Tuple.Create``3(``0,``1,``2)">
+      <summary>Erstellt ein neues 3-Tupel bzw. Tripel.</summary>
+      <returns>Ein 3-Tupel mit dem Wert (<paramref name="item1" />, <paramref name="item2" />, <paramref name="item3" />).</returns>
+      <param name="item1">Der Wert der ersten Komponente des Tupels.</param>
+      <param name="item2">Der Wert der zweiten Komponente des Tupels.</param>
+      <param name="item3">Der Wert der dritten Komponente des Tupels.</param>
+      <typeparam name="T1">Der Typ der ersten Komponente des Tupels.</typeparam>
+      <typeparam name="T2">Der Typ der zweiten Komponente des Tupels.</typeparam>
+      <typeparam name="T3">Der Typ der dritten Komponente des Tupels.</typeparam>
+    </member>
+    <member name="M:System.Tuple.Create``4(``0,``1,``2,``3)">
+      <summary>Erstellt ein neues 4-Tupel bzw. Quadrupel.</summary>
+      <returns>Ein 4-Tupel mit dem Wert (<paramref name="item1" />, <paramref name="item2" />, <paramref name="item3" />, <paramref name="item4" />).</returns>
+      <param name="item1">Der Wert der ersten Komponente des Tupels.</param>
+      <param name="item2">Der Wert der zweiten Komponente des Tupels.</param>
+      <param name="item3">Der Wert der dritten Komponente des Tupels.</param>
+      <param name="item4">Der Wert der vierten Komponente des Tupels.</param>
+      <typeparam name="T1">Der Typ der ersten Komponente des Tupels.</typeparam>
+      <typeparam name="T2">Der Typ der zweiten Komponente des Tupels.</typeparam>
+      <typeparam name="T3">Der Typ der dritten Komponente des Tupels.</typeparam>
+      <typeparam name="T4">Der Typ der vierten Komponente des Tupels.  </typeparam>
+    </member>
+    <member name="M:System.Tuple.Create``5(``0,``1,``2,``3,``4)">
+      <summary>Erstellt ein neues 5-Tupel bzw. Quintupel.</summary>
+      <returns>Ein 5-Tupel mit dem Wert (<paramref name="item1" />, <paramref name="item2" />, <paramref name="item3" />, <paramref name="item4" />, <paramref name="item5" />).</returns>
+      <param name="item1">Der Wert der ersten Komponente des Tupels.</param>
+      <param name="item2">Der Wert der zweiten Komponente des Tupels.</param>
+      <param name="item3">Der Wert der dritten Komponente des Tupels.</param>
+      <param name="item4">Der Wert der vierten Komponente des Tupels.</param>
+      <param name="item5">Der Wert der fünften Komponente des Tupels.</param>
+      <typeparam name="T1">Der Typ der ersten Komponente des Tupels.</typeparam>
+      <typeparam name="T2">Der Typ der zweiten Komponente des Tupels.</typeparam>
+      <typeparam name="T3">Der Typ der dritten Komponente des Tupels.</typeparam>
+      <typeparam name="T4">Der Typ der vierten Komponente des Tupels.</typeparam>
+      <typeparam name="T5">Der Typ der fünften Komponente des Tupels.</typeparam>
+    </member>
+    <member name="M:System.Tuple.Create``6(``0,``1,``2,``3,``4,``5)">
+      <summary>Erstellt ein neues 6-Tupel bzw. Sextupel.</summary>
+      <returns>Ein 6-Tupel mit dem Wert (<paramref name="item1" />, <paramref name="item2" />, <paramref name="item3" />, <paramref name="item4" />, <paramref name="item5" />, <paramref name="item6" />).</returns>
+      <param name="item1">Der Wert der ersten Komponente des Tupels.</param>
+      <param name="item2">Der Wert der zweiten Komponente des Tupels.</param>
+      <param name="item3">Der Wert der dritten Komponente des Tupels.</param>
+      <param name="item4">Der Wert der vierten Komponente des Tupels.</param>
+      <param name="item5">Der Wert der fünften Komponente des Tupels.</param>
+      <param name="item6">Der Wert der sechsten Komponente des Tupels.</param>
+      <typeparam name="T1">Der Typ der ersten Komponente des Tupels.</typeparam>
+      <typeparam name="T2">Der Typ der zweiten Komponente des Tupels.</typeparam>
+      <typeparam name="T3">Der Typ der dritten Komponente des Tupels.</typeparam>
+      <typeparam name="T4">Der Typ der vierten Komponente des Tupels.</typeparam>
+      <typeparam name="T5">Der Typ der fünften Komponente des Tupels.</typeparam>
+      <typeparam name="T6">Der Typ der sechsten Kompone

@@ -1,0 +1,13 @@
+ystem.ComponentModel.ITypeDescriptorContext,System.Type)">
+      <summary>Tests whether a context can be converted from one type to the type of this converter.</summary>
+      <returns>true if the type can be converted; otherwise, false.</returns>
+      <param name="context">A type that provides the format context.</param>
+      <param name="sourceType">The type to convert from.</param>
+    </member>
+    <member name="M:System.ServiceModel.XamlIntegration.XPathMessageContextTypeConverter.CanConvertTo(System.ComponentModel.ITypeDescriptorContext,System.Type)">
+      <summary>Tests whether a type can be converted into a target type. </summary>
+      <returns>true if the conversion can be performed; otherwise, false.</returns>
+      <param name="context">A type that provides the format context.</param>
+      <param name="destinationType">A type that provides the format context.</param>
+    </member>
+    <member name="M

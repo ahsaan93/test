@@ -1,0 +1,23 @@
+>지금 다시 시작</tooltiptext>
+    </rebootnowbutton>
+    <rebootlaterbutton>
+      <text _locID="btnRebootLater">나중에 다시 시작(_L)</text>
+      <tooltiptext _locID="btnRebootLaterTip">나중에 다시 시작</tooltiptext>
+    </rebootlaterbutton>
+    <launchbutton>
+      <text _locID="btnLaunch">시작(_L)</text>
+      <tooltiptext _locID="btnLaunchTip">응용 프로그램 시작</tooltiptext>
+    </launchbutton>
+    <closebutton>
+      <text _locID="btnClose">닫기(_C)</text>
+      <tooltiptext _locID="btnCloseTip">설치 프로그램 닫기</tooltiptext>
+    </closebutton>
+    <typelistcolumn>
+      <text _locID="colTypeFinish">형식</text>
+    </typelistcolumn>
+    <packagenamecolumn>
+      <text _locID="colPackageName">패키지 이름</text>
+    </packagenamecolumn>
+    <errordescriptioncolumn>
+      <text _locID="colErrorDescription">오류 설명</text>
+    </errordescri

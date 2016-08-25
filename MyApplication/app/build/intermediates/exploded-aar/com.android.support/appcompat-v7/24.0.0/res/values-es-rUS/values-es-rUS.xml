@@ -1,0 +1,23 @@
+Reader.ReadInt16Array(System.String,System.String)">
+      <summary>Lit le contenu d'une série de nœuds avec les éléments <paramref name="localName" /> et <paramref name="namespaceUri" /> donnés dans un tableau d'entiers short (<see cref="T:System.Int16" />).</summary>
+      <returns>Tableau d'entiers short (<see cref="T:System.Int16" />).</returns>
+      <param name="localName">Nom local de l'élément.</param>
+      <param name="namespaceUri">URI de l'espace de noms de l'élément.</param>
+    </member>
+    <member name="M:System.Xml.XmlDictionaryReader.ReadInt16Array(System.Xml.XmlDictionaryString,System.Xml.XmlDictionaryString)">
+      <summary>Lit le contenu d'une série de nœuds avec les éléments <paramref name="localName" /> et <paramref name="namespaceUri" /> donnés dans un tableau d'entiers short (<see cref="T:System.Int16" />).</summary>
+      <returns>Tableau d'entiers short (<see cref="T:System.Int16" />).</returns>
+      <param name="localName">Nom local de l'élément.</param>
+      <param name="namespaceUri">URI de l'espace de noms de l'élément.</param>
+    </member>
+    <member name="M:System.Xml.XmlDictionaryReader.ReadInt32Array(System.String,System.String)">
+      <summary>Lit le contenu d'une série de nœuds avec les éléments <paramref name="localName" /> et <paramref name="namespaceUri" /> dans un tableau d'entiers (<see cref="T:System.Int32" />).</summary>
+      <returns>Tableau d'entiers (<see cref="T:System.Int32" />).</returns>
+      <param name="localName">Nom local de l'élément.</param>
+      <param name="namespaceUri">URI de l'espace de noms de l'élément.</param>
+    </member>
+    <member name="M:System.Xml.XmlDictionaryReader.ReadInt32Array(System.Xml.XmlDictionaryString,System.Xml.XmlDictionaryString)">
+      <summary>Lit le contenu d'une série de nœuds avec les éléments <paramref name="localName" /> et <paramref name="namespaceUri" /> dans un tableau d'entiers (<see cref="T:System.Int32" />).</summary>
+      <returns>Tableau d'entiers (<see cref="T:System.Int32" />).</returns>
+      <param name="localName">Nom local de l'élément.</param>
+      <param n

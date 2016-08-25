@@ -1,0 +1,146 @@
+r>
+    <member name="M:System.Threading.Tasks.Task.WaitAny(System.Threading.Tasks.Task[],System.Threading.CancellationToken)">
+      <summary>等候所有提供的 <see cref="T:System.Threading.Tasks.Task" /> 物件完成執行。</summary>
+      <returns>
+        <paramref name="tasks" /> 陣列引數中已完成工作的索引。</returns>
+      <param name="tasks">要等待之 <see cref="T:System.Threading.Tasks.Task" /> 執行個體的陣列。</param>
+      <param name="cancellationToken">等候工作完成時要觀察的 <see cref="P:System.Threading.Tasks.TaskFactory.CancellationToken" />。</param>
+      <exception cref="T:System.ObjectDisposedException">The <see cref="T:System.Threading.Tasks.Task" /> has been disposed.</exception>
+      <exception cref="T:System.ArgumentNullException">The <paramref name="tasks" /> argument is null.</exception>
+      <exception cref="T:System.ArgumentException">The <paramref name="tasks" /> argument contains a null element.</exception>
+      <exception cref="T:System.OperationCanceledException">The <paramref name="cancellationToken" /> was canceled.</exception>
+    </member>
+    <member name="M:System.Threading.Tasks.Task.WaitAny(System.Threading.Tasks.Task[],System.TimeSpan)">
+      <summary>等候其中任何一個提供的 <see cref="T:System.Threading.Tasks.Task" /> 物件在指定的時間間隔內完成執行。</summary>
+      <returns>
+        <paramref name="tasks" /> 陣列引數中已完成工作的索引；如果發生逾時，則為 -1。</returns>
+      <param name="tasks">要等待之 <see cref="T:System.Threading.Tasks.Task" /> 執行個體的陣列。</param>
+      <param name="timeout">
+        <see cref="T:System.TimeSpan" />，代表等候毫秒數；或是 <see cref="T:System.TimeSpan" />，代表無限期等候的 -1 毫秒。</param>
+      <exception cref="T:System.ObjectDisposedException">The <see cref="T:System.Threading.Tasks.Task" /> has been disposed.</exception>
+      <exception cref="T:System.ArgumentNullException">The <paramref name="tasks" /> argument is null.</exception>
+      <exception cref="T:System.ArgumentOutOfRangeException">
+        <paramref name="timeout" /> is a negative number other than -1 milliseconds, which represents an infinite time-out. -or-<paramref name="timeout" /> is greater than <see cref="F:System.Int32.MaxValue" />. </exception>
+      <exception cref="T:System.ArgumentException">The <paramref name="tasks" /> argument contains a null element.</exception>
+    </member>
+    <member name="M:System.Threading.Tasks.Task.WhenAll``1(System.Collections.Generic.IEnumerable{System.Threading.Tasks.Task{``0}})">
+      <summary>建立一個工作，當可列舉集合中的所有 <see cref="T:System.Threading.Tasks.Task`1" /> 物件完成時，會完成此工作。</summary>
+      <returns>工作，代表所有提供的工作已完成。</returns>
+      <param name="tasks">要等待完成的工作。</param>
+      <typeparam name="TResult">完成的工作類型。</typeparam>
+      <exception cref="T:System.ArgumentNullException">The <paramref name="tasks" /> argument was null.</exception>
+      <exception cref="T:System.ArgumentException">The <paramref name="tasks" /> collection contained a null task. </exception>
+    </member>
+    <member name="M:System.Threading.Tasks.Task.WhenAll(System.Collections.Generic.IEnumerable{System.Threading.Tasks.Task})">
+      <summary>建立一個工作，當可列舉集合中的所有 <see cref="T:System.Threading.Tasks.Task" /> 物件完成時，會完成此工作。</summary>
+      <returns>工作，代表所有提供的工作已完成。</returns>
+      <param name="tasks">要等待完成的工作。</param>
+      <exception cref="T:System.ArgumentNullException">The <paramref name="tasks" /> argument was null. </exception>
+      <exception cref="T:System.ArgumentException">The <paramref name="tasks" /> collection contained a null task.</exception>
+    </member>
+    <member name="M:System.Threading.Tasks.Task.WhenAll(System.Threading.Tasks.Task[])">
+      <summary>建立一個工作，當陣列中的所有 <see cref="T:System.Threading.Tasks.Task" /> 物件完成時，會完成此工作。</summary>
+      <returns>工作，代表所有提供的工作已完成。</returns>
+      <param name="tasks">要等待完成的工作。</param>
+      <exception cref="T:System.ArgumentNullException">The <paramref name="tasks" /> argument was null. </exception>
+      <exception cref="T:System.ArgumentException">The <paramref name="tasks" /> array contained a null task. </exception>
+    </member>
+    <member name="M:System.Threading.Tasks.Task.WhenAll``1(System.Threading.Tasks.Task{``0}[])">
+      <summary>建立一個工作，當陣列中的所有 <see cref="T:System.Threading.Tasks.Task`1" /> 物件完成時，會完成此工作。</summary>
+      <returns>工作，代表所有提供的工作已完成。</returns>
+      <param name="tasks">要等待完成的工作。</param>
+      <typeparam name="TResult">完成的工作類型。</typeparam>
+      <exception cref="T:System.ArgumentNullException">The <paramref name="tasks" /> argument was null.</exception>
+      <exception cref="T:System.ArgumentException">The <paramref name="tasks" /> array contained a null task.</exception>
+    </member>
+    <member name="M:System.Threading.Tasks.Task.WhenAny``1(System.Collections.Generic.IEnumerable{System.Threading.Tasks.Task{``0}})">
+      <summary>建立當任何一個提供的工作完成時才會完成的工作。</summary>
+      <returns>工作，代表其中一個提供的工作已完成。傳回的工作結果為已完成的工作。</returns>
+      <param name="tasks">要等待完成的工作。</param>
+      <typeparam name="TResult">完成的工作類型。</typeparam>
+      <exception cref="T:System.ArgumentNullException">The <paramref name="tasks" /> argument was null.</exception>
+      <exception cref="T:System.ArgumentException">The <paramref name="tasks" /> array contained a null task, or was empty.</exception>
+    </member>
+    <member name="M:System.Threading.Tasks.Task.WhenAny(System.Collections.Generic.IEnumerable{System.Threading.Tasks.Task})">
+      <summary>建立當任何一個提供的工作完成時才會完成的工作。</summary>
+      <returns>工作，代表其中一個提供的工作已完成。傳回的工作結果為已完成的工作。</returns>
+      <param name="tasks">要等待完成的工作。</param>
+      <exception cref="T:System.ArgumentNullException">The <paramref name="tasks" /> argument was null.</exception>
+      <exception cref="T:System.ArgumentException">The <paramref name="tasks" /> array contained a null task, or was empty.</exception>
+    </member>
+    <member name="M:System.Threading.Tasks.Task.WhenAny(System.Threading.Tasks.Task[])">
+      <summary>建立當任何一個提供的工作完成時才會完成的工作。</summary>
+      <returns>工作，代表其中一個提供的工作已完成。傳回的工作結果為已完成的工作。</returns>
+      <param name="tasks">要等待完成的工作。</param>
+      <exception cref="T:System.ArgumentNullException">The <paramref name="tasks" /> argument was null.</exception>
+      <exception cref="T:System.ArgumentException">The <paramref name="tasks" /> array contained a null task, or was empty.</exception>
+    </member>
+    <member name="M:System.Threading.Tasks.Task.WhenAny``1(System.Threading.Tasks.Task{``0}[])">
+      <summary>建立當任何一個提供的工作完成時才會完成的工作。</summary>
+      <returns>工作，代表其中一個提供的工作已完成。傳回的工作結果為已完成的工作。</returns>
+      <param name="tasks">要等待完成的工作。</param>
+      <typeparam name="TResult">完成的工作類型。</typeparam>
+      <exception cref="T:System.ArgumentNullException">The <paramref name="tasks" /> argument was null.</exception>
+      <exception cref="T:System.ArgumentException">The <paramref name="tasks" /> array contained a null task, or was empty.</exception>
+    </member>
+    <member name="M:System.Threading.Tasks.Task.Yield">
+      <summary>建立會在等候時以非同步方式遞交 (Yield) 給目前內容的 awaitable 工具。</summary>
+      <returns>內容，這個內容會在受到等候時非同步轉換回等候當時的最新內容。如果目前的 <see cref="T:System.Threading.SynchronizationContext" /> 非 null，即視為目前的內容。否則，將與目前執行之工作相關聯的工作排程器視為目前的內容。</returns>
+    </member>
+    <member name="T:System.Threading.Tasks.Task`1">
+      <summary>代表可傳回值的非同步作業。</summary>
+      <typeparam name="TResult">這個 <see cref="T:System.Threading.Tasks.Task`1" /> 所產生之結果的類型。</typeparam>
+    </member>
+    <member name="M:System.Threading.Tasks.Task`1.#ctor(System.Func{`0})">
+      <summary>使用指定的函式，初始化新的 <see cref="T:System.Threading.Tasks.Task`1" />。</summary>
+      <param name="function">委派，表示工作中要執行的程式碼。當函式完成時，工作的 <see cref="P:System.Threading.Tasks.Task`1.Result" /> 屬性會設定成傳回函式的結果值。</param>
+      <exception cref="T:System.ArgumentNullException">The <paramref name="function" /> argument is null.</exception>
+    </member>
+    <member name="M:System.Threading.Tasks.Task`1.#ctor(System.Func{`0},System.Threading.CancellationToken)">
+      <summary>使用指定的函式，初始化新的 <see cref="T:System.Threading.Tasks.Task`1" />。</summary>
+      <param name="function">委派，表示工作中要執行的程式碼。當函式完成時，工作的 <see cref="P:System.Threading.Tasks.Task`1.Result" /> 屬性會設定成傳回函式的結果值。</param>
+      <param name="cancellationToken">要指派給這個工作的 <see cref="T:System.Threading.CancellationToken" />。</param>
+      <exception cref="T:System.ObjectDisposedException">The <see cref="T:System.Threading.CancellationTokenSource" /> that created<paramref name=" cancellationToken" /> has already been disposed.</exception>
+      <exception cref="T:System.ArgumentNullException">The <paramref name="function" /> argument is null.</exception>
+    </member>
+    <member name="M:System.Threading.Tasks.Task`1.#ctor(System.Func{`0},System.Threading.CancellationToken,System.Threading.Tasks.TaskCreationOptions)">
+      <summary>使用指定的函式和建立選項，初始化新的 <see cref="T:System.Threading.Tasks.Task`1" />。</summary>
+      <param name="function">委派，表示工作中要執行的程式碼。當函式完成時，工作的 <see cref="P:System.Threading.Tasks.Task`1.Result" /> 屬性會設定成傳回函式的結果值。</param>
+      <param name="cancellationToken">要指派給新工作的 <see cref="T:System.Threading.CancellationToken" />。</param>
+      <param name="creationOptions">
+        <see cref="T:System.Threading.Tasks.TaskCreationOptions" />，用於自訂工作的行為。</param>
+      <exception cref="T:System.ObjectDisposedException">The <see cref="T:System.Threading.CancellationTokenSource" /> that created<paramref name=" cancellationToken" /> has already been disposed.</exception>
+      <exception cref="T:System.ArgumentOutOfRangeException">The <paramref name="creationOptions" /> argument specifies an invalid value for <see cref="T:System.Threading.Tasks.TaskCreationOptions" />.</exception>
+      <exception cref="T:System.ArgumentNullException">The <paramref name="function" /> argument is null.</exception>
+    </member>
+    <member name="M:System.Threading.Tasks.Task`1.#ctor(System.Func{`0},System.Threading.Tasks.TaskCreationOptions)">
+      <summary>使用指定的函式和建立選項，初始化新的 <see cref="T:System.Threading.Tasks.Task`1" />。</summary>
+      <param name="function">委派，表示工作中要執行的程式碼。當函式完成時，工作的 <see cref="P:System.Threading.Tasks.Task`1.Result" /> 屬性會設定成傳回函式的結果值。</param>
+      <param name="creationOptions">
+        <see cref="T:System.Threading.Tasks.TaskCreationOptions" />，用於自訂工作的行為。</param>
+      <exception cref="T:System.ArgumentOutOfRangeException">The <paramref name="creationOptions" /> argument specifies an invalid value for <see cref="T:System.Threading.Tasks.TaskCreationOptions" />.</exception>
+      <exception cref="T:System.ArgumentNullException">The <paramref name="function" /> argument is null.</exception>
+    </member>
+    <member name="M:System.Threading.Tasks.Task`1.#ctor(System.Func{System.Object,`0},System.Object)">
+      <summary>使用指定的函式和狀態，初始化新的 <see cref="T:System.Threading.Tasks.Task`1" />。</summary>
+      <param name="function">委派，表示工作中要執行的程式碼。當函式完成時，工作的 <see cref="P:System.Threading.Tasks.Task`1.Result" /> 屬性會設定成傳回函式的結果值。</param>
+      <param name="state">物件，表示動作所需的資料。</param>
+      <exception cref="T:System.ArgumentNullException">The <paramref name="function" /> argument is null.</exception>
+    </member>
+    <member name="M:System.Threading.Tasks.Task`1.#ctor(System.Func{System.Object,`0},System.Object,System.Threading.CancellationToken)">
+      <summary>使用指定的動作、狀態和選項，初始化新的 <see cref="T:System.Threading.Tasks.Task`1" />。</summary>
+      <param name="function">委派，表示工作中要執行的程式碼。當函式完成時，工作的 <see cref="P:System.Threading.Tasks.Task`1.Result" /> 屬性會設定成傳回函式的結果值。</param>
+      <param name="state">物件，代表示函式所要使用的資料。</param>
+      <param name="cancellationToken">要指派給新工作的 <see cref="T:System.Threading.CancellationToken" />。</param>
+      <exception cref="T:System.ObjectDisposedException">The <see cref="T:System.Threading.CancellationTokenSource" /> that created<paramref name=" cancellationToken" /> has already been disposed.</exception>
+      <exception cref="T:System.ArgumentNullException">The <paramref name="function" /> argument is null.</exception>
+    </member>
+    <member name="M:System.Threading.Tasks.Task`1.#ctor(System.Func{System.Object,`0},System.Object,System.Threading.CancellationToken,System.Threading.Tasks.TaskCreationOptions)">
+      <summary>使用指定的動作、狀態和選項，初始化新的 <see cref="T:System.Threading.Tasks.Task`1" />。</summary>
+      <param name="function">委派，表示工作中要執行的程式碼。當函式完成時，工作的 <see cref="P:System.Threading.Tasks.Task`1.Result" /> 屬性會設定成傳回函式的結果值。</param>
+      <param name="state">物件，代表示函式所要使用的資料。</param>
+      <param name="cancellationToken">要指派給新工作的 <see cref="T:System.Threading.CancellationToken" />。</param>
+      <param name="creationOptions">
+        <see cref="T:System.Threading.Tasks.TaskCreationOptions" />，用於自訂工作的行為。</param>
+      <exception cref="T:System.ObjectDisposedException">The <see cref="T:System.Threading.CancellationTokenSource" /> that created<paramref name=" cancellationToken" /> has already been disposed.</exception>
+      <exception cref="T:System.ArgumentOutOfRangeEx

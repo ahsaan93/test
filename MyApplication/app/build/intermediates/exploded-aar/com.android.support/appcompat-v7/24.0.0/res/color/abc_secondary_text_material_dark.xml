@@ -1,0 +1,9 @@
+D@Can?8t?5join?5an?5IPv6?5group?5on?5a?5IP@ 000000001000ef88     PlainDatagramSocketImpl.obj
+ 0002:00000fb8       ??_C@_0BC@JFLIBEAA@not?5in6?5multicast?$AA@ 000000001000efb8     PlainDatagramSocketImpl.obj
+ 0002:00000fd0       ??_C@_0CK@FKKDPICG@no?5Inet4Address?5associated?5with?5@ 000000001000efd0     PlainDatagramSocketImpl.obj
+ 0002:00001000       ??_C@_0BL@KIMGBHOL@get?5IP_MULTICAST_IF?5failed?$AA@ 000000001000f000     PlainDatagramSocketImpl.obj
+ 0002:00001020       ??_C@_0DA@OBEPBCCJ@Can?8t?5join?5an?5IPv4?5group?5on?5an?5I@ 000000001000f020     PlainDatagramSocketImpl.obj
+ 0002:00001050       ??_C@_0BB@FCPOINAD@not?5in?5multicast?$AA@ 000000001000f050     PlainDatagramSocketImpl.obj
+ 0002:00001068       ??_C@_0N@DOLJHIMH@serverSocket?$AA@ 000000001000f068     PlainSocketImpl.obj
+ 0002:00001078       ??_C@_0BI@PLIDPFNP@Ljava?1net?1ServerSocket?$DL?$AA@ 000000001000f078     PlainSocketImpl.obj
+ 0002:0000

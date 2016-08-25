@@ -1,0 +1,35 @@
+isplayName="Use Standard Windows Libraries" Description="Use Standard Windows Libraries" />
+    <EnumValue Name="Static" DisplayName="Use MFC in a Static Library" Description="Use MFC in a Static Library" />
+    <EnumValue Name="Dynamic" DisplayName="Use MFC in a Shared DLL" Description="Use MFC in a Shared DLL" />
+  </EnumProperty>
+  <EnumProperty Name="UseOfAtl" DisplayName="Use of ATL"
+                Description="Specifies how ATL is used by the configuration."
+                Category="ProjectDefaults"
+                Visible="false"
+                F1Keyword="VC.Project.VCConfiguration.useOfATL">
+    <EnumValue Name="false" DisplayName="Not Using ATL" Description="Not Using ATL" />
+    <EnumValue Name="Static" DisplayName="Static Link to ATL" Description="Static Link to ATL" />
+    <EnumValue Name="Dynamic" DisplayName="Dynamic Link to ATL" Description="Dynamic Link to ATL" />
+  </EnumProperty>
+  <EnumProperty Name="CharacterSet" DisplayName="Character Set"
+                Description="Tells the compiler to use the specified character set; aids in localization issues."
+                Category="ProjectDefaults"
+                F1Keyword="VC.Project.VCConfiguration.CharacterSet">
+    <EnumValue Name="NotSet" DisplayName="Not Set" Description="Not Set" />
+    <EnumValue Name="Unicode" DisplayName="Use Unicode Character Set" Description="Use Unicode Character Set" />
+    <EnumValue Name="MultiByte" DisplayName="Use Multi-Byte Character Set" Description="Use Multi-Byte Character Set" />
+  </EnumProperty>
+  <EnumProperty Name="CLRSupport" DisplayName="Common Language Runtime Support"
+                Description="Specifies whether this configuration supports the Common Language Runtime. This is incompatible with some other settings, e.g. runtime checks. See help for /clr family of C++ compiler switches for full list of conflicts."
+                Category="ProjectDefaults"
+                F1Keyword="VC.Project.VCConfiguration.ManagedExtensions">
+    <EnumValue Name="false" DisplayName="No Common Language Runtime Support"
+               Description="No Common Language Runtime Support" />
+    <EnumValue Name="true" DisplayName="Common Language Runtime Support (/clr)"
+               Description="Common Language Runtime Support (/clr)"/>
+    <EnumValue Name="Pure" DisplayName="Pure MSIL Common Language Runtime Support (/clr:pure)"
+               Description="Pure MSIL Common Language Runtime Support (/clr:pure)" />
+    <EnumValue Name="Safe" DisplayName="Safe MSIL Common Language Runtime Support (/clr:safe)"
+               Description="Safe MSIL Common Language Runtime Support (/clr:safe)" />
+  </EnumProperty>
+  <StringProperty Na

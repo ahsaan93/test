@@ -1,0 +1,11 @@
+omTypes.ITypeInfo2.GetAllVarCustData(System.Int32,System.IntPtr)">
+      <summary>为自定义数据获取变量。</summary>
+      <param name="index">用于为其获取自定义数据的变量的索引。</param>
+      <param name="pCustData">一个指向包含所有自定义数据项的 CUSTDATA 的指针。</param>
+    </member>
+    <member name="M:System.Runtime.InteropServices.ComTypes.ITypeInfo2.GetContainingTypeLib(System.Runtime.InteropServices.ComTypes.ITypeLib@,System.Int32@)">
+      <summary>检索类型库，该类型库包含此类型说明和它在该类型库中的索引。</summary>
+      <param name="ppTLB">此方法返回时，包含对包含类型库的引用。该参数未经初始化即被传递。</param>
+      <param name="pIndex">此方法返回时，包含对包含类型库中的类型说明的索引的引用。该参数未经初始化即被传递。</param>
+    </member>
+    <member name="M:System.Runtime.Int

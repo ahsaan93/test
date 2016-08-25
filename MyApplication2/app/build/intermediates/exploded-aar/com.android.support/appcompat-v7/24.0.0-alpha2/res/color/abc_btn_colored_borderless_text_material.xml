@@ -1,0 +1,15 @@
+enerator">Generador de SQL que se va a usar.</param>
+    </member>
+    <member name="P:System.Data.Entity.Migrations.DbMigrationsConfiguration.TargetDatabase">
+      <summary>     Obtiene o establece un valor para reemplazar la conexión de la base de datos que se va a migrar. </summary>
+    </member>
+    <member name="T:System.Data.Entity.Migrations.DbMigrationsConfiguration`1">
+      <summary>Representa la configuración con relación al uso de las migraciones para un modelo determinado.</summary>
+      <typeparam name="TContext">Contexto.</typeparam>
+    </member>
+    <member name="M:System.Data.Entity.Migrations.DbMigrationsConfiguration`1.#ctor">
+      <summary>     Inicializa una nueva instancia de la clase <see cref="T:System.Data.Entity.Migrations.DbMigrationsConfiguration`1" />. </summary>
+    </member>
+    <member name="M:System.Data.Entity.Migrations.DbMigrationsConfiguration`1.Equals(System.Object)">
+      <summary>Devuelve un valor que indica si esta instancia es igual que un objeto especificado.</summary>
+      <returns>true s

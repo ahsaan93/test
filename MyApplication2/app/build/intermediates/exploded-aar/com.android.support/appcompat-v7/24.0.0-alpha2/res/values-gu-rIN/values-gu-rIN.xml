@@ -1,0 +1,26 @@
+tableitem>
+    <selectableitem _locID="SQL_Name">Microsoft SQL Server Data Tools</selectableitem>
+    <selectableitem _locID="SQL_Description">Microsoft SQL Server Data Tools는 개발자가 Microsoft SQL Server 기반 응용 프로그램 또는 Entity Framework 기반의 응용 프로그램을 빌드하는 데 필요한 최신 도구를 제공합니다. 이러한 도구의 종류는 다음과 같습니다.
+      * Entity Framework Designer
+      * Microsoft SQL Server Data Tools
+      * Microsoft SQL Server 2012 Native Client
+      * Microsoft SQL Server 2012 명령줄 유틸리티
+      * Microsoft SQL Server 2012 Transact-SQL 컴파일러
+    </selectableitem>
+
+    <selectableitem _locID="Win81SDK">Windows 8.1 및 Windows Phone 8.1용 도구</selectableitem>
+    <selectableitem _locID="Win81SDKDescription">Windows 8.1 및 Windows Phone 8.1용 Windows 스토어 앱과 게임을 만드는 데 필요한 도구입니다. Windows 8.1 및 Windows Phone 8.1용 Windows SDK와 Visual Studio 2013 Visual C++ 도구 집합(v120)을 포함합니다.</selectableitem>
+
+    <selectableitem _locID="SelectableItemWindowsPhone81EmulatorName">Windows Phone 8.1용 에뮬레이터</selectableitem>
+    <selectableitem _locID="SelectableItemWindowsPhone81EmulatorDescription">에뮬레이터는 장치 없이 앱 및 게임을 만들고 테스트하는 데 도움이 됩니다. 
+Visual Studio 및 http://dev.windows.com 내에서 추가 릴리스용 에뮬레이터를 사용할 수 있습니다.</selectableitem>
+
+    <selectableitem _locID="ToolsForWin81_WP80_WP81">도구 및 Windows SDK</selectableitem>
+    <selectableitem _locID="ToolsForWin81_WP80_WP81Description">Windows 8.1, Windows Phone 8.1 및 Windows Phone 8.0용 앱을 만드는 데 사용되는 개발 도구입니다. 
+Windows 8.1 SDK, Windows Phone 8.1 SDK 및 Windows Phone 8.0 SDK를 포함합니다. 
+Windows 8.1 Update 이상이 필요합니다.</selectableitem>
+
+    <selectableitem _locID="WindowsPhone80Name">Windows Phone 8.0 SDK</selectableitem>
+    <selectableitem _locID="WindowsPhone80Description">Windows 8.0용 앱과 게임을 만드는 데 필요한 도구입니다. Windows Phone 8.0용 Windows SDK, Windows Phone 8.0 에뮬레이터 및 Visual Studio 2012 Visual C++ 도구 집합(v110)을 포함합니다.</selectableitem>
+
+    <selectableitem _locID="VC_Tools_Name">Visual C++ 2015용 일반 도구</selectableitem>

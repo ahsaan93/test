@@ -1,0 +1,28 @@
+stem.Action{``0,System.Int32})">
+            <summary>
+            Lässt die Anwendung eines Aktionsdelegats (häufig ein sehr einfaches Lambda) auf eine ganze Sequenz mit dem Index der einzelnen Elemente zu.
+            </summary>
+        </member>
+        <member name="M:Microsoft.Expression.Drawing.Core.CommonExtensions.EnsureListCount``1(System.Collections.Generic.IList{``0},System.Int32,System.Func{``0})">
+            <summary>
+            Stellt sicher, dass die Anzahl einer Liste einer angegebenen Anzahl entspricht. Erstellt mit einer angegebenen Factory Elemente oder entfernt diese bei Bedarf. Wenn es sich bei &quot;Input IList&quot; um eine Liste handelt, wird &quot;AddRange&quot; oder &quot;RemoveRange&quot; verwendet, sofern keine Factory vorhanden ist.
+            </summary>
+        </member>
+        <member name="M:Microsoft.Expression.Drawing.Core.CommonExtensions.EnsureListCountAtLeast``1(System.Collections.Generic.IList{``0},System.Int32,System.Func{``0})">
+            <summary>
+            Stellt sicher, dass die Anzahl einer Liste mindestens der angegebenen Anzahl entspricht. Erstellt mit einer angegebenen Factory.
+            </summary>
+        </member>
+        <member name="M:Microsoft.Expression.Drawing.Core.CommonExtensions.AddRange``1(System.Collections.Generic.ICollection{``0},System.Collections.Generic.IEnumerable{``0})">
+            <summary>
+            Am Ende einer Auflistung wird ein Elementebereich hinzugefügt. Wenn es sich bei einer Auflistung um eine Liste handelt, wird &quot;List.AddRange&quot; verwendet.
+            </summary>
+        </member>
+        <member name="M:Microsoft.Expression.Drawing.Core.CommonExtensions.Last``1(System.Collections.Generic.IList{``0})">
+            <summary>
+            Ruft das letzte Element der angegebenen Liste ab.
+            </summary>
+        </member>
+        <member name="M:Microsoft.Expression.Drawing.Core.CommonExtensions.RemoveLast``1(System.Collections.Generic.IList{``0})">
+            <summary>
+            Entfernt das letzte Element aus

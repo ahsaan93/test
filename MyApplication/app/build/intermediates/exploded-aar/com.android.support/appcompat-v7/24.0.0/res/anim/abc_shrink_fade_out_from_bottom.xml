@@ -1,0 +1,17 @@
+mber>
+    <member name="M:System.Windows.Input.StylusDownEventArgs.InvokeEventHandler(System.Delegate,System.Object)">
+      <summary>Invokes event handlers in a type-specific way, which can increase event system efficiency.</summary>
+      <param name="genericHandler">The generic handler to call in a type-specific way.</param>
+      <param name="genericTarget">The target to call the handler on.</param>
+    </member>
+    <member name="P:System.Windows.Input.StylusDownEventArgs.TapCount">
+      <summary>Gets the number of times the tablet pen was tapped.</summary>
+      <returns>The number of times the tablet pen was tapped.</returns>
+    </member>
+    <member name="T:System.Windows.Input.StylusDownEventHandler">
+      <summary>Represents the method that handles the <see cref="E:System.Windows.Input.Stylus.StylusDown" /> event, as well as several variations, including the corresponding Preview event. Also re-exposes the event in the base element classes. </summary>
+      <param name="sender">The source of the event. </param>
+      <param name="e">A <see cref="T:System.Windows.Input.StylusDownEventArgs" /> that contains the event data. .</param>
+    </member>
+    <member name="T:System.Windows.Input.StylusEventArgs">
+      <summary>Provides data for several of the events that are as

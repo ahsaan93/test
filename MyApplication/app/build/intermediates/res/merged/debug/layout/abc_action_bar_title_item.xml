@@ -1,0 +1,19 @@
+r>
+    <member name="M:System.Resources.ResourceManager.InternalGetResourceSet(System.Globalization.CultureInfo,System.Boolean,System.Boolean)">
+      <summary>Provides the implementation for finding a resource set.</summary>
+      <returns>The specified resource set.</returns>
+      <param name="culture">The culture object to look for. </param>
+      <param name="createIfNotExists">true to load the resource set, if it has not been loaded yet; otherwise, false. </param>
+      <param name="tryParents">true to check parent <see cref="T:System.Globalization.CultureInfo" /> objects if the resource set cannot be loaded; otherwise, false.</param>
+      <exception cref="T:System.Resources.MissingManifestResourceException">The main assembly does not contain a .resources file, which is required to look up a resource. </exception>
+      <exception cref="T:System.ExecutionEngineException">There was an internal error in the runtime.</exception>
+      <exception cref="T:System.Resources.MissingSatelliteAssemblyException">The satellite assembly associated with <paramref name="culture" /> could not be located.</exception>
+    </member>
+    <member name="F:System.Resources.ResourceManager.MagicNumber">
+      <summary>Holds the number used to identify resource files.</summary>
+    </member>
+    <member name="F:System.Resources.ResourceManager.MainAssembly">
+      <summary>Specifies the main assembly that contains the resources.</summary>
+    </member>
+    <member name="M:System.Resources.ResourceManager.ReleaseAllResources">
+      <summary>Tells the resource

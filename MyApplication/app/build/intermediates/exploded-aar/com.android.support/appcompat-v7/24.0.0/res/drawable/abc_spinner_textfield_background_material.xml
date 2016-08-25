@@ -1,0 +1,15 @@
+ception">
+        <paramref name="version" /> ist null. </exception>
+    </member>
+    <member name="P:System.Reflection.AssemblyFileVersionAttribute.Version">
+      <summary>Ruft den Namen der Win32-Dateiversionsressource ab.</summary>
+      <returns>Eine Zeichenfolge, die den Namen der Dateiversionsressource enthält.</returns>
+    </member>
+    <member name="T:System.Reflection.AssemblyFlagsAttribute">
+      <summary>Gibt eine bitweise Kombination von <see cref="T:System.Reflection.AssemblyNameFlags" />-Flags für eine Assembly an. Diese dienen zur Beschreibung von Optionen für den JIT-Compiler (Just In Time) und geben an, ob die Assembly erneut zugewiesen werden kann und ob sie einen vollen bzw. einen mit Token versehenen öffentlichen Schlüssel besitzt.Diese Klasse kann nicht vererbt werden.</summary>
+    </member>
+    <member name="M:System.Reflection.AssemblyFlagsAttribute.#ctor(System.Reflection.AssemblyNameFlags)">
+      <summary>Initialisiert eine neue Instanz der <see cref="T:System.Reflection.AssemblyFlagsAttribute" />-Klasse mit der angegebenen Kombination von <see cref="T:System.Reflection.AssemblyNameFlags" />-Flags.</summary>
+      <param name="assemblyFlags">Eine bitweise Kombination von <see cref="T:System.Reflection.AssemblyNameFlags" />-Flags. Diese stehen für JIT-Compileroptionen (Just In Time) sowie Gültigkeitsdauer und geben an, ob die Assembly erneut zugewiesen werden kann und ob sie einen vollen bzw. einen mit Token versehenen öffentlichen Schlüssel besitzt.</param>
+    </member>
+    <member name="P:System.Reflec

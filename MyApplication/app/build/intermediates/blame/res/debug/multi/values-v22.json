@@ -1,0 +1,27 @@
+pServicesClass.ClearHwndProps(Accessibility._RemotableHandle@,System.UInt32,System.UInt32,System.Guid@,System.Int32)">
+      <summary>The <see cref="T:Accessibility.CAccPropServicesClass" /> and all of its exposed members are part of a managed wrapper for the Component Object Model (COM) IAccPropServices interface.</summary>
+      <param name="hwnd">Identifies the accessible element that is to be annotated. This replaces the identity string.</param>
+      <param name="idObject">Identifies the accessible element that is to be annotated. This replaces the identity string.</param>
+      <param name="idChild">Identifies the accessible element that is to be annotated. This replaces the identity string.</param>
+      <param name="paProps">Specifies an array of properties that is to be reset. These properties will revert to the default behavior that they displayed before they were annotated.</param>
+      <param name="cProps">Specifies the number of properties in the <paramref name="paProps" /> array.</param>
+    </member>
+    <member name="M:Accessibility.CAccPropServicesClass.ClearProps(System.Byte@,System.UInt32,System.Guid@,System.Int32)">
+      <summary>The <see cref="T:Accessibility.CAccPropServicesClass" /> and all of its exposed members are part of a managed wrapper for the Component Object Model (COM) IAccPropServices interface.</summary>
+      <param name="pIDString">Identify the accessible element that is to be un-annotated.</param>
+      <param name="dwIDStringLen">Length of <paramref name="pIDString" />.</param>
+      <param name="paProps">Specify an array of properties that is to be reset. These properties will revert to the default behavior they displayed before they were annotated.</param>
+      <param name="cProps">Specifies the number of properties in the <paramref name="paProps" /> array.</param>
+    </member>
+    <member name="M:Accessibility.CAccPropServicesClass.ComposeHmenuIdentityString(Accessibility._RemotableHandle@,System.UInt32,System.IntPtr,System.UInt32@)">
+      <summary>The <see cref="T:Accessibility.CAccPropServicesClass" /> and all of its exposed members are part of a managed wrapper for the Component Object Model (COM) IAccPropServices interface.</summary>
+      <param name="hmenu">Identifies the HMENU-based accessible element.</param>
+      <param name="idChild">Specifies the child ID of the accessible element.</param>
+      <param name="ppIDString">Pointer to a buffer that receives the identity string. The callee allocates this buffer using CoTaskMemAlloc. When finished, the caller must free the buffer by calling CoTaskMemFree.</param>
+      <param name="pdwIDStringLen">Pointer to a buffer that receives the length of the identity string.</param>
+    </member>
+    <member name="M:Accessibility.CAccPropServicesClass.ComposeHwndIdentityString(Accessibility._RemotableHandle@,System.UInt32,System.UInt32,System.IntPtr,System.UInt32@)">
+      <summary>The <see cref="T:Accessibility.CAccPropServicesClass" /> and all of its exposed members are part of a managed wrapper for the Component Object Model (COM) IAccPropServices interface.</summary>
+      <param name="hwnd">Specifies the HWND of the accessible element that the caller wants to identify.</param>
+      <param name="idObject">Specifies the object ID of the accessible element.</param>
+      <

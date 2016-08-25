@@ -1,0 +1,10 @@
+lback process. (See the Remarks section.)</param>
+      <exception cref="T:System.ArgumentNullException">The <paramref name="culture" /> parameter is null. </exception>
+      <exception cref="T:System.Resources.MissingManifestResourceException">
+        <paramref name="tryParents" /> is true, no usable set of resources has been found, and there are no default culture resources. </exception>
+    </member>
+    <member name="M:System.Resources.ResourceManager.GetSatelliteContractVersion(System.Reflection.Assembly)">
+      <summary>Returns the version specified by the <see cref="T:System.Resources.SatelliteContractVersionAttribute" /> attribute in the given assembly.</summary>
+      <returns>The satellite contract version of the given assembly, or null if no version was found.</returns>
+      <param name="a">The assembly to check for the <see cref="T:System.Resources.SatelliteContractVersionAttribute" /> attribute. </param>
+      <exception cref="T:System.ArgumentException">The <see cref="T:System.Version" /> found in the assembly <paramref name="a"

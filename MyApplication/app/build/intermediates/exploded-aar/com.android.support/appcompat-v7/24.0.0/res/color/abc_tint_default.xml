@@ -1,0 +1,25 @@
+ummary>A Restore button.</summary>
+    </member>
+    <member name="T:System.Windows.Forms.CharacterCasing">
+      <summary>Specifies the case of characters in a <see cref="T:System.Windows.Forms.TextBox" /> control.</summary>
+      <filterpriority>2</filterpriority>
+    </member>
+    <member name="F:System.Windows.Forms.CharacterCasing.Lower">
+      <summary>Converts all characters to lowercase.</summary>
+    </member>
+    <member name="F:System.Windows.Forms.CharacterCasing.Normal">
+      <summary>The case of characters is left unchanged.</summary>
+    </member>
+    <member name="F:System.Windows.Forms.CharacterCasing.Upper">
+      <summary>Converts all characters to uppercase.</summary>
+    </member>
+    <member name="T:System.Windows.Forms.CheckBox">
+      <summary>Represents a Windows <see cref="T:System.Windows.Forms.CheckBox" />.</summary>
+      <filterpriority>1</filterpriority>
+    </member>
+    <member name="M:System.Windows.Forms.CheckBox.#ctor">
+      <summary>Initializes a new instance of the <see cref="T:System.Windows.Forms.CheckBox" /> class.</summary>
+    </member>
+    <member name="P:System.Windows.Forms.CheckBox.Appearance">
+      <summary>Gets or sets the value that determines the appearance of a <see cref="T:System.Windows.Forms.CheckBox" /> control.</summary>
+      <returns>One of the <see cref="T:System.Windows.Forms.Appearance" /> values. The defau

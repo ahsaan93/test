@@ -1,0 +1,12 @@
+dows.Input.StylusPointProperty" />.</returns>
+    </member>
+    <member name="P:System.Windows.Input.StylusPointProperty.IsButton">
+      <summary>Gets whether the <see cref="T:System.Windows.Input.StylusPointProperty" /> represents a button on the stylus.</summary>
+      <returns>true if the <see cref="T:System.Windows.Input.StylusPointProperty" /> represents a button on the stylus; otherwise, false.</returns>
+    </member>
+    <member name="M:System.Windows.Input.StylusPointProperty.ToString"></member>
+    <member name="T:System.Windows.Input.StylusPointPropertyInfo">
+      <summary>Specifies the constraints of a property in a <see cref="T:System.Windows.Input.StylusPoint" />.</summary>
+    </member>
+    <member name="M:System.Windows.Input.StylusPointPropertyInfo.#ctor(System.Windows.Input.StylusPointProperty)">
+      <summary>Initializes a new instance of the <see cref="T:System.Windows.Input.StylusPointPropertyI

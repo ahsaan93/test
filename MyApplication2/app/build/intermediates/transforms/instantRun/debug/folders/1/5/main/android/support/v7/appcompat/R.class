@@ -1,0 +1,70 @@
+urn isComposableProperty IsNot Nothing AndAlso CBool(isComposableProperty.GetValue(edmFunction, Nothing))
+    End Function
+
+    Public Function GetParameters(edmFunction As EdmFunction) As IEnumerable(Of FunctionImportParameter)
+        Return FunctionImportParameter.Create(edmFunction.Parameters, _code, _ef)
+    End Function
+
+    Public Function GetReturnType(edmFunction As EdmFunction) As TypeUsage
+        Dim returnParam As FunctionParameter = GetReturnParameter(edmFunction)
+        Return If(returnParam Is Nothing, Nothing, _ef.GetElementType(returnParam.TypeUsage))
+    End Function
+
+    Public Function GenerateMergeOptionFunction(edmFunction As EdmFunction, includeMergeOption As Boolean) As Boolean
+        Dim returnType As TypeUsage = GetReturnType(edmFunction)
+        Return Not includeMergeOption AndAlso returnType IsNot Nothing AndAlso returnType.EdmType.BuiltInTypeKind = BuiltInTypeKind.EntityType
+    End Function
+End Class
+
+Public Class EdmMetadataLoader
+    Private ReadOnly _host As IDynamicHost
+    Private ReadOnly _errors As System.Collections.IList
+
+    Public Sub New(host As IDynamicHost, errors As System.Collections.IList)
+        ArgumentNotNull(host, "host")
+        ArgumentNotNull(errors, "errors")
+
+        _host = host
+        _errors = errors
+    End Sub
+
+    Public Function CreateEdmItemCollection(sourcePath As String) As IEnumerable(Of GlobalItem)
+        ArgumentNotNull(sourcePath, "sourcePath")
+
+        If Not ValidateInputPath(sourcePath) Then
+            Return New EdmItemCollection()
+        End If
+
+        Dim schemaElement As XElement = LoadRootElement(_host.ResolvePath(sourcePath))
+        If schemaElement IsNot Nothing Then
+            Using reader = schemaElement.CreateReader()
+                Dim errors As IList(Of EdmSchemaError)
+                Dim itemCollection As EdmItemCollection = MetadataItemCollectionFactory.CreateEdmItemCollection(New XmlReader() {reader}, errors)
+
+                ProcessErrors(errors, sourcePath)
+
+                Return itemCollection
+            End Using
+        End If
+        Return New EdmItemCollection()
+    End Function
+
+    Public Function GetModelNamespace(sourcePath As String) As String
+        ArgumentNotNull(sourcePath, "sourcePath")
+
+        If Not ValidateInputPath(sourcePath) Then
+            Return String.Empty
+        End If
+
+        Dim model As XElement = LoadRootElement(_host.ResolvePath(sourcePath))
+        If model Is Nothing Then
+            Return String.Empty
+        End If
+
+        Dim attribute As XAttribute = model.Attribute("Namespace")
+        Return If(attribute IsNot Nothing, attribute.Value, "")
+    End Function
+
+    Private Function ValidateInputPath(sourcePath As String) As Boolean
+        If sourcePath = "$" & "edmxInputFile" & "$" Then
+            _errors.Add(New CompilerEr
