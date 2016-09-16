@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.example.muhammadahsan.intentactivites.MainActivity">
+
+    <TextView
+        android:id="@+id/textView_numbers"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Numbers"
+        android:textSize="20sp"
+        android:background="@android:color/holo_orange_dark"
+        android:padding="30dp"
+        android:onClick="goNumber"/>
+    <TextView
+        android:id="@+id/textView_familyMembers"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Family Members"
+        android:textSize="20sp"
+        android:background="@android:color/holo_green_dark"
+        android:padding="30dp"
+        android:onClick="goFamilyMembers"/>
+    <TextView
+        android:id="@+id/textView_Colors"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Colors"
+        android:textSize="20sp"
+        android:background="@android:color/holo_purple"
+        android:padding="30dp"
+        android:onClick="goColors"/>
+    <TextView
+        android:id="@+id/textView_phrases"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Phrases"
+        android:textSize="20sp"
+        android:background="@android:color/holo_blue_light"
+        android:padding="30dp"
+        android:onClick="goPhrases"/>
+</LinearLayout>

@@ -22,6 +22,8 @@ public class MainActivity extends AppCompatActivity {
     boolean addChoclate=false;
     String name=null;
 
+    String orderSummary;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -128,13 +130,22 @@ public class MainActivity extends AppCompatActivity {
         else{
             totalPrice();
             TextView orderSumm = (TextView) findViewById(R.id.textView_orderSummary);
-            orderSumm.setText("Order Summary\n\nName : "+name+"\nWhipped Creame : "+addWhippedCream+"\nChoclate : "+addChoclate+"\nQuantity : "+qty+"\nTotal : "+tPrice);
+            orderSummary= "Order Summary\n\n" +
+                        "Name : "+name+
+                        "\nWhipped Creame : "+addWhippedCream+
+                        "\nChoclate : "+addChoclate+
+                        "\nQuantity : "+qty+
+                        "\nTotal : "+tPrice+
+                        "\n\nThank You!"+
+                        "\n\nBest Regards,\n"+getString(R.string.shop_name);
+
+            orderSumm.setText(orderSummary);
 
 
             Intent intent = new Intent(Intent.ACTION_SENDTO);
             intent.setData(Uri.parse("mailto:"+"m.ahsaan93@gmail.com"));
             intent.putExtra(Intent.EXTRA_SUBJECT, "Coffee Order");
-            intent.putExtra(Intent.EXTRA_TEXT, "Order Summary\n\nName : "+name+"\nWhipped Creame : "+addWhippedCream+"\nChoclate : "+addChoclate+"\nQuantity : "+qty+"\nTotal : "+tPrice+"\n\nThank You!"+"\n\nBest Regards,\n"+getString(R.string.shop_name));
+            intent.putExtra(Intent.EXTRA_TEXT, orderSummary);
             if (intent.resolveActivity(getPackageManager()) != null) {
                 startActivity(intent);
             }
