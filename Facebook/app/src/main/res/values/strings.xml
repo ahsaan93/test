@@ -3,7 +3,6 @@
     <string name="description">Facebook login page</string>
     <string name="loginHint">Email or Phone</string>
     <string name="passwordHint">Password</string>
-    <string name="ifMatched">User name is matched</string>
-    <string name="ifNotMatched">User name is not matched</string>
-    <string name="name">Muhammad Ahsan</string>
+    <string name="notFound">No record found</string>
+    <string name="Back_o_login">Back to Login</string>
 </resources>

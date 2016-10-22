@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.muhammadahsan.Name">
+
+    <TextView
+        android:id="@+id/textView_enterName"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="What's Your Name?"
+        android:textStyle="bold"
+        android:textSize="20sp"
+        android:padding="20dp"
+        android:layout_marginTop="15dp"
+        android:gravity="center"
+        android:layout_centerHorizontal="true"/>
+    <TextView
+        android:id="@+id/textView_ExtraDetail"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Using your real name makes it easier for friends to recognize you."
+        android:paddingLeft="30dp"
+        android:paddingRight="30dp"
+        android:textSize="14dp"
+        android:gravity="center"
+        android:layout_below="@+id/textView_enterName"/>
+    <EditText
+        android:id="@+id/editText_FirstName"
+        android:layout_width="130dp"
+        android:layout_height="wrap_content"
+        android:text=""
+        android:layout_marginLeft="30dp"
+        android:layout_marginTop="40dp"
+        android:hint="First Name"
+        android:layout_below="@id/textView_ExtraDetail"
+        android:inputType="text"
+        android:maxLength="15"/>
+    <EditText
+        android:id="@+id/editText_LastName"
+        android:layout_width="130dp"
+        android:layout_height="wrap_content"
+        android:text=""
+        android:hint="Last Name"
+        android:inputType="text"
+        android:maxLength="15"
+        android:layout_marginRight="30dp"
+        android:layout_alignTop="@+id/editText_FirstName"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true" />
+    <Button
+        android:id="@+id/button_next"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Next"
+        android:textColor="@android:color/white"
+        android:layout_marginLeft="30dp"
+        android:layout_marginRight="30dp"
+        android:layout_marginTop="30dp"
+        android:background="#5890FF"
+        android:layout_below="@id/editText_LastName"
+        android:onClick="goJoinFacebook"
+        />
+</RelativeLayout>

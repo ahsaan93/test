@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.muhammadahsan.TermsPrivacy">
+
+    <TextView
+        android:id="@+id/textView_finishSigningUp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Finish Signing Up"
+        android:textStyle="bold"
+        android:textSize="18sp"
+        android:padding="10dp"
+        android:layout_marginTop="15dp"
+        android:gravity="center"
+        android:layout_centerHorizontal="true"/>
+    <TextView
+        android:id="@+id/textView_ExtraDetail1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="By signing up, you agreeto our Facebook Terms and that you have read our Data Policy, including our Cookie Use. Vou may receive SMS Notiﬁcations from Facebook and can opt—out at any time.."
+        android:paddingLeft="20dp"
+        android:paddingRight="20dp"
+        android:textSize="12dp"
+        android:gravity="center"
+        android:layout_below="@+id/textView_finishSigningUp"/>
+    <TextView
+        android:id="@+id/textView_contacts"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Contacts"
+        android:textStyle="bold"
+        android:textSize="14sp"
+        android:padding="10dp"
+        android:layout_marginTop="15dp"
+        android:gravity="center"
+        android:layout_centerHorizontal="true"
+    android:layout_below="@+id/textView_ExtraDetail1"/>
+    <TextView
+        android:id="@+id/textView_ExtraDetail2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="info about your contacts in your address book, including names, phone numbers and nicknames will be continuously uploaded to Facebookto help you and others ﬁnd friends faster and to help us provide a better service. Vou will be ableto manage or delete contact information you share with Facebook, and can turn this off at any time in Settings. Learn More."
+        android:paddingLeft="20dp"
+        android:paddingRight="20dp"
+        android:textSize="12dp"
+        android:gravity="center"
+        android:layout_below="@+id/textView_contacts"/>
+    <Button
+        android:id="@+id/button_signUp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Sign Up"
+        android:textColor="@android:color/white"
+        android:layout_marginLeft="30dp"
+        android:layout_marginRight="30dp"
+        android:layout_marginBottom="20dp"
+        android:background="#5890FF"
+        android:layout_above="@+id/textView_SignUpWithoutUploadingContacts"
+        android:layout_centerHorizontal="true"
+        android:onClick="goSignUp"/>
+    <TextView
+        android:id="@+id/textView_SignUpWithoutUploadingContacts"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Sign Up without uploading my contacts"
+        android:textColor="#5991FF"
+        android:textAlignment="center"
+        android:textSize="15dp"
+        android:textStyle="bold"
+        android:gravity="center"
+        android:layout_marginBottom="10dp"
+        android:layout_centerHorizontal="true"
+        android:layout_alignParentBottom="true"
+        />
+</RelativeLayout>

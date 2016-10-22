@@ -35,15 +35,76 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_below="@id/editText_grade"
-        android:textSize="30sp"/>
+        android:textSize="20sp"/>
 
     <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Add Data"
         android:id="@+id/button_addData"
-        android:layout_alignParentBottom="true"
-        android:layout_centerHorizontal="true"
-        android:onClick="addData"/>
+        android:onClick="addData"
+        android:layout_below="@+id/button_viewAll"
+        android:layout_alignParentLeft="true" />
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="View All"
+        android:id="@+id/button_viewAll"
+        android:onClick="viewAll"
+        android:layout_below="@+id/textView_result"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Update Data"
+        android:id="@+id/button_update"
+        android:layout_below="@+id/button_addData"
+        android:layout_alignParentLeft="true"
+        android:onClick="updateID"/>
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Delete data"
+        android:id="@+id/button_delete"
+        android:layout_below="@+id/button_update"
+        android:layout_alignParentLeft="true"
+        android:onClick="deleteID"/>
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/editText_updateID"
+        android:layout_above="@+id/button_delete"
+        android:layout_toRightOf="@+id/button_update"
+        android:layout_toEndOf="@+id/button_update" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/editText_deleteID"
+        android:layout_alignBottom="@+id/button_delete"
+        android:layout_toRightOf="@+id/button_delete" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="View Record"
+        android:id="@+id/button_viewRecord"
+        android:layout_below="@+id/button_delete"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:onClick="viewRecord"/>
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/editText_viewID"
+        android:layout_alignBottom="@+id/button_viewRecord"
+        android:layout_toRightOf="@+id/button_update"
+        android:layout_toEndOf="@+id/button_update" />
+
 
 </RelativeLayout>

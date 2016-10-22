@@ -1,12 +1,9 @@
 package com.example.muhammadahsan.sqldbapp;
 
-import android.content.ContentProviderOperation;
-import android.content.ContentValues;
 import android.content.Context;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
-import android.support.v7.app.AlertDialog;
 
 public class DatabaseHelper extends SQLiteOpenHelper {
     String stu;
@@ -24,55 +21,55 @@ public class DatabaseHelper extends SQLiteOpenHelper {
         db.execSQL("drop if exists students");
         onCreate(db);
     }
-
-    public boolean onInsert(String name, String marks, String grade){
+    public void onDelete(int id){
         SQLiteDatabase db = this.getWritableDatabase();
-
-        //long result = db.execSQL("Insert into students(name,marks,grade) values ("+name+","+marks+","+grade+")");
-        //return true;
-
-
-        ContentValues contentValues = new ContentValues();
-        contentValues.put("name",name);
-        contentValues.put("marks",marks);
-        contentValues.put("grade",grade);
-        long result = db.insert("students",null,contentValues);
-        if (result==-1){
-            return false;
-        }else{
-            return true;
-        }
+        db.execSQL("DELETE FROM STUDENTS WHERE ID = "+id);
     }
-    public void onSelect(String name){
+    public void onUpdate(int id, String name, String marks, String grade){
+        SQLiteDatabase db = this.getWritableDatabase();
+        db.execSQL("UPDATE STUDENTS SET NAME='"+name+"', MARKS='"+marks+"', GRADE='"+grade+"' WHERE ID="+id);
+    }
+    public void onInsert(String name, String marks, String grade){
+        SQLiteDatabase db = this.getWritableDatabase();
+        db.execSQL("Insert into students(name,marks,grade) values('"+name+"','"+marks+"','"+grade+"')");
+    }
+    public String viewAll(Context context){
         SQLiteDatabase db = this.getReadableDatabase();
-        // Retrieving all records
-        Cursor c=db.rawQuery("SELECT * FROM student", null);
-        // Checking if no records found
+        Cursor c = db.rawQuery("SELECT * FROM students", null);
         if(c.getCount()==0)
         {
-            showMessage("Error", "No records found");
-            return;
+            return "Error - No records found";
         }
-        // Appending records to a string buffer
-        StringBuffer buffer=new StringBuffer();
-        while(c.moveToNext())
-        {
-            buffer.append("Rollno: "+c.getString(0)+"\n");
-            buffer.append("Name: "+c.getString(1)+"\n");
-            buffer.append("Marks: "+c.getString(2)+"\n\n");
+        else{
+            StringBuffer buffer=new StringBuffer();
+            while(c.moveToNext())
+            {
+                buffer.append("RollNo: "+c.getString(0)+"\n");
+                buffer.append("Name: "+c.getString(1)+"\n");
+                buffer.append("Marks: "+c.getString(2)+"\n");
+                buffer.append("Grade: "+c.getString(3)+"\n\n");
+            }
+            return buffer.toString();
         }
-        // Displaying all records
-        //showMessage("Student Details", buffer.toString());
     }
-    public void showMessage(String title,String message)
-    {
-        AlertDialog.Builder builder = new AlertDialog.Builder(this);
+    public String viewRecord(Context context, int id){
+        SQLiteDatabase db = this.getReadableDatabase();
+        Cursor c = db.rawQuery("SELECT * FROM students where id = "+id, null);
+        if(c.getCount()==0)
+        {
+            return "Error - No records found";
+        }
+        else{
+            StringBuffer buffer=new StringBuffer();
+            while(c.moveToNext())
+            {
+                buffer.append("RollNo: "+c.getString(0)+"\n");
+                buffer.append("Name: "+c.getString(1)+"\n");
+                buffer.append("Marks: "+c.getString(2)+"\n");
+                buffer.append("Grade: "+c.getString(3)+"\n\n");
+            }
+            return buffer.toString();
 
-/*        Builder builder=new Builder(this);
-        builder.setCancelable(true);
-        builder.setTitle(title);
-        builder.setMessage(message);
-        builder.show();
-*/
+        }
     }
 }

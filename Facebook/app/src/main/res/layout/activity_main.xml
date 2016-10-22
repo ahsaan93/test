@@ -3,11 +3,9 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:paddingBottom="16dp"
     android:paddingLeft="30dp"
     android:paddingRight="30dp"
-    android:paddingTop="16dp"
-    android:background="#3b5998"
+    android:background="#3B5998"
     android:orientation="vertical"
     android:contentDescription="@string/description"
     tools:context="com.example.muhammadahsan.facebook.MainActivity">
@@ -26,6 +24,7 @@
         android:textSize="15sp"
         android:maxLength="20"
         android:hint="@string/loginHint"
+        android:textColorHint="@android:color/darker_gray"
         android:layout_marginTop="20dp"/>
     <EditText
         android:id="@+id/editText_password"
@@ -35,13 +34,14 @@
         android:textSize="15sp"
         android:maxLength="20"
         android:hint="@string/passwordHint"
+        android:textColorHint="@android:color/darker_gray"
         android:inputType="textPassword"
         android:layout_marginTop="5dp"/>
     <Button
         android:id="@+id/button_login"
         android:layout_width="match_parent"
         android:layout_height="40dp"
-        android:background="#4e69a2"
+        android:background="#4E69A2"
         android:textColor="#ffffff"
         android:text="Log In"
         android:layout_marginTop="10dp"
@@ -54,7 +54,8 @@
         android:textSize="12sp"
         android:gravity="center"
         android:textColor="#ffffff"
-        android:layout_marginTop="10dp"/>
+        android:layout_marginTop="10dp"
+        android:onClick="forgotPassword"/>
 
     <Button
         android:layout_width="match_parent"
@@ -65,14 +66,6 @@
         android:gravity="center"
         android:background="#3b5998"
         android:textColor="#ffffff"
-        android:layout_marginTop="65dp"/>
-
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Sign Up for Facebook"
-        android:textSize="12sp"
-        android:gravity="center"
-        android:textColor="#ffffff"
-        android:layout_marginTop="0dp"/>
+        android:layout_marginTop="100dp"
+        android:onClick="signUp_mobileNo"/>
 </LinearLayout>

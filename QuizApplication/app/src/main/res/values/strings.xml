@@ -1,0 +1,16 @@
+<resources>
+    <string name="app_name">Quiz Application</string>
+    <string name="Quiz1">Quiz1 : Which language is used in androind programming?</string>
+    <string name="q1_a1">Java</string>
+    <string name="q1_a2">PHP</string>
+    <string name="q1_a3">C#</string>
+    <string name="submit">Submit</string>
+    <string name="Quiz2">Quiz2 : Which one is most suitable language for web application?</string>
+    <string name="q2_a1">Andorid</string>
+    <string name="q2_a2">C# .Net</string>
+    <string name="q2_a3">PHP</string>
+    <string name="Quiz3">Quiz3 : Which language is not programming language?</string>
+    <string name="q3_a1">C#</string>
+    <string name="q3_a2">Inpage</string>
+    <string name="q3_a3">PL/SQL</string>
+</resources>

@@ -2,6 +2,8 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.example.muhammadahsan.facebook">
 
+    <uses-permission android:name="android.permission.INTERNET" />
+
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
@@ -15,6 +17,16 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity android:name="com.example.muhammadahsan.MobileNumber" />
+        <activity android:name="com.example.muhammadahsan.EmailAddress" />
+        <activity android:name="com.example.muhammadahsan.Name" />
+        <activity android:name="com.example.muhammadahsan.JoinFacebook" />
+        <activity android:name="com.example.muhammadahsan.Gender" />
+        <activity android:name="com.example.muhammadahsan.ChoosePassword" />
+        <activity android:name="com.example.muhammadahsan.TermsPrivacy" />
+        <activity android:name="com.example.muhammadahsan.Home" />
+        <activity android:name="com.example.muhammadahsan.SignUp" />
+        <activity android:name="com.example.muhammadahsan.FindYourAccount"></activity>
     </application>
 
 </manifest>
