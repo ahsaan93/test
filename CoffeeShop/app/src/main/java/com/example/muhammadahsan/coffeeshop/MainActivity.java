@@ -33,18 +33,6 @@ public class MainActivity extends AppCompatActivity {
         qty=Integer.parseInt(qt.getText().toString());
         totalPrice();
 
-/*        Button sentEmail= (Button) findViewById(R.id.button_order);
-        sentEmail.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Intent intentEmail=new Intent(Intent.ACTION_SENDTO);
-                intentEmail.putExtra(Intent.EXTRA_EMAIL, new String[]{"m.ahsaan93@gmail.com"});
-                intentEmail.putExtra(Intent.EXTRA_SUBJECT, "Coffee Order");
-                intentEmail.putExtra(Intent.EXTRA_TEXT, "Order Summary\n\nName : "+name+"\nWhipped Creame : "+addWhippedCream+"\nChoclate : "+addChoclate+"\nQuantity : "+qty+"\nTotal : "+tPrice+"\nThank You!");
-                intentEmail.setType("message/rfc822");
-                startActivity(intentEmail);
-            }
-        });*/
     }
 
     public void addWhipped(View view){
@@ -59,6 +47,7 @@ public class MainActivity extends AppCompatActivity {
             TextView additional = (TextView) findViewById(R.id.textView_additionalWhippedPrice);
             additional.setText("");
         }
+        totalPrice();
     }
     public void addChoclate(View view){
         boolean selection = ((CheckBox) view).isChecked();
@@ -72,6 +61,7 @@ public class MainActivity extends AppCompatActivity {
             TextView additional = (TextView) findViewById(R.id.textView_additionalChoclatePrice);
             additional.setText("");
         }
+        totalPrice();
     }
     public void basePrice(boolean whipped, boolean choclate){
 
@@ -99,15 +89,18 @@ public class MainActivity extends AppCompatActivity {
     public void qty_decreament(View view){
         TextView qt = (TextView) findViewById(R.id.textView_qty);
         qty=Integer.parseInt(qt.getText().toString());
-        if(qty<1){
-            qty=1;
+
+        if(qty == 0){
+            qty=0;
             qt.setText(String.valueOf(qty));
         }
-        else if(qty>0 && qty<2) {
+/*        else if(qty==0) {
             totalPrice();
             Toast.makeText(this, "Quantity must be atleast 1", Toast.LENGTH_SHORT).show();
+
         }
-        else if (qty>1) {
+*/
+        else if (qty > 0) {
             qty = qty - 1;
             qt.setText(String.valueOf(qty));
         }
@@ -124,6 +117,10 @@ public class MainActivity extends AppCompatActivity {
         name = userName.getText().toString();
         if (name.length() < 1){
             Toast.makeText(this, "User Name cannot leave empty", Toast.LENGTH_SHORT).show();
+        }
+        else if (qty == 0){
+            totalPrice();
+            Toast.makeText(this, "Quantity must be atleast 1", Toast.LENGTH_SHORT).show();
         }
         else{
             totalPrice();

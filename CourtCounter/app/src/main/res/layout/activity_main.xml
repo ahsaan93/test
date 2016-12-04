@@ -34,8 +34,9 @@
                 android:layout_marginTop="10dp"
                 android:layout_marginBottom="10dp"
                 android:gravity="center"
-                android:layout_gravity="center_horizontal"/>
+                />
             <Button
+                android:id="@+id/btn_ta_threePoints"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="@string/teamA_points3"
@@ -43,10 +44,10 @@
                 android:layout_marginLeft="15dp"
                 android:layout_marginRight="15dp"
                 android:layout_marginBottom="8dp"
-                android:onClick="addThreeForTeamA"
 
                 />
             <Button
+                android:id="@+id/btn_ta_twoPoints"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="@string/teamA_points2"
@@ -54,9 +55,9 @@
                 android:layout_marginLeft="15dp"
                 android:layout_marginRight="15dp"
                 android:layout_marginBottom="8dp"
-                android:onClick="addTwoForTeamA"
                 />
             <Button
+                android:id="@+id/btn_ta_freethrow"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="@string/teamA_freeThrow"
@@ -64,7 +65,6 @@
                 android:layout_marginLeft="15dp"
                 android:layout_marginRight="15dp"
                 android:layout_marginBottom="8dp"
-                android:onClick="addOneForTeamA"
                 />
         </LinearLayout>
         <LinearLayout
@@ -93,6 +93,7 @@
                 android:gravity="center"
                 android:layout_gravity="center_horizontal"/>
             <Button
+                android:id="@+id/btn_tb_threePoints"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="@string/teamB_points3"
@@ -100,9 +101,9 @@
                 android:layout_marginLeft="15dp"
                 android:layout_marginRight="15dp"
                 android:layout_marginBottom="8dp"
-                android:onClick="addThreeForTeamB"
                 />
             <Button
+                android:id="@+id/btn_tb_twoPoints"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="@string/teamB_points2"
@@ -110,9 +111,9 @@
                 android:layout_marginLeft="15dp"
                 android:layout_marginRight="15dp"
                 android:layout_marginBottom="8dp"
-                android:onClick="addTwoForTeamB"
                 />
             <Button
+                android:id="@+id/btn_tb_freethrow"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="@string/teamB_freeThrow"
@@ -120,11 +121,11 @@
                 android:layout_marginLeft="15dp"
                 android:layout_marginRight="15dp"
                 android:layout_marginBottom="8dp"
-                android:onClick="addOneForTeamB"
                 />
         </LinearLayout>
     </LinearLayout>
     <Button
+        android:id="@+id/btn_reset"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/reset"
@@ -132,7 +133,5 @@
         android:layout_centerHorizontal="true"
         android:layout_marginBottom="20dp"
         android:layout_gravity="center_horizontal"
-        android:onClick="resetAll"
-
         />
 </RelativeLayout>

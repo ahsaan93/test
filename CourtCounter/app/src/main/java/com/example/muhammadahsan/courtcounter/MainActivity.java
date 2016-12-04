@@ -3,6 +3,7 @@ package com.example.muhammadahsan.courtcounter;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.Button;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -14,50 +15,87 @@ public class MainActivity extends AppCompatActivity {
     int scoreTeamA=0;
     int scoreTeamB=0;
 
+    Button reset, teamA_3, teamA_2, teamA_1, teamB_3, teamB_2, teamB_1;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
+        ini_buttons();
+        click_buttons();
     }
 
-
-
-    public void resetAll(View view){
-        scoreTeamA=0;
-        scoreTeamB=0;
-
-        teamA(0);
-        teamB(0);
-
-        Toast.makeText(this,resetCounter,LENGTH_SHORT).show();
+    private void ini_buttons(){
+        reset = (Button) findViewById(R.id.btn_reset);
+        teamA_1 = (Button) findViewById(R.id.btn_ta_freethrow);
+        teamA_2 = (Button) findViewById(R.id.btn_ta_twoPoints);
+        teamA_3 = (Button) findViewById(R.id.btn_ta_threePoints);
+        teamB_1 = (Button) findViewById(R.id.btn_tb_freethrow);
+        teamB_2 = (Button) findViewById(R.id.btn_tb_twoPoints);
+        teamB_3 = (Button) findViewById(R.id.btn_tb_threePoints);
     }
-    public void teamA(int score){
+
+    private void click_buttons(){
+        reset.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                scoreTeamA=0;
+                scoreTeamB=0;
+
+                teamA(0);
+                teamB(0);
+                Toast.makeText(MainActivity.this, R.string.resetCounter, Toast.LENGTH_SHORT).show();
+            }
+        });
+
+        teamA_1.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                teamA(1);
+            }
+        });
+        teamA_2.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                teamA(2);
+            }
+        });
+        teamA_3.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                teamA(3);
+            }
+        });
+
+        teamB_1.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                teamB(1);
+            }
+        });
+        teamB_2.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                teamB(2);
+            }
+        });
+        teamB_3.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                teamB(3);
+            }
+        });
+    }
+
+    private void teamA(int score){
         TextView scoreTA = (TextView) findViewById(R.id.textView_teamScoreA);
         scoreTeamA = scoreTeamA + score;
         scoreTA.setText(String.valueOf(scoreTeamA));
     }
-    public void addThreeForTeamA(View view){
-        teamA(3);
-    }
-    public void addTwoForTeamA(View view){
-        teamA(2);
-    }
-    public void addOneForTeamA(View view){
-        teamA(1);
-    }
 
-    public void teamB(int score){
+    private void teamB(int score){
         TextView scoreTB = (TextView) findViewById(R.id.textView_teamScoreB);
         scoreTeamB = scoreTeamB + score;
         scoreTB.setText(String.valueOf(scoreTeamB));
-    }
-    public void addThreeForTeamB(View view){
-        teamB(3);
-    }
-    public void addTwoForTeamB(View view){
-        teamB(2);
-    }
-    public void addOneForTeamB(View view){
-        teamB(1);
     }
 }
