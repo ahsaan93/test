@@ -1,0 +1,42 @@
+{
+  "project_info": {
+    "project_number": "963339350591",
+    "firebase_url": "https://learning-management-syst-4db85.firebaseio.com",
+    "project_id": "learning-management-syst-4db85",
+    "storage_bucket": "learning-management-syst-4db85.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:963339350591:android:c9bc508cb857e908",
+        "android_client_info": {
+          "package_name": "com.example.muhammadahsan.lms"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "963339350591-1f2evic26sigqsvld10dhra566gh2bco.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyD7QfK1L_3tELO9FxSBThBLlm5z2jrOjlA"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
