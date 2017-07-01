@@ -16,10 +16,9 @@ import static com.example.muhammadahsan.MainActivity.stmt;
 import static com.example.muhammadahsan.MainActivity.user_id;
 
 public class LoginActivity extends Activity {
-    public static EditText ed_UserID, ed_UserPassword;
-    public static Button btn_Login;
+    public EditText ed_UserID, ed_UserPassword;
+    public Button btn_Login;
     public static String v_userID, v_userPassword;
-    String resultValue = null;
     String login_id;
     String user_password;
 
@@ -56,19 +55,30 @@ public class LoginActivity extends Activity {
                         String sql = "SELECT USER_ID, USER_LOGIN, USER_PASSWORD FROM USER_SETUP WHERE USER_LOGIN = '" + v_userID + "'";
                         //Toast.makeText(getApplicationContext(), ""+sql, Toast.LENGTH_SHORT).show();
                         resultSet = stmt.executeQuery(sql);
-                        while(resultSet.next()) {
-                            user_id = resultSet.getString(1);
-                            login_id = resultSet.getString(2);
-                            user_password = resultSet.getString(3);
+                        //Toast.makeText(getApplicationContext(), ""+resultSet.getString(1), Toast.LENGTH_SHORT).show();
+                        if (!resultSet.next()){
+                            Toast.makeText(getApplicationContext(), "User not found!", Toast.LENGTH_SHORT).show();
+                        }else{
+                            while(resultSet.next()) {
+                                user_id = resultSet.getString(1);
+                                login_id = resultSet.getString(2);
+                                user_password = resultSet.getString(3);
+                            }
+
+                            Toast.makeText(getApplicationContext(), "Result: "+"\n"+user_id+"\n"+login_id+"\n"+user_password, Toast.LENGTH_SHORT).show();
+
+                            if (login_id.equals(v_userID) && user_password.equals(v_userPassword)){
+                                Toast.makeText(getApplicationContext(), "Successfully Login", Toast.LENGTH_SHORT).show();
+                            }else{
+                                Toast.makeText(getApplicationContext(), "Login Failed!", Toast.LENGTH_SHORT).show();
+                                user_id = null;
+                                login_id = null;
+                                user_password = null;
+                            }
+
                         }
-                        Toast.makeText(getApplicationContext(), "Result: "+"\n"+user_id+"\n"+login_id+"\n"+user_password, Toast.LENGTH_SHORT).show();
                     } catch (SQLException e) {
                         e.printStackTrace();
-                    }
-                    if (login_id.equals(v_userID) && user_password.equals(v_userPassword)){
-                        Toast.makeText(getApplicationContext(), "Successfully Login", Toast.LENGTH_SHORT).show();
-                    }else{
-                        Toast.makeText(getApplicationContext(), "Login Failed!", Toast.LENGTH_SHORT).show();
                     }
                 }
 
