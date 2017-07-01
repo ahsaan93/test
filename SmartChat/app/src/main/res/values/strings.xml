@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">SmartChat</string>
+    <string name="tv_username">UserName</string>
+    <string name="tv_timestamp">10:00 AM</string>
+    <string name="tv_mgs">helo world helo world , this is smart chat ownered by Muhammad Ahsan</string>
+    <string name="et_mgs"> Enter your message</string>
+    <string name="title_activity_main2">Main2Activity</string>
+</resources>

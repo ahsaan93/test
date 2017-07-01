@@ -8,42 +8,18 @@
     android:paddingLeft="@dimen/activity_horizontal_margin"
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
-    android:background="@drawable/background"
     tools:context="com.example.muhammadahsan.smartchat.MainActivity">
 
-
-    <ListView
-        android:id="@+id/lv_messages"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:layout_above="@+id/linear_layout_message"
-        android:layout_marginBottom="@dimen/margin_button"
-        android:transcriptMode="alwaysScroll"
-        android:stackFromBottom="true">
-
-    </ListView>
-    <LinearLayout
+    <ImageView
+        android:layout_width="200dp"
+        android:layout_height="200dp"
+        android:id="@+id/im_profileImage"
+        android:layout_centerHorizontal="true"/>
+    <Button
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        android:layout_alignParentBottom="true"
-        android:id="@+id/linear_layout_message">
-
-        <EditText
-            android:id="@+id/et_message"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:textSize="@dimen/dimen_mgsTextSize"
-            android:hint="@string/et_mgs"
-            android:background="@android:color/white"
-            android:padding="@dimen/dimen_text_padding"
-            />
-        <ImageView
-            android:id="@+id/pic_send"
-            android:layout_width="40dp"
-            android:layout_height="40dp"
-            android:src="@drawable/send_mgs"/>
-
-    </LinearLayout>
+        android:text="Upload"
+        android:layout_below="@+id/im_profileImage"
+        android:id="@+id/btn_upload"
+        />
 </RelativeLayout>

@@ -1,49 +1,71 @@
 package com.example.muhammadahsan.singer;
 
+import android.os.StrictMode;
+
 import java.sql.Connection;
 import java.sql.DriverManager;
-import java.sql.SQLException;
+import java.sql.ResultSet;
 import java.sql.Statement;
 
-public class db_connection {
+import static com.example.muhammadahsan.MainActivity.stmt;
 
-    public static void main(String[] argv) {
+public class DB_CONNECTION{
 
-        System.out.println("-------- Oracle JDBC Connection Testing ------");
+    String DEFAULT_DRIVER = "oracle.jdbc.driver.OracleDriver";
+    String DEFAULT_IP;// = "172.17.1.20"; //---1
+    String DEFAULT_SERVICE_NAME;// = "PROD"; //---2
+    String DEFAULT_PORT;// = "1521"; //---3
+    //String DEFAULT_URL = "jdbc:oracle:thin:@172.17.1.20:1521:PROD";
+    String DEFAULT_URL;// = "jdbc:oracle:thin:@"+DEFAULT_IP+":"+DEFAULT_PORT+":"+DEFAULT_SERVICE_NAME;
+    String DEFAULT_USERNAME;// = "ERPMAIN"; //---4
+    String DEFAULT_PASSWORD;// = "CITI_BANK2016"; //---5
+    String status = "";
+    public static Connection connection, conn;
 
+
+    public DB_CONNECTION(String DEFAULT_IP, String DEFAULT_SERVICE_NAME, String DEFAULT_PORT, String DEFAULT_USERNAME, String DEFAULT_PASSWORD) {
+        this.DEFAULT_IP = DEFAULT_IP;
+        this.DEFAULT_SERVICE_NAME = DEFAULT_SERVICE_NAME;
+        this.DEFAULT_PORT = DEFAULT_PORT;
+        this.DEFAULT_USERNAME = DEFAULT_USERNAME;
+        this.DEFAULT_PASSWORD = DEFAULT_PASSWORD;
+
+        this.DEFAULT_URL = "jdbc:oracle:thin:"+this.DEFAULT_USERNAME+"/"+this.DEFAULT_PASSWORD+"@"+DEFAULT_IP+":"+DEFAULT_PORT+":"+DEFAULT_SERVICE_NAME;
+    }
+
+
+    public String connect_database() {
+
+        if (android.os.Build.VERSION.SDK_INT > 9) {
+            StrictMode.ThreadPolicy policy = new StrictMode.ThreadPolicy.Builder().permitAll().build();
+            StrictMode.setThreadPolicy(policy);
+        }
         try {
 
-            Class.forName("oracle.jdbc.driver.OracleDriver");
-
+            Class.forName(DEFAULT_DRIVER);
         } catch (ClassNotFoundException e) {
-
-            System.out.println("Where is your Oracle JDBC Driver?");
+            status ="Database connection failed!---2";
             e.printStackTrace();
-            return;
-
+            return status;
         }
-
-        System.out.println("Oracle JDBC Driver Registered!");
-
-        Connection connection = null;
 
         try {
+            connection = DriverManager.getConnection(DEFAULT_URL);
+            //status ="Database Connected";
 
-            connection = DriverManager.getConnection(
-                    "jdbc:oracle:thin:172.17.1.20:1521:PROD", "erpmain","citi_bank2016");
-
-        } catch (SQLException e) {
-
-            System.out.println("Connection Failed! Check output console");
+            stmt=connection.createStatement();
+            ResultSet rs=stmt.executeQuery("SELECT SYSDATE FROM DUAL");
+            while(rs.next()) {
+                //System.out.println("hello : " + rs.getString(1));
+                status ="Connection established on "+rs.getString(1);
+            }
+            //status ="Connected as ";//+rs.getString(1).toString();
+        }
+        catch (Exception e) {
+            status ="Database connection failed!---1";
             e.printStackTrace();
-            return;
-
         }
+        return status;
 
-        if (connection != null) {
-            System.out.println("You made it, take control your database now!");
-        } else {
-            System.out.println("Failed to make connection!");
-        }
     }
 }

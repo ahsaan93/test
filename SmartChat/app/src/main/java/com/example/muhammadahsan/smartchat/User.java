@@ -1,8 +1,5 @@
 package com.example.muhammadahsan.smartchat;
 
-/**
- * Created by Muhammad Ahsan on 2/5/2017.
- */
 
 public class User {
     private String id;
@@ -51,6 +48,6 @@ public class User {
     public void setPicUri(String picUri) {
         this.picUri = picUri;
     }
-    
+
 
 }

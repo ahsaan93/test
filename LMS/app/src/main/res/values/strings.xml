@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">Learning Management System</string>
+    <string name="app_name"></string>
     <string name="notice_board">Notice Board</string>
     <string name="important_links_notification">Important Links/Notifications</string>
     <string name="important_contacts">Important Contacts</string>
@@ -11,4 +11,5 @@
     <string name="technical_contacts_email">support@abc.edu.pk</string>
     <string name="password_queries_email">password@abc.edu.pk</string>
     <string name="forgot_password">Forgot Password ?</string>
+    <string name="student_registration">Student Registration</string>
 </resources>
