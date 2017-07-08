@@ -1,5 +1,7 @@
 <resources>
     <string name="app_name">Singer Pakistan Ltd.</string>
+    <string name="app_subtitle">Trusted Excellence</string>
+
     <string name="title_activity_login">Sign in</string>
 
     <!-- Strings related to login -->

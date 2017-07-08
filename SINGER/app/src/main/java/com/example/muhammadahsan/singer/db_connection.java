@@ -2,12 +2,11 @@ package com.example.muhammadahsan.singer;
 
 import android.os.StrictMode;
 
-import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.ResultSet;
 import java.sql.Statement;
 
-import static com.example.muhammadahsan.MainActivity.stmt;
+import static com.example.muhammadahsan.singer.Splashscreen.connection;
 
 public class DB_CONNECTION{
 
@@ -19,8 +18,7 @@ public class DB_CONNECTION{
     String DEFAULT_URL;// = "jdbc:oracle:thin:@"+DEFAULT_IP+":"+DEFAULT_PORT+":"+DEFAULT_SERVICE_NAME;
     String DEFAULT_USERNAME;// = "ERPMAIN"; //---4
     String DEFAULT_PASSWORD;// = "CITI_BANK2016"; //---5
-    String status = "";
-    public static Connection connection, conn;
+    Boolean status = false;
 
 
     public DB_CONNECTION(String DEFAULT_IP, String DEFAULT_SERVICE_NAME, String DEFAULT_PORT, String DEFAULT_USERNAME, String DEFAULT_PASSWORD) {
@@ -34,7 +32,7 @@ public class DB_CONNECTION{
     }
 
 
-    public String connect_database() {
+    public boolean connect_database() {
 
         if (android.os.Build.VERSION.SDK_INT > 9) {
             StrictMode.ThreadPolicy policy = new StrictMode.ThreadPolicy.Builder().permitAll().build();
@@ -44,25 +42,28 @@ public class DB_CONNECTION{
 
             Class.forName(DEFAULT_DRIVER);
         } catch (ClassNotFoundException e) {
-            status ="Database connection failed!---2";
+            status = false;
+            //status ="Database connection failed!---2";
             e.printStackTrace();
-            return status;
+            return false;
         }
 
         try {
             connection = DriverManager.getConnection(DEFAULT_URL);
             //status ="Database Connected";
 
-            stmt=connection.createStatement();
+            Statement stmt = connection.createStatement();
             ResultSet rs=stmt.executeQuery("SELECT SYSDATE FROM DUAL");
-            while(rs.next()) {
+            //while(rs.next()) {
                 //System.out.println("hello : " + rs.getString(1));
-                status ="Connection established on "+rs.getString(1);
-            }
+            status = true;
+            //status ="Connection established on "+rs.getString(1);
+            //}
             //status ="Connected as ";//+rs.getString(1).toString();
         }
         catch (Exception e) {
-            status ="Database connection failed!---1";
+            status = false;
+            //status ="Database connection failed!---1";
             e.printStackTrace();
         }
         return status;

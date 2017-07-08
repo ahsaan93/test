@@ -21,18 +21,31 @@
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
         android:supportsRtl="true">
-        <activity
-            android:name="com.example.muhammadahsan.MainActivity"
-            android:label="@string/app_name">
+
+        <activity android:name=".Splashscreen"
+            android:label="@string/app_name"
+            android:theme="@android:style/Theme.NoTitleBar.Fullscreen">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+
+        <activity
+            android:name="com.example.muhammadahsan.MainActivity"
+            android:label="@string/app_name"
+            android:icon="@drawable/singer_logo1">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
         <activity
             android:name="com.example.muhammadahsan.LoginActivity"
-            android:label="@string/title_activity_login"></activity>
+            android:label="@string/title_activity_login"
+            android:icon="@drawable/singer_logo1"></activity>
     </application>
 
 </manifest>

@@ -9,7 +9,7 @@ public class DB_TNSNAMES  {
     String DEFAULT_USERNAME;
     String DEFAULT_PASSWORD;
 
-    public String connect_SingerDEV(){
+    public boolean connect_SingerDEV(){
         this.DEFAULT_IP = "192.168.0.20";
         this.DEFAULT_SERVICE_NAME = "orcl";
         this.DEFAULT_PORT = "1521";
@@ -19,9 +19,9 @@ public class DB_TNSNAMES  {
         db = new DB_CONNECTION(DEFAULT_IP,DEFAULT_SERVICE_NAME,DEFAULT_PORT,DEFAULT_USERNAME,DEFAULT_PASSWORD);
         //current_active_db = "SINGER DEV";
         //Toast.makeText(getApplicationContext(), ""+db.connect_database(), Toast.LENGTH_SHORT).show();
-        return db.connect_database().toString();
+        return db.connect_database();
     }
-    public String connect_SingerLive(){
+    public boolean connect_SingerLive(){
         this.DEFAULT_IP = "172.17.1.42";
         this.DEFAULT_SERVICE_NAME = "ERPMAIN";
         this.DEFAULT_PORT = "1521";
@@ -31,9 +31,9 @@ public class DB_TNSNAMES  {
         db = new DB_CONNECTION(DEFAULT_IP,DEFAULT_SERVICE_NAME,DEFAULT_PORT,DEFAULT_USERNAME,DEFAULT_PASSWORD);
         //current_active_db = "SINGER LIVE";
         //Toast.makeText(getApplicationContext(), ""+db.connect_database(), Toast.LENGTH_SHORT).show();
-        return db.connect_database().toString();
+        return db.connect_database();
     }
-    public String connect_EMCPL(){
+    public boolean connect_EMCPL(){
         this.DEFAULT_IP = "172.17.1.41";
         this.DEFAULT_SERVICE_NAME = "EMCPL";
         this.DEFAULT_PORT = "1521";
@@ -43,6 +43,6 @@ public class DB_TNSNAMES  {
         db = new DB_CONNECTION(DEFAULT_IP,DEFAULT_SERVICE_NAME,DEFAULT_PORT,DEFAULT_USERNAME,DEFAULT_PASSWORD);
         //current_active_db = "EMCPL";
         //Toast.makeText(getApplicationContext(), ""+db.connect_database(), Toast.LENGTH_SHORT).show();
-        return db.connect_database().toString();
+        return db.connect_database();
     }
 }
